@@ -275,12 +275,12 @@ body.dark #services-offer {
     color: #000;
 }
 
-/* Wrapper for centering counter horizontally */
-.counter-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    /* margin-top: 10px; */
+/* Wrapper for centering card horizontally */
+.card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* margin-top: 10px; */
 }
 
 body.dark .hamburger {
