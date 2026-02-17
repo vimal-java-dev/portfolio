@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3G79ZS5DSS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-3G79ZS5DSS');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vimal Tech</title>
@@ -11,7 +20,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/visitor-counter.css">
   <link rel="stylesheet" href="/css/common.css">
   <link rel="stylesheet" href="/css/live-projects.css">
   <link rel="stylesheet" href="/css/mini-services.css">
@@ -128,7 +136,7 @@
   </section>
 
   <!-- Live Projects Section -->
-  <section id="live-projects" class="container fade-in live-projects counter-container">
+  <section id="live-projects" class="container fade-in live-projects card-container">
     <div class="live-projects-card">
       <h2>Live Websites</h2>
       <!-- Button to open modal -->
@@ -154,49 +162,31 @@
     </div>
   </div>
 
-  <!-- Visitor Counter Section -->
-  <section id="visitor-counter" class="counter-wrap">
-    <div class="counter-card theme-neon">
-      <div class="counter-header">
-        <svg class="counter-icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm7 9a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1 7 7 0 0 1 14 0Z" />
-        </svg>
-        <div class="counter-titles">
-          <h2 class="counter-title">Visitors</h2>
-          <p class="counter-subtitle">Thanks for visiting 👋</p>
+  <!-- Visiting Card Section -->
+  <section id="cta-section" class="cta-wrap">
+    <div class="cta-card theme-neon">
+      <div class="cta-header">
+        <div class="cta-titles">
+          <h2 class="cta-title">Thanks for visiting 👋</h2>
+          <p class="cta-subtitle">Ready to turn your idea into reality?</p>
         </div>
       </div>
 
-      <div class="counter-body">
-        <span class="counter-label">Total Count</span>
-        <div class="counter-value-wrap">
-          <span id="visitorCount" class="counter-value shimmer" aria-live="polite">Loading…</span>
-        </div>
+      <div class="cta-body">
+        <p class="cta-description">
+          Helping local businesses thrive in the Digital Era.
+          Whether it's a <strong>local business website</strong> or an <strong>enterprise backend system</strong>,
+          I am ready to code your vision.
+        </p>
       </div>
 
-      <div class="counter-footer">
-        <button id="refreshBtn" class="ghost-btn" type="button" title="Refresh">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M17.65 6.35A7.95 7.95 0 0 0 12 4V1L7 6l5 5V8a5 5 0 1 1-5 5H5a7 7 0 1 0 12.65-6.65Z" />
-          </svg>
-          Refresh
-        </button>
+      <div class="cta-footer">
+        <a href="tel:+919638474047" class="cta-button">
+          Start a Project
+        </a>
       </div>
     </div>
-  </section>
-
-  <section id="theme-switcher" class="container fade-in theme-switcher">
-    <div style="text-align: center;">
-      <h2>Visitor Theme Switcher</h2>
-      <p>Try different looks for the visitor counter:</p>
-      <!-- Add this toggle anywhere on the page to try looks -->
-      <div style="display:flex; gap:8px; justify-content:center; padding:8px;">
-        <button class="ghost-btn" onclick="setTheme('theme-minimal')">Minimal</button>
-        <button class="ghost-btn" onclick="setTheme('theme-neon')">Neon</button>
-        <button class="ghost-btn" onclick="setTheme('theme-compact')">Compact</button>
-      </div>
-    </div>
-  </section>
+  </section><br><br>
 
   <!-- Floating WhatsApp -->
   <a href="https://wa.me/919638474047?text=Hello%20Vimal%2C%0AI%20would%20like%20to%20know%20more%20about%20your%20tech%20services."
@@ -221,18 +211,8 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- Visitor Counter JS -->
-  <!-- A super-compact - theme switcher -->
-  <script>
-    function setTheme(cls) {
-      const card = document.querySelector('.counter-card');
-      card.classList.remove('theme-minimal', 'theme-neon', 'theme-compact');
-      card.classList.add(cls);
-    }
-  </script>
   <!-- JS -->
   <script src="/js/common.js"></script>
-  <script type="module" src="/js/visitorCounter.js"></script>
   <!-- Popup Window JS -->
   <script src="/js/open-modal-btn.js"></script>
   <script src="/js/dropdown.js"></script>

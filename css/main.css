@@ -215,7 +215,8 @@ body.dark .hamburger {
 
 body.dark #experience,
 body.dark #skills,
-body.dark #projects {
+body.dark #projects,
+body.dark #cta-section {
   background-color: #467db4;
   color: #000;
 }
@@ -256,8 +257,8 @@ body.dark #darkModeToggle:hover {
   background: #3ce8ff;
 }
 
-/* Wrapper for centering counter horizontally */
-.counter-container {
+/* Wrapper for centering card horizontally */
+.card-container {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -283,4 +284,68 @@ body.dark #darkModeToggle:hover {
 .cta-section a.btn:hover {
   background: #ff5722;
   transform: scale(1.05);
+}
+
+/* Container */
+.cta-wrap {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: #e9ecef;
+  /* Match your site bg */
+}
+
+/* The Card */
+.cta-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border: 1px solid #333;
+  border-radius: 12px;
+  background: #1a1a1a;
+  /* Slightly lighter than bg */
+  box-shadow: 0 4px 20px rgba(0, 255, 0, 0.05);
+  /* Subtle neon glow */
+}
+
+/* Typography */
+.cta-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.cta-subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-description {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-description strong {
+  color: #00ff88;
+  /* Your neon color */
+}
+
+/* The Button */
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #00ff88;
+  /* Your neon green */
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
 }
