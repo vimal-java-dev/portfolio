@@ -21,7 +21,7 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/common.css">
-  <link rel="stylesheet" href="/css/live-projects.css">
+  <link rel="stylesheet" href="/css/latest-works.css">
   <link rel="stylesheet" href="/css/mini-services.css">
   <link rel="stylesheet" href="/css/dropdown.css">
   <!-- Popup Window CSS -->
@@ -62,8 +62,7 @@
         <ul class="dropdown-menu">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#services-preview">Offering</a></li>
-          <li><a href="#live-projects">Live</a></li>
-          <!-- <li><a href="#visitor-counter">Visitors</a></li> -->
+          <li><a href="#projects">Live</a></li>
         </ul>
       </li>
       <!-- New Services link -->
@@ -84,12 +83,13 @@
     <div class="hero-content">
       <h1>Hello,<br> I'm <span class="highlight">Vimal</span></h1>
       <p>A Passionate <strong>Java Developer</strong> building scalable backend applications.</p>
-      <a href="#live-projects" class="btn">My Work</a>
+      <a href="#projects" class="btn">My Work</a>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="experience" class="container fade-in">
+    <h2 class="section-title">Experience</h2>
     <h2>Competency and Proficiency</h2>
     <p>
       I have a good exposure on Java Technologies with hands-on experience in building backend systems, REST APIs, and
@@ -104,7 +104,7 @@
 
   <!-- Mini Services Preview Section -->
   <section id="services-preview" class="container fade-in">
-    <h2>Services | Offer | Preview</h2>
+    <h2 class="section-title">Services | Offer | Preview</h2>
     <p>Explore professional services to help build and scale your projects:</p><br>
 
     <div class="services-grid">
@@ -135,32 +135,115 @@
     </div>
   </section>
 
-  <!-- Live Projects Section -->
-  <section id="live-projects" class="container fade-in live-projects card-container">
-    <div class="live-projects-card">
-      <h2>Live Websites</h2>
-      <!-- Button to open modal -->
-      <button class="open-modal-btn">View My Work</button>
-    </div>
-  </section>
+  <!-- Latest Works Section -->
+  <section id="projects" class="projects-wrap">
+    <h2 class="section-title">Latest Works</h2>
+    <div class="projects-grid">
 
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="cta-section fade-in" style="--delay:0.6s; margin-bottom: 60px;">
-        <a href="https://sumanenterprise.vercel.app/" target="_blank" class="btn">
-          Suman Enterprise
-        </a><br /><br /><br />
-        <a href="https://chaimakers.vercel.app/" target="_blank" class="btn">
-          Chai Makers Café
-        </a><br /><br /><br />
-        <a href="https://alexfoodcorner.netlify.app/" target="_blank" class="btn">
-          Alex Food Corner
-        </a>
+      <!-- Suman Enterprise Card -->
+      <div class="project-card">
+        <div class="card-inner">
+          <!-- FRONT -->
+          <div class="card-front">
+            <div class="card-thumbnail">
+              <img src="/images/suman-enterprise.png" alt="Suman Enterprise Dashboard" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Suman Enterprise</h3>
+              <p>Full-stack enterprise management dashboard with real-time analytics and user authentication.</p>
+              <div class="tech-stack">
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">Spring Boot</span>
+                <span class="tech-badge">Vue.js</span>
+              </div>
+              <div class="card-links">
+                <a href="https://sumanenterprise.vercel.app/" class="btn-live" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACK (Dribbble-style reveal) -->
+          <div class="card-back">
+            <h3>🔧 Tech Deep Dive</h3>
+            <p>Scalable Java Spring Boot backend with PostgreSQL, React frontend, real-time analytics via WebSockets.
+              Deployed on Vercel with CI/CD.</p>
+            <div class="card-links">
+              <a href="https://sumanenterprise.vercel.app/" class="btn-live" target="_blank">→ Live Site</a>
+              <a href="https://github.com/yourusername/sumanenterprise" class="btn-github" target="_blank">💻 Source
+                Code</a>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Chai Makers Card -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-thumbnail">
+              <img src="/images/chai-makers.png" alt="Chai Makers App" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Chai Makers</h3>
+              <p>Interactive chai shop web app with menu, ordering system, and payment integration.</p>
+              <div class="tech-stack">
+                <span class="tech-badge">Angular</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Stripe</span>
+              </div>
+              <div class="card-links">
+                <a href="https://chaimakers.vercel.app/" class="btn-live" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3>☕ Chai Ordering App</h3>
+            <p>Full e-commerce flow: menu browsing → cart → Razorpay/Stripe checkout. PWA-ready with offline support.
+            </p>
+            <div class="card-links">
+              <a href="https://chaimakers.vercel.app/" class="btn-live" target="_blank">→ Live Site</a>
+              <a href="https://github.com/vimal-tech-dev/chai-makers" class="btn-github" target="_blank">💻 Source
+                Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alex Food Corner Card -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-thumbnail">
+              <img src="/images/alex-food-corner.png" alt="Alex Food Corner" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Alex Food Corner</h3>
+              <p>Modern restaurant website featuring menu display, online ordering, and reservation system.</p>
+              <div class="tech-stack">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Tailwind CSS</span>
+                <span class="tech-badge">Vite</span>
+              </div>
+              <div class="card-links">
+                <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank">Live Demo</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-back">
+            <h3>🍽️ Restaurant Site</h3>
+            <p>Responsive design with menu filtering, WhatsApp ordering integration, Google Maps location, and contact
+              forms.</p>
+            <div class="card-links">
+              <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank">→ Live Site</a>
+              <a href="#" class="btn-github" target="_blank">💻 Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
-  </div>
+  </section><br><br>
 
   <!-- Visiting Card Section -->
   <section id="cta-section" class="cta-wrap">
@@ -182,7 +265,7 @@
 
       <div class="cta-footer">
         <a href="tel:+919638474047" class="cta-button">
-          Start a Project
+          Make your own website
         </a>
       </div>
     </div>

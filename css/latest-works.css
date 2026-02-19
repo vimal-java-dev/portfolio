@@ -1,0 +1,229 @@
+.projects-wrap {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* DRIBBBLE-STYLE INTERACTIVE CARDS */
+.project-card {
+    perspective: 1000px;
+    height: 480px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: white;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-20px) scale(1.02);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    border-radius: 20px;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* STATIC GLOSS + SHIMMER OVERLAY */
+.card-thumbnail {
+    height: 180px;
+    /* was 240px – shorter = more text fits */
+    overflow: hidden;
+    position: relative;
+}
+
+/* .card-thumbnail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(0, 0, 0, 0.1) 100%);
+    z-index: 1;
+} */
+
+.card-thumbnail::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+}
+
+/* SHIMMER ANIMATION (subtle loop) */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.card-thumbnail::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -200%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.4) 50%,
+            transparent 70%);
+    animation: shimmer 3s infinite;
+    z-index: 2;
+}
+
+/* HOVER: Remove shimmer, enhance gradient */
+.project-card:hover .card-thumbnail::after {
+    animation: none;
+    opacity: 0;
+}
+
+.project-card:hover .card-thumbnail::before {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            transparent 50%,
+            rgba(0, 0, 0, 0.2) 100%);
+}
+
+.card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* focus on center of text, not the top empty area */
+    object-position: center center;
+}
+
+.project-card:hover .card-thumbnail img {
+    transform: scale(1.15);
+}
+
+.card-content {
+    padding: 1.8rem;
+}
+
+.card-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.4rem;
+    color: #2c3e50;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.card-links {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.btn-live, .btn-github {
+    flex: 1;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-live {
+    background: #007bff;
+    color: white;
+}
+
+.btn-live:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-github {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-github:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .project-card {
+        height: 480px;
+    }
+}
