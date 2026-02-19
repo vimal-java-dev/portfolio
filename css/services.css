@@ -255,7 +255,9 @@ body.dark .service-card:hover p {
 
 /* Icon Bounce Animation */
 @keyframes iconBounce {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -277,12 +279,70 @@ body.dark #services-offer {
 
 /* Wrapper for centering card horizontally */
 .card-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  /* margin-top: 10px; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* margin-top: 10px; */
 }
 
 body.dark .hamburger {
+    color: #000;
+}
+
+/* Accordion Styles */
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion-header h3 {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.accordion-icon {
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    margin-top: 10px;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 300px;
+    /* safe default */
+}
+
+.accordion-item.active .accordion-icon {
+    transform: rotate(45deg);
+    /* + becomes × */
+}
+
+/* Services Help Your Business */
+#services-help-business {
+    text-align: center;
+    background-color: #ced4da;
+}
+
+body.dark #services-help-business {
+    background-color: #467db4;
+    color: #000;
+}
+
+/* Let’s Build Something Solid */
+#lets-build {
+    text-align: center;
+    background-color: #ced4da;
+}
+
+body.dark #lets-build {
+    background-color: #467db4;
     color: #000;
 }

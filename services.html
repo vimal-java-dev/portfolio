@@ -5,6 +5,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vimal Tech • Services</title>
+
+    <!-- SEO SCHEMA: Services Page -->
+    <!-- include: /seo/services.schema.html -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vimaltech.dev/#organization",
+      "name": "Vimal Tech",
+      "url": "https://vimaltech.dev",
+      "logo": "https://vimaltech.dev/images/logo.jpeg",
+      "email": "vimal.patel@vimaltech.dev",
+      "telephone": "+91-9638474047",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/",
+        "https://github.com/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vimaltech.dev/#website",
+      "url": "https://vimaltech.dev",
+      "name": "Vimal Tech",
+      "publisher": {
+        "@id": "https://vimaltech.dev/#organization"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://vimaltech.dev/services.html#backend",
+      "name": "Backend Development",
+      "serviceType": "Software Development",
+      "provider": {
+        "@id": "https://vimaltech.dev/#organization"
+      },
+      "areaServed": "Worldwide",
+      "description": "Scalable backend development using Java, Spring Boot, and microservices for secure and high-performance applications."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://vimaltech.dev/services.html#cloud",
+      "name": "Cloud Integration",
+      "serviceType": "Cloud Services",
+      "provider": {
+        "@id": "https://vimaltech.dev/#organization"
+      },
+      "areaServed": "Worldwide",
+      "description": "Cloud deployment, integration, and scaling using AWS and modern cloud platforms."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://vimaltech.dev/services.html#database",
+      "name": "Database Management",
+      "serviceType": "Database Services",
+      "provider": {
+        "@id": "https://vimaltech.dev/#organization"
+      },
+      "areaServed": "Worldwide",
+      "description": "Database design, optimization, and management for relational and NoSQL systems."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://vimaltech.dev/services.html#api",
+      "name": "API Development",
+      "serviceType": "API Engineering",
+      "provider": {
+        "@id": "https://vimaltech.dev/#organization"
+      },
+      "areaServed": "Worldwide",
+      "description": "Secure REST API development and third-party integrations for web and mobile applications."
+    }
+  ]
+}
+</script>
+
+    <!-- SEO: Services FAQ Schema -->
+    <!-- include: /seo/services-faq.schema.html -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does a project take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Small projects usually take 2–4 weeks. Larger systems depend on scope and complexity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide post-deployment support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, ongoing maintenance, optimization, and feature enhancements are available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work with existing codebases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, existing systems can be extended, refactored, or optimized."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you help with MVP development?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, MVPs are built with scalable architecture to support future growth."
+      }
+    }
+  ]
+}
+</script>
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -73,8 +198,10 @@
         <div class="gradient-overlay"></div>
         <div class="hero-content">
             <h1>Our <span class="highlight">Professional Services</span></h1>
-            <p>Delivering scalable, secure, and modern efficient solutions for web, mobile, and enterprise systems.
-            </p>
+            <h2>
+                We help startups and businesses build scalable, secure, and high-performance
+                software systems — from backend architecture to cloud-ready deployments.
+            </h2>
             <a href="#live-projects" class="btn">My Work</a>
         </div>
     </section>
@@ -82,41 +209,177 @@
     <!-- Services Section -->
     <section id="services-offer" class="container">
         <h2 class="section-title fade-in">Services We Offer</h2>
-        <p class="fade-in">Explore our expertise to scale your projects efficiently:</p>
+        <h3 class="fade-in">Explore our expertise to scale your projects efficiently:</h3>
 
-        <div class="services-grid">
-            <div class="service-card fade-in" style="--delay:0s;">
-                <i class="fas fa-server"></i>
-                <h3>Backend Development</h3>
-                <p>Scalable applications using Java, Spring Boot, and Microservices.</p>
+        <div class="services-grid accordion">
+
+            <div class="service-card fade-in accordion-item" style="--delay:0s;">
+                <div class="accordion-header">
+                    <i class="fas fa-server"></i>
+                    <h3>Backend Development</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        Design and development of scalable backend systems using Java,
+                        Spring Boot, and Microservices. Ideal for APIs, SaaS platforms,
+                        and enterprise-grade applications.
+                    </p>
+                </div>
             </div>
-            <div class="service-card fade-in" style="--delay:0.1s;">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud Integration</h3>
-                <p>Deploy and manage apps efficiently on AWS and cloud platforms.</p>
+
+            <div class="service-card fade-in accordion-item" style="--delay:0.1s;">
+                <div class="accordion-header">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Integration</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        Cloud-ready deployment, configuration, and scaling using AWS
+                        and modern hosting platforms for reliability and performance.
+                    </p>
+                </div>
             </div>
-            <div class="service-card fade-in" style="--delay:0.2s;">
-                <i class="fas fa-database"></i>
-                <h3>Database Management</h3>
-                <p>Relational and NoSQL database design & management.</p>
+
+            <div class="service-card fade-in accordion-item" style="--delay:0.2s;">
+                <div class="accordion-header">
+                    <i class="fas fa-database"></i>
+                    <h3>Database Management</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        Optimized relational and NoSQL database design, query tuning,
+                        backups, and data integrity management.
+                    </p>
+                </div>
             </div>
-            <div class="service-card fade-in" style="--delay:0.3s;">
-                <i class="fas fa-project-diagram"></i>
-                <h3>Project Consulting</h3>
-                <p>Architecture guidance and microservices design for enterprise projects.</p>
+
+            <div class="service-card fade-in accordion-item" style="--delay:0.3s;">
+                <div class="accordion-header">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Project Consulting</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        System architecture planning, microservices strategy,
+                        and technical guidance to reduce long-term technical debt.
+                    </p>
+                </div>
             </div>
-            <div class="service-card fade-in" style="--delay:0.4s;">
-                <i class="fas fa-code"></i>
-                <h3>API Development</h3>
-                <p>RESTful APIs and integrations for modern web & mobile apps.</p>
+
+            <div class="service-card fade-in accordion-item" style="--delay:0.4s;">
+                <div class="accordion-header">
+                    <i class="fas fa-code"></i>
+                    <h3>API Development</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        Secure REST API development and third-party integrations
+                        for web and mobile applications.
+                    </p>
+                </div>
             </div>
-            <div class="service-card fade-in" style="--delay:0.5s;">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Security & Optimization</h3>
-                <p>Secure, optimized, and maintainable solutions following best practices.</p>
+
+            <div class="service-card fade-in accordion-item" style="--delay:0.5s;">
+                <div class="accordion-header">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Security & Optimization</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>
+                        Performance tuning, security best practices, and maintainable
+                        code standards for long-term system stability.
+                    </p>
+                </div>
             </div>
+
         </div>
     </section><br />
+
+    <section class="container fade-in">
+        <h2 class="section-title">Why Work With Me</h2>
+        <p>
+            I focus on building software that is not only functional today,
+            but scalable, maintainable, and cost-effective in the long run.
+        </p>
+
+        <ul style="margin-top: 20px; line-height: 1.8;">
+            <li>✔ Clean, production-ready backend code</li>
+            <li>✔ Scalable system & microservice architecture</li>
+            <li>✔ Performance-optimized & secure applications</li>
+            <li>✔ Clear communication & structured delivery</li>
+            <li>✔ Long-term support and optimization</li>
+        </ul>
+    </section>
+
+    <section id="services-help-business" class="container fade-in">
+        <h2 class="section-title">How These Services Help Your Business</h2>
+
+        <div style="margin-top: 30px;">
+            <h3>Backend Development</h3>
+            <p>
+                Ideal for applications that require secure APIs, business logic,
+                and high traffic handling. I design backend systems that are
+                stable, scalable, and easy to extend.
+            </p>
+            <hr /><br>
+
+            <h3>Cloud Integration</h3>
+            <p>
+                Suitable for growing products that need reliable deployment,
+                scalability, and cost-optimized infrastructure on cloud platforms.
+            </p>
+            <hr /><br>
+
+            <h3>Database Management</h3>
+            <p>
+                Designed for data-driven applications that require fast queries,
+                reliable storage, and secure data handling.
+            </p>
+            <hr /><br>
+
+            <h3>API Development</h3>
+            <p>
+                Enables seamless communication between web apps, mobile apps,
+                and third-party services using secure REST APIs.
+            </p>
+        </div>
+    </section>
+
+    <section class="container fade-in">
+        <h2 class="section-title">My Working Process</h2>
+
+        <ol style="margin-top: 20px; line-height: 1.9;">
+            <li><strong>Requirement Discussion</strong> – Understand business & technical goals</li>
+            <li><strong>Architecture Planning</strong> – Design scalable system structure</li>
+            <li><strong>Development</strong> – Clean, modular, and testable code</li>
+            <li><strong>Testing & Deployment</strong> – Stability and performance validation</li>
+            <li><strong>Support & Optimization</strong> – Continuous improvements</li>
+        </ol>
+    </section>
+
+    <section class="container fade-in">
+        <h2 class="section-title">Engagement Models</h2>
+
+        <p>
+            I offer flexible engagement options depending on your project needs:
+        </p>
+
+        <ul style="margin-top: 20px; line-height: 1.8;">
+            <li><strong>Project-Based</strong> – Fixed scope with clear deliverables</li>
+            <li><strong>Hourly / Monthly Retainer</strong> – Ongoing development & support</li>
+            <li><strong>Consulting</strong> – Architecture review, planning, and guidance</li>
+        </ul>
+
+        <p style="margin-top: 15px;">
+            Pricing depends on project complexity, timeline, and requirements.
+        </p>
+    </section>
 
     <!-- Live Projects Section -->
     <section id="live-projects" class="container fade-in live-projects card-container">
@@ -150,6 +413,40 @@
         class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <section class="container fade-in">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <div style="margin-top: 25px;">
+            <p><strong>How long does a project take?</strong><br>
+                Small projects usually take 2–4 weeks. Larger systems vary based on scope.
+            </p>
+
+            <p><strong>Do you provide post-deployment support?</strong><br>
+                Yes. I offer maintenance, optimization, and feature enhancements.
+            </p>
+
+            <p><strong>Can you work with existing codebases?</strong><br>
+                Absolutely. I can extend, refactor, or optimize existing systems.
+            </p>
+
+            <p><strong>Do you help with MVP development?</strong><br>
+                Yes. I specialize in MVPs built with scalable architecture.
+            </p>
+        </div>
+    </section>
+
+    <section id="lets-build" class="container fade-in" style="text-align: center;">
+        <h2 class="section-title">Let’s Build Something Solid</h2>
+        <h3 style="margin-top: 15px;">
+            Have an idea or an existing system that needs improvement?
+        </h3>
+        <h4>
+            <a href="contact.html" class="btn" style="margin-top: 20px;">
+                Get in Touch
+            </a>
+        </h4>
+    </section>
 
     <!-- Footer -->
     <footer>
