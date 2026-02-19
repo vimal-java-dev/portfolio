@@ -124,3 +124,29 @@ function updateToggleIcon() {
         darkModeToggle.style.color = "#fff";
     }
 }
+
+// ===== Services Accordion Logic =====
+document.addEventListener("DOMContentLoaded", function () {
+    const accordionItems = document.querySelectorAll(".accordion-item");
+
+    if (!accordionItems.length) return;
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+
+        if (!header) return;
+
+        header.addEventListener("click", () => {
+            const isActive = item.classList.contains("active");
+
+            // Close all
+            accordionItems.forEach(i => i.classList.remove("active"));
+
+            // Open clicked one if it was closed
+            if (!isActive) {
+                item.classList.add("active");
+            }
+        });
+    });
+});
+
