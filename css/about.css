@@ -1,0 +1,271 @@
+/* about.css */
+
+/* =====================================
+   ABOUT PAGE — REFINED DARK-TECH
+===================================== */
+
+:root {
+    --amber: #f59e0b;
+    --amber-light: #fbbf24;
+    --amber-dim: rgba(245, 158, 11, 0.12);
+    --bg-dark: #0b0f1a;
+    --bg-card: #111827;
+    --text-primary: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+    --border: rgba(255, 255, 255, 0.07);
+    --radius: 14px;
+    --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* ── GLOBAL OVERRIDES ───────────────── */
+
+body.about-body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', 'DM Sans', sans-serif;
+}
+
+.about-body .navbar {
+    background-color: rgba(11, 15, 26, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+}
+
+.about-body .navbar .brand-name-vimal {
+    color: #fff;
+}
+
+.about-body .nav-links li a {
+    color: #cbd5e1;
+}
+
+.about-body .nav-links li a:hover,
+.about-body .nav-links li a.active {
+    color: var(--amber);
+}
+
+@media (max-width: 768px) {
+    .about-body .nav-links {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border);
+    }
+}
+
+/* ── PAGE STRUCTURE ─────────────────── */
+
+.about-container {
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+    background: var(--amber-dim);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.brand-badge .logo-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.page-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+/* ── GRID & CARDS ───────────────────── */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 960px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow-card);
+    position: relative;
+}
+
+.card .title {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.card .title em {
+    font-style: italic;
+    color: var(--amber);
+}
+
+.card .subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.card .subtitle strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.badge-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+    margin-bottom: 12px;
+}
+
+.badge-tag .icon {
+    width: 14px;
+    height: 14px;
+    color: var(--amber);
+}
+
+/* ── TECH BADGES ────────────────────── */
+
+.tech-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.tech-badge {
+    font-size: 13px;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-primary);
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.tech-badge:hover {
+    background: var(--amber-dim);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: var(--amber);
+}
+
+/* ── INSPIRATION POLISH ─────────────── */
+
+.inspo {
+    overflow: hidden;
+}
+
+.inspo .panel {
+    position: relative;
+    z-index: 1;
+}
+
+/* Animated spotlight */
+.inspo::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background:
+        radial-gradient(220px 140px at var(--sx, 70%) -20%, rgba(245, 158, 11, 0.15), transparent 60%),
+        radial-gradient(180px 120px at 12% 115%, rgba(234, 88, 12, 0.1), transparent 60%);
+    filter: blur(14px);
+    pointer-events: none;
+    transition: opacity .25s ease;
+    z-index: 0;
+}
+
+.inspo:hover::before {
+    opacity: .95;
+}
+
+/* Soft accent underline */
+.accent-underline {
+    display: block;
+    height: 3px;
+    width: 60px;
+    margin-top: 12px;
+    background: linear-gradient(90deg, var(--amber), #ea580c);
+    border-radius: 999px;
+    opacity: 0.8;
+}
+
+/* ── PILLARS (Value Props) ──────────── */
+
+.pillars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+@media (max-width: 700px) {
+    .pillars {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 430px) {
+    .pillars {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pillar {
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .01));
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    transition: transform .18s ease, border-color 0.2s;
+}
+
+.pillar svg {
+    width: 16px;
+    height: 16px;
+    color: var(--amber);
+    opacity: 0.9;
+    flex: 0 0 16px;
+}
+
+.pillar:hover {
+    transform: translateY(-2px);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+/* Override common.css section radius to let custom cards control it */
+.about-body section {
+    border-radius: var(--radius);
+}
