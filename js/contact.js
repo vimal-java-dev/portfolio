@@ -1,126 +1,119 @@
-// Year
-document.getElementById("year").textContent = new Date().getFullYear();
+// contact.js
+document.addEventListener("DOMContentLoaded", function () {
 
-// Theme toggle with localStorage persistence
-const root = document.documentElement;
-const themeToggle = document.getElementById("themeToggle");
-const sun = document.getElementById("sun");
-const moon = document.getElementById("moon");
+  // 1️⃣ Force "Contact" Link Active
+  // common.js has a ScrollSpy that removes active classes on scroll. 
+  // This function ensures the contact link overrides that behavior.
+  const contactLink = document.querySelector('.nav-links a[href="contact.html"]');
 
-const setTheme = (mode) => {
-  if (mode === "light") {
-    root.classList.add("light");
-    sun.style.display = "none";
-    moon.style.display = "";
-    themeToggle.setAttribute("aria-pressed", "true");
-  } else {
-    root.classList.remove("light");
-    sun.style.display = "";
-    moon.style.display = "none";
-    themeToggle.setAttribute("aria-pressed", "false");
+  function keepContactActive() {
+    if (contactLink) {
+      // Remove active from others, force it on Contact
+      document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+      contactLink.classList.add('active');
+    }
   }
-  localStorage.setItem("prefers-theme", mode);
-};
 
-const saved = localStorage.getItem("prefers-theme");
-if (saved) {
-  setTheme(saved);
-}
-themeToggle.addEventListener("click", () => {
-  const isLight = root.classList.contains("light");
-  setTheme(isLight ? "dark" : "light");
-});
+  // Run on initial load
+  keepContactActive();
 
-// Micro-interactions: gentle tilt on hover for cards
-document.querySelectorAll(".card").forEach((card, i) => {
-  if (card.dataset.static === "true") {
-    return;
-  }
-  card.style.setProperty("--delay", i * 80 + "ms");
-  let rAF;
-  const onMove = (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    cancelAnimationFrame(rAF);
-    rAF = requestAnimationFrame(() => {
-      card.style.transform = `rotateX(${-y * 3}deg) rotateY(${
-        x * 3
-      }deg) translateY(-3px)`;
-    });
-  };
-  const reset = () => {
-    card.style.transform = "";
-  };
-  card.addEventListener("mousemove", onMove);
-  card.addEventListener("mouseleave", reset);
-});
+  // Run on scroll to instantly override common.js
+  window.addEventListener("scroll", keepContactActive);
 
-// Reveal on scroll
-const io = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        io.unobserve(entry.target);
+
+  // 2️⃣ Character Count for Message
+  const messageInput = document.getElementById("message");
+  const charCountSpan = document.getElementById("charCount");
+  const maxChars = 1000;
+
+  if (messageInput && charCountSpan) {
+    messageInput.addEventListener("input", () => {
+      const currentLength = messageInput.value.length;
+      charCountSpan.textContent = `${currentLength} / ${maxChars}`;
+
+      if (currentLength >= maxChars) {
+        charCountSpan.classList.add("at-limit");
+        messageInput.value = messageInput.value.substring(0, maxChars);
+      } else if (currentLength > maxChars * 0.9) {
+        charCountSpan.classList.add("near-limit");
+        charCountSpan.classList.remove("at-limit");
+      } else {
+        charCountSpan.classList.remove("near-limit", "at-limit");
       }
     });
-  },
-  { threshold: 0.2 }
-);
-document.querySelectorAll(".card").forEach((el) => io.observe(el));
-
-/* ============================
-   Scroll-to-Top Button
-============================ */
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 180) {
-      scrollTopBtn.classList.add("show");
-    } else {
-      scrollTopBtn.classList.remove("show");
-    }
-  });
-
-  scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  function makeNoise() {
-    const el = document.querySelector(".noise");
-    if (!el) return;
-
-    const size = 80; // texture tile size
-    const c = document.createElement("canvas");
-    c.width = c.height = size;
-
-    const ctx = c.getContext("2d", { willReadFrequently: false });
-    const img = ctx.createImageData(size, size);
-    const data = img.data;
-
-    // grayscale random pixels with low alpha
-    for (let i = 0; i < data.length; i += 4) {
-      const v = Math.random() * 255;
-      data[i] = data[i + 1] = data[i + 2] = v; // R,G,B
-      data[i + 3] = 12; // alpha (0–255) -> ~0.05 opacity per pixel
-    }
-    ctx.putImageData(img, 0, 0);
-
-    el.style.backgroundImage = `url(${c.toDataURL("image/png")})`;
-    el.style.backgroundRepeat = "repeat";
   }
-});
 
-/* =========================
-   Mobile Navigation Toggle
-========================= */
-const navToggle = document.getElementById("navToggle");
-const navMenu = document.getElementById("navMenu");
+  // 3️⃣ Form Validation & Submission
+  const form = document.getElementById("contactForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const successMsg = document.getElementById("formSuccess");
 
-navToggle.addEventListener("click", () => {
-  const isOpen = navMenu.classList.toggle("open");
-  navToggle.classList.toggle("open", isOpen);
-  navToggle.setAttribute("aria-expanded", isOpen);
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent actual PHP submit for demo purposes
+
+      let isValid = true;
+
+      // Clear previous errors
+      document.querySelectorAll(".field-error").forEach(el => el.classList.remove("visible"));
+      document.querySelectorAll(".input-error").forEach(el => el.classList.remove("input-error"));
+
+      // Validate Name
+      const name = document.getElementById("name");
+      if (!name.value.trim()) {
+        showError("name", "Name is required");
+        isValid = false;
+      }
+
+      // Validate Email
+      const email = document.getElementById("email");
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email.value.trim()) {
+        showError("email", "Email is required");
+        isValid = false;
+      } else if (!emailRegex.test(email.value)) {
+        showError("email", "Please enter a valid email address");
+        isValid = false;
+      }
+
+      // Validate Message
+      const message = document.getElementById("message");
+      if (!message.value.trim()) {
+        showError("message", "Please enter a message");
+        isValid = false;
+      }
+
+      if (isValid) {
+        // Simulate Loading
+        submitBtn.classList.add("loading");
+        submitBtn.querySelector(".btn-text").textContent = "Sending...";
+
+        // Simulate Network Request (1.5 seconds)
+        setTimeout(() => {
+          submitBtn.classList.remove("loading");
+          submitBtn.querySelector(".btn-text").textContent = "Message Sent";
+          form.reset();
+          if (charCountSpan) charCountSpan.textContent = `0 / ${maxChars}`;
+
+          successMsg.classList.add("visible");
+
+          // Reset button text after a while
+          setTimeout(() => {
+            submitBtn.querySelector(".btn-text").textContent = "Send Message";
+          }, 3000);
+        }, 1500);
+      }
+    });
+  }
+
+  function showError(fieldId, message) {
+    const input = document.getElementById(fieldId);
+    const errorSpan = document.getElementById(`error-${fieldId}`);
+
+    if (input) input.classList.add("input-error");
+    if (errorSpan) {
+      errorSpan.textContent = message;
+      errorSpan.classList.add("visible");
+    }
+  }
 });
