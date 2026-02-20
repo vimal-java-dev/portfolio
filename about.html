@@ -4,150 +4,62 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vimal Tech • About</title>
-    <!-- Favicon -->
+    <title>Vimal Tech | About</title>
+
+    <meta name="description"
+        content="Learn more about Vimal Tech, my coding philosophy, and my approach to scalable software development and system architecture." />
+
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- Contact Stylesheet -->
-    <link rel="stylesheet" href="/css/contact.css" />
-    <meta name="description"
-        content="A clean, modern contact page with responsive layout, client-side validation, and a subtle animated aesthetic." />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Map embed */
-        .map-embed {
-            border-top: 1px solid var(--border);
-        }
 
-        .map-embed iframe {
-            width: 100%;
-            height: 240px;
-            border: 0;
-            display: block;
-            border-radius: 0 0 var(--radius-xl) var(--radius-xl);
-        }
+    <link rel="stylesheet" href="/css/common.css">
 
-        /* Inspiration polish */
-        .inspo {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .inspo .panel {
-            position: relative;
-        }
-
-        /* Animated spotlight that follows the cursor a bit */
-        .inspo::before {
-            content: "";
-            position: absolute;
-            inset: -2px;
-            background:
-                radial-gradient(220px 140px at var(--sx, 70%) -20%, rgba(122, 167, 255, .18), transparent 60%),
-                radial-gradient(180px 120px at 12% 115%, rgba(42, 212, 161, .12), transparent 60%);
-            filter: blur(14px);
-            pointer-events: none;
-            transition: opacity .25s ease;
-        }
-
-        .inspo:hover::before {
-            opacity: .95
-        }
-
-        /* Soft accent underline under the title */
-        .accent-underline {
-            display: block;
-            height: 6px;
-            margin-top: 6px;
-            background: linear-gradient(90deg, var(--brand), var(--ok));
-            border-radius: 999px;
-            filter: blur(6px);
-            opacity: .55;
-        }
-
-        /* Pillars grid (tiny value props) */
-        .pillars {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 12px;
-            margin-top: 14px;
-        }
-
-        @media (max-width:700px) {
-            .pillars {
-                grid-template-columns: 1fr 1fr
-            }
-        }
-
-        @media (max-width:430px) {
-            .pillars {
-                grid-template-columns: 1fr
-            }
-        }
-
-        .pillar {
-            border: 1px solid var(--border);
-            background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .01));
-            border-radius: 12px;
-            padding: 12px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            font-size: 14px;
-            color: var(--muted);
-            transition: transform .18s ease;
-        }
-
-        .pillar svg {
-            width: 16px;
-            height: 16px;
-            opacity: .9;
-            flex: 0 0 16px
-        }
-
-        .pillar:hover {
-            transform: translateY(-2px)
-        }
-    </style>
+    <link rel="stylesheet" href="/css/about.css">
 </head>
 
-<body>
-    <nav class="navbar" aria-label="Primary navigation">
-        <div class="nav-inner">
-            <img src="/images/logo.jpeg" alt="Brand Logo" class="logo">
-            <a href="index.html" class="nav-brand">Vimal Tech</a>
+<body class="about-body">
 
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+    <nav class="navbar">
+        <div>
+            <a href="index.html" class="brand">
+                <img src="/images/logo.jpeg" alt="Vimal Tech Logo" class="logo">
+                <span class="brand-name">
+                    <span class="brand-name-vimal">Vimal</span>
+                    <span class="brand-name-tech">Tech</span>
+                </span>
+            </a>
+        </div>
 
-            <ul class="nav-links" id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="expertise.html">Expertise</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-            </ul>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="expertise.html">Expertise</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+        </ul>
+
+        <div class="nav-toggle-wrapper">
+            <div class="hamburger" id="hamburger">☰</div>
         </div>
     </nav>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="container">
-        <header>
-            <div class="brand" aria-label="Brand">
-                <div class="logo" aria-hidden="true">
+
+    <main class="container about-container">
+
+        <header class="about-header fade-in">
+            <div class="brand-badge" aria-label="Brand">
+                <div class="logo-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path
                             d="M12 2l3.09 6.26L22 9.27l-5 4.88L18.18 22 12 18.77 5.82 22 7 14.15l-5-4.88 6.91-1.01L12 2z" />
                     </svg>
                 </div>
-                <span>JAVA DEV</span>
-                <div class="logo" aria-hidden="true">
+                <span>JAVA DEVELOPER</span>
+                <div class="logo-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path
@@ -155,29 +67,15 @@
                     </svg>
                 </div>
             </div>
-            <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle theme">
-                <svg id="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="5" />
-                    <path
-                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-                </svg>
-                <svg id="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"
-                    aria-hidden="true">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-                </svg>
-                <span>Theme</span>
-            </button>
+            <h1 class="page-title">About Me</h1>
         </header>
 
-        <div class="grid">
+        <div class="grid fade-in">
 
-            <!-- Left: Inspiration card -->
             <section class="card" aria-label="Inspiration">
                 <div class="sparkle" aria-hidden="true"></div>
                 <div class="panel">
-                    <div class="badge" aria-hidden="true">
+                    <div class="badge-tag" aria-hidden="true">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" />
@@ -188,28 +86,27 @@
                     <p class="subtitle quote">Tools and technologies I <strong>love</strong> working with.</p>
 
                     <div class="tech-badges">
-                        <span class="badge">React</span>
-                        <span class="badge">Node.js</span>
-                        <span class="badge">Angular</span>
-                        <span class="badge">MongoDB</span>
-                        <span class="badge">Flutter</span>
-                        <span class="badge">Firebase</span>
-                        <span class="badge">TypeScript</span>
-                        <span class="badge">Tailwind</span>
-                        <span class="badge">Vite</span>
-                        <span class="badge">HTML</span>
-                        <span class="badge">CSS</span>
-                        <span class="badge">JS</span>
-                        <span class="badge">Bootstrap</span>
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Node.js</span>
+                        <span class="tech-badge">Angular</span>
+                        <span class="tech-badge">MongoDB</span>
+                        <span class="tech-badge">Flutter</span>
+                        <span class="tech-badge">Firebase</span>
+                        <span class="tech-badge">TypeScript</span>
+                        <span class="tech-badge">Tailwind</span>
+                        <span class="tech-badge">Vite</span>
+                        <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span>
+                        <span class="tech-badge">JS</span>
+                        <span class="tech-badge">Bootstrap</span>
                     </div>
                 </div>
             </section>
 
-            <!-- Right: Info card -->
             <section class="card inspo" aria-label="Inspiration">
                 <div class="sparkle" aria-hidden="true"></div>
                 <div class="panel" onmousemove="this.closest('.inspo').style.setProperty('--sx', event.offsetX + 'px')">
-                    <div class="badge" aria-hidden="true">
+                    <div class="badge-tag" aria-hidden="true">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" />
@@ -223,13 +120,12 @@
                     <span class="accent-underline" aria-hidden="true"></span>
 
                     <p class="subtitle quote" style="margin-top:10px">
-                        -> My philosophy on coding and software development.</br>
+                        &#8594; My philosophy on coding and software development.<br><br>
                         • "The best code is not just functional; it is <strong>intentional</strong>. I merge a
-                        foundation of discipline
-                        in
-                        computer psychology with an <strong>active curiosity</strong> for evolving technology, ensuring
-                        every app I
-                        deliver has clean architecture, predictable results, and <strong>genuine longevity</strong>."
+                        foundation of discipline in computer psychology with an <strong>active curiosity</strong> for
+                        evolving technology, ensuring
+                        every app I deliver has clean architecture, predictable results, and <strong>genuine
+                            longevity</strong>."
                     </p>
 
                     <div class="pillars" aria-label="Core strengths">
@@ -250,17 +146,16 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M3 12h18M12 3v18" />
                             </svg>
-                            Build with diagram
+                            Build with a diagram
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Bottom: Brief Info card -->
             <section class="card inspo" aria-label="Inspiration">
                 <div class="sparkle" aria-hidden="true"></div>
                 <div class="panel" onmousemove="this.closest('.inspo').style.setProperty('--sx', event.offsetX + 'px')">
-                    <div class="badge" aria-hidden="true">
+                    <div class="badge-tag" aria-hidden="true">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" />
@@ -274,8 +169,8 @@
                     <span class="accent-underline" aria-hidden="true"></span>
 
                     <p class="subtitle quote" style="margin-top:10px">
-                        -> I feel there should be the <strong>unique blend</strong> of mental discipline and technical
-                        craft.</br>
+                        &#8594; I feel there should be the <strong>unique blend</strong> of mental discipline and
+                        technical craft.<br><br>
                         • "I build modern web and mobile applications where <strong>clean architecture</strong> meets
                         human understanding. Driven by the discipline of computer psychology and an insatiable curiosity
                         for <strong>cutting-edge</strong> technology, my commitment is always to predictable delivery
@@ -306,11 +201,10 @@
                 </div>
             </section>
 
-            <!-- Bottom: Brief Info card -->
             <section class="card inspo" aria-label="Inspiration">
                 <div class="sparkle" aria-hidden="true"></div>
                 <div class="panel" onmousemove="this.closest('.inspo').style.setProperty('--sx', event.offsetX + 'px')">
-                    <div class="badge" aria-hidden="true">
+                    <div class="badge-tag" aria-hidden="true">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 2l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" />
@@ -324,13 +218,12 @@
                     <span class="accent-underline" aria-hidden="true"></span>
 
                     <p class="subtitle quote" style="margin-top:10px">
-                        -> These highlight my drive to <strong>stay current</strong> while ensuring stability.</br>
-
+                        &#8594; These highlight my drive to <strong>stay current</strong> while ensuring
+                        stability.<br><br>
                         • "My process is <strong>rooted</strong> in discipline, insight, and innovation. From clean
-                        architecture to
-                        predictable delivery, I <strong>leverage</strong> my background to build more than just apps—I
-                        build long-lasting
-                        solutions that <strong>deeply</strong> understand the end-user."
+                        architecture to predictable delivery, I <strong>leverage</strong> my background to build more
+                        than just apps—I build long-lasting solutions that <strong>deeply</strong> understand the
+                        end-user."
                     </p>
 
                     <div class="pillars" aria-label="Core strengths">
@@ -345,7 +238,7 @@
                                 <rect x="3" y="4" width="18" height="16" rx="2" />
                                 <path d="M7 8h10M7 12h6M7 16h8" />
                             </svg>
-                            Understand boilerplate-code
+                            Understand boilerplate
                         </div>
                         <div class="pillar">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -357,24 +250,16 @@
                 </div>
             </section>
         </div>
+    </main>
 
-        <!-- Scroll to Top Button -->
-        <button id="scrollTopBtn" aria-label="Scroll to top">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M18 15l-6-6-6 6" />
-            </svg>
-        </button>
+    <footer>
+        <p>Contact No: 9638 474047</p>
+        <p>Email: vimal.patel@vimaltech.dev</p>
+        <p>© 2026 Vimal Patel | Java Developer</p>
+    </footer>
 
-        <footer
-            style="margin: 22px 0; color: var(--muted); display:flex; align-items:center; justify-content:space-between; gap:16px; font-size: 13px; padding: 1.2rem;">
-            <span>© <span id="year"></span><br>Vimal Tech.<br>All rights reserved.</span>
-            <span>Made with ❤️<br>In Valsad.</span>
-        </footer>
-    </div>
-
-    <!-- JS -->
-    <script src="/js/contact.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/about.js"></script>
 </body>
 
 </html>
