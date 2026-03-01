@@ -1,16 +1,19 @@
 // contact.js
 document.addEventListener("DOMContentLoaded", function () {
-
   // 1️⃣ Force "Contact" Link Active
-  // common.js has a ScrollSpy that removes active classes on scroll. 
+  // common.js has a ScrollSpy that removes active classes on scroll.
   // This function ensures the contact link overrides that behavior.
-  const contactLink = document.querySelector('.nav-links a[href="contact.html"]');
+  const contactLink = document.querySelector(
+    '.nav-links a[href="contact.html"]'
+  );
 
   function keepContactActive() {
     if (contactLink) {
       // Remove active from others, force it on Contact
-      document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
-      contactLink.classList.add('active');
+      document
+        .querySelectorAll(".nav-links a")
+        .forEach((link) => link.classList.remove("active"));
+      contactLink.classList.add("active");
     }
   }
 
@@ -19,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Run on scroll to instantly override common.js
   window.addEventListener("scroll", keepContactActive);
-
 
   // 2️⃣ Character Count for Message
   const messageInput = document.getElementById("message");
@@ -55,8 +57,12 @@ document.addEventListener("DOMContentLoaded", function () {
       let isValid = true;
 
       // Clear previous errors
-      document.querySelectorAll(".field-error").forEach(el => el.classList.remove("visible"));
-      document.querySelectorAll(".input-error").forEach(el => el.classList.remove("input-error"));
+      document
+        .querySelectorAll(".field-error")
+        .forEach((el) => el.classList.remove("visible"));
+      document
+        .querySelectorAll(".input-error")
+        .forEach((el) => el.classList.remove("input-error"));
 
       // Validate Name
       const name = document.getElementById("name");
@@ -84,24 +90,56 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (isValid) {
-        // Simulate Loading
         submitBtn.classList.add("loading");
         submitBtn.querySelector(".btn-text").textContent = "Sending...";
 
-        // Simulate Network Request (1.5 seconds)
-        setTimeout(() => {
-          submitBtn.classList.remove("loading");
-          submitBtn.querySelector(".btn-text").textContent = "Message Sent";
-          form.reset();
-          if (charCountSpan) charCountSpan.textContent = `0 / ${maxChars}`;
+        const formData = {
+          name: name.value.trim(),
+          email: email.value.trim(),
+          subject: document.getElementById("subject").value.trim(),
+          message: message.value.trim(),
+        };
 
-          successMsg.classList.add("visible");
+        fetch("https://api.vimaltech.dev/api/v1/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Server error");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            if (data.success) {
+              submitBtn.classList.remove("loading");
+              submitBtn.querySelector(".btn-text").textContent = "Message Sent";
 
-          // Reset button text after a while
-          setTimeout(() => {
+              form.reset();
+              if (charCountSpan) charCountSpan.textContent = `0 / ${maxChars}`;
+
+              successMsg.classList.add("visible");
+
+              setTimeout(() => {
+                submitBtn.querySelector(".btn-text").textContent =
+                  "Send Message";
+                successMsg.classList.remove("visible");
+              }, 3000);
+            } else {
+              throw new Error(data.message);
+            }
+          })
+          .catch((error) => {
+            console.error("API Error:", error);
+
+            submitBtn.classList.remove("loading");
             submitBtn.querySelector(".btn-text").textContent = "Send Message";
-          }, 3000);
-        }, 1500);
+
+            alert("Submission failed. Please try again.");
+          });
       }
     });
   }
