@@ -84,8 +84,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Validate Message
       const message = document.getElementById("message");
-      if (!message.value.trim()) {
+      const messageText = message.value.trim();
+
+      if (!messageText) {
         showError("message", "Please enter a message");
+        isValid = false;
+      } else if (messageText.length < 10) {
+        showError("message", "Message must be at least 10 characters");
         isValid = false;
       }
 
@@ -100,18 +105,26 @@ document.addEventListener("DOMContentLoaded", function () {
           message: message.value.trim(),
         };
 
-        fetch("https://api.vimaltech.dev/api/v1/contact", {
+        const API_BASE =
+          window.location.hostname === "localhost"
+            ? "http://localhost:8080"
+            : "https://api.vimaltech.dev";
+
+        fetch(`${API_BASE}/api/v1/contact`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
         })
-          .then((response) => {
+          .then(async (response) => {
+            const data = await response.json();
+
             if (!response.ok) {
-              throw new Error("Server error");
+              throw new Error(data.message || "Server error");
             }
-            return response.json();
+
+            return data;
           })
           .then((data) => {
             if (data.success) {
