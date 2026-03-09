@@ -122,6 +122,11 @@ section {
     color: #ff6347;
 }
 
+.nav-links a.active {
+    color: #00bcd4;
+    font-weight: 600;
+}
+
 /* Hamburger menu */
 .hamburger {
     display: none;

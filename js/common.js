@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Close the menu when any nav link is clicked
-    navItems.forEach(link => {
+    navItems.forEach((link) => {
       link.addEventListener("click", () => {
         if (navLinks.classList.contains("active")) {
           navLinks.classList.remove("active");
@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ✅ NEW: Close the menu when clicking outside */
     document.addEventListener("click", (event) => {
-      const isClickInside = navLinks.contains(event.target) || hamburger.contains(event.target);
+      const isClickInside =
+        navLinks.contains(event.target) || hamburger.contains(event.target);
       if (!isClickInside && navLinks.classList.contains("active")) {
         navLinks.classList.remove("active");
         hamburger.classList.remove("active");
@@ -67,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
 
         // Get the index of this element in the NodeList
@@ -82,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, appearOptions);
 
     // Observe each .fade-in element
-    faders.forEach(fader => appearOnScroll.observe(fader));
+    faders.forEach((fader) => appearOnScroll.observe(fader));
   }
 
   /* ============================
@@ -94,18 +95,27 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", () => {
       let current = "";
 
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+        if (
+          pageYOffset >= sectionTop &&
+          pageYOffset < sectionTop + sectionHeight
+        ) {
           current = section.getAttribute("id");
         }
       });
 
-      navItems.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-          link.classList.add("active");
+      navItems.forEach((link) => {
+        const href = link.getAttribute("href");
+
+        // Only apply scroll spy to section links (#)
+        if (href.startsWith("#")) {
+          link.classList.remove("active");
+
+          if (href === `#${current}`) {
+            link.classList.add("active");
+          }
         }
       });
     });
@@ -114,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dropdown toggle for Desktop
   const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-  dropdownToggles.forEach(toggle => {
+  dropdownToggles.forEach((toggle) => {
     toggle.addEventListener("click", (e) => {
       e.preventDefault();
       const parent = toggle.parentElement;
@@ -130,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Ensure all dropdowns are closed on page load (prevents an open menu after refresh)
   function resetDropdowns() {
     const dropdowns = document.querySelectorAll(".dropdown");
-    dropdowns.forEach(drop => {
+    dropdowns.forEach((drop) => {
       drop.classList.remove("open");
       const menu = drop.querySelector(".dropdown-menu");
       if (menu) menu.style.display = "none";
@@ -142,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const isDropdownToggle = e.target.matches(".dropdown-toggle");
     const dropdown = e.target.closest(".dropdown");
 
-    document.querySelectorAll(".dropdown").forEach(drop => {
+    document.querySelectorAll(".dropdown").forEach((drop) => {
       const menu = drop.querySelector(".dropdown-menu");
 
       // If clicked outside this dropdown, close it
@@ -153,4 +163,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* ============================
+   Active Navbar Link per Page
+============================ */
+  const currentPage = window.location.pathname.split("/").pop();
+
+  navItems.forEach((link) => {
+    const linkPage = link.getAttribute("href");
+
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    }
+
+    // Special case: homepage
+    if (
+      (currentPage === "" || currentPage === "/") &&
+      linkPage === "index.html"
+    ) {
+      link.classList.add("active");
+    }
+  });
 });
