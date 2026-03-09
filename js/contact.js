@@ -1,27 +1,7 @@
 // contact.js
 document.addEventListener("DOMContentLoaded", function () {
   // 1️⃣ Force "Contact" Link Active
-  // common.js has a ScrollSpy that removes active classes on scroll.
-  // This function ensures the contact link overrides that behavior.
-  const contactLink = document.querySelector(
-    '.nav-links a[href="contact.html"]'
-  );
-
-  function keepContactActive() {
-    if (contactLink) {
-      // Remove active from others, force it on Contact
-      document
-        .querySelectorAll(".nav-links a")
-        .forEach((link) => link.classList.remove("active"));
-      contactLink.classList.add("active");
-    }
-  }
-
-  // Run on initial load
-  keepContactActive();
-
-  // Run on scroll to instantly override common.js
-  window.addEventListener("scroll", keepContactActive);
+  // Code removed because common.js handles this with ScrollSpy.
 
   // 2️⃣ Character Count for Message
   const messageInput = document.getElementById("message");
