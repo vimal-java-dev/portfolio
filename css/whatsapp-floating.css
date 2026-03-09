@@ -1,8 +1,8 @@
 /* ===== WhatsApp Button ===== */
 .whatsapp-float {
     position: fixed;
-    bottom: 171px;
-    right: 20px;
+    bottom: 150px;
+    right: 10px;
     z-index: 1000;
     background-color: #25d366;
     color: #fff;
