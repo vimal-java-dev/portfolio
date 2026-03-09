@@ -652,8 +652,22 @@ body.contact-body {
     border-radius: 0;
 }
 
-/* Force the Contact link to stay highlighted, overriding common.js */
-.contact-body .nav-links li a[href="contact.html"],
-.contact-body .nav-links li a[href="contact.html"].active {
-    color: var(--amber) !important;
+.map-button {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.map-open-btn {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #0a66c2;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.map-open-btn:hover {
+    background: #084a8c;
 }
