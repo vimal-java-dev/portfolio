@@ -59,7 +59,17 @@
   <link rel="stylesheet" href="/css/open-modal-btn.css">
   <link rel="stylesheet" href="/css/whatsapp-floating.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    a {
+      color: sandybrown;
+    }
+
+    a:hover {
+      color: blue;
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -77,16 +87,6 @@
   </script>
 
 </head>
-
-<style>
-  a {
-    color: sandybrown;
-  }
-
-  a:hover {
-    color: blue;
-  }
-</style>
 
 <body>
   <!-- Header / Navbar -->
@@ -186,6 +186,43 @@
     <h2 class="section-title">Latest Works</h2>
     <div class="projects-grid">
 
+      <!-- Alex Food Corner Card -->
+      <div class="project-card">
+        <div class="card-inner">
+          <div class="card-front">
+            <div class="card-thumbnail">
+              <img src="/images/alex-food-corner.png" alt="Alex Food Corner" loading="lazy">
+            </div>
+            <div class="card-content">
+              <h3>Alex Food Corner</h3>
+              <p>Modern restaurant website featuring menu display, online ordering and reservation system.</p>
+              <div class="tech-stack">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Tailwind CSS</span>
+                <span class="tech-badge">Vite</span>
+              </div>
+              <div class="card-links">
+                <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">Live
+                  Demo</a>
+              </div>
+            </div>
+          </div>
+          <!-- BACK (Dribbble-style reveal) -->
+          <div class="card-back">
+            <h3>🍽️ Restaurant Site</h3>
+            <p>Responsive design with menu filtering, WhatsApp ordering integration, Google Maps location, and contact
+              forms.</p>
+            <div class="card-links">
+              <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">→ Live
+                Site</a>
+              <a href="https://github.com/vimal-tech-dev/alex-food-corner" class="btn-github" target="_blank">
+                💻 Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Suman Enterprise Card -->
       <div class="project-card">
         <div class="card-inner">
@@ -208,7 +245,6 @@
               </div>
             </div>
           </div>
-
           <!-- BACK (Dribbble-style reveal) -->
           <div class="card-back">
             <h3>🔧 Tech Deep Dive</h3>
@@ -217,7 +253,7 @@
             <div class="card-links">
               <a href="https://sumanenterprise.vercel.app/" class="btn-live" target="_blank" rel="noopener">→ Live
                 Site</a>
-              <a href="https://github.com/yourusername/sumanenterprise" class="btn-github" target="_blank">💻 Source
+              <a href="https://github.com/vimal-tech-dev/suman-enterprise" class="btn-github" target="_blank">💻 Source
                 Code</a>
             </div>
           </div>
@@ -244,6 +280,7 @@
               </div>
             </div>
           </div>
+          <!-- BACK (Dribbble-style reveal) -->
           <div class="card-back">
             <h3>☕ Chai Ordering App</h3>
             <p>Full e-commerce flow: menu browsing → cart → Razorpay/Stripe checkout. PWA-ready with offline support.
@@ -256,41 +293,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Alex Food Corner Card -->
-      <div class="project-card">
-        <div class="card-inner">
-          <div class="card-front">
-            <div class="card-thumbnail">
-              <img src="/images/alex-food-corner.png" alt="Alex Food Corner" loading="lazy">
-            </div>
-            <div class="card-content">
-              <h3>Alex Food Corner</h3>
-              <p>Modern restaurant website featuring menu display, online ordering, and reservation system.</p>
-              <div class="tech-stack">
-                <span class="tech-badge">React</span>
-                <span class="tech-badge">Tailwind CSS</span>
-                <span class="tech-badge">Vite</span>
-              </div>
-              <div class="card-links">
-                <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">Live
-                  Demo</a>
-              </div>
-            </div>
-          </div>
-          <div class="card-back">
-            <h3>🍽️ Restaurant Site</h3>
-            <p>Responsive design with menu filtering, WhatsApp ordering integration, Google Maps location, and contact
-              forms.</p>
-            <div class="card-links">
-              <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">→ Live
-                Site</a>
-              <a href="#" class="btn-github" target="_blank">💻 Source Code</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
 
     </div>
   </section><br><br>
@@ -328,12 +330,46 @@
   </a>
 
   <!-- Footer -->
-  <footer>
-    <p><strong>Vimal Tech</strong> – Java Backend Development</p>
-    <p>Phone: +91 9638 474047</p>
-    <p>Email: vimal.patel@vimaltech.dev</p>
-    <p>Valsad, Gujarat, India</p>
-    <p>© 2026 Vimal Patel</p>
+  <footer class="site-footer">
+    <div class="footer-divider"></div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Vimal Tech</h3>
+        <p>
+          Freelance Software Development Services<br />
+          As an Independent Software Development Studio
+        </p><br />
+        <p class="msme">
+          MSME Registered Micro Enterprise<br />
+          Under the Ministry of Micro, Small and Medium Enterprises<br />
+          Government of India
+        </p><br />
+        <p class="udyam">
+          Udyam Registration Number: UDYAM-GJ-25-0089795
+        </p>
+        <p class="udyam-verify">
+          <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank" rel="noopener">
+            ✓ Verify MSME Registration
+          </a>
+        </p>
+      </div>
+      <div class="footer-right">
+        <p><strong>Vimal Patel</strong></p>
+        <p>Founder & Software Developer</p><br />
+        <p>Phone: <a href="tel:+919638474047">+91 9638 474047</a></p>
+        <p>Email: <a href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a></p>
+        <p>Valsad, Gujarat, India - 396001</p><br />
+        <div class="footer-social">
+          <a href="https://github.com/vimal-tech-dev" target="_blank" rel="noopener"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vimaltech/" target="_blank" rel="noopener"><i
+              class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 - 2026 Vimal Tech • Built frontend with HTML, CSS & JavaScript</p>
+    </div>
   </footer>
 
   <!-- Dark Mode Toggle -->
