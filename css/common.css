@@ -199,14 +199,143 @@ section {
 /* ===================================================
    ===== Footer =====
 =================================================== */
-footer {
+
+.site-footer {
+    background: linear-gradient(180deg, #0f172a, #020617);
+    color: #e5e7eb;
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+.footer-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-bottom: 35px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-right {
+    flex: 1;
+    min-width: 260px;
+    text-align: right;
+}
+
+.site-footer h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.site-footer p {
+    margin: 6px 0;
+    line-height: 1.5;
+}
+
+.msme,
+.udyam {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    margin-left: 12px;
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.site-footer a {
+    color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+    }
+
+}
+
+.footer-social a,
+.site-footer a {
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.footer-social a:hover,
+.site-footer a:hover {
+    transform: translateY(-2px);
+    opacity: 1;
+    color: #93c5fd;
+    text-decoration: underline;
+}
+
+.site-footer {
+    animation: footerFade 0.8s ease-in-out;
+}
+
+@keyframes footerFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 35px;
+    padding-top: 18px;
     text-align: center;
-    padding: 1.2rem;
-    background: #222;
-    color: #fff;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* =========================================
+======= Verify MSME Registration ========
+=========================================  */
+
+.udyam-verify a {
+  font-size: 13px;
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.udyam-verify a:hover {
+  text-decoration: underline;
 }
 
 /* ===================================================
