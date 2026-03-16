@@ -200,42 +200,56 @@ section {
    ===== Footer =====
 =================================================== */
 
+/* ===== Footer ===== */
+
 .site-footer {
     background: linear-gradient(180deg, #0f172a, #020617);
     color: #e5e7eb;
-    padding: 40px 20px;
+    padding: 60px 20px;
     font-size: 14px;
 }
 
+/* top divider */
 .footer-divider {
     height: 1px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgb(208, 255, 0);
     margin-bottom: 35px;
 }
 
+/* container */
 .footer-container {
     max-width: 1100px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
 }
 
-.footer-left {
+/* 3-Column Layout */
+.footer-left,
+.footer-center,
+.footer-links {
     flex: 1;
-    min-width: 280px;
+    max-width: 320px;
 }
 
-.footer-right {
-    flex: 1;
-    min-width: 260px;
+.footer-center {
+    border-left: 1px solid rgb(208, 255, 0);
+    border-right: 1px solid rgb(208, 255, 0);
+    padding: 0 80px;
+}
+
+.footer-links {
     text-align: right;
 }
 
+/* typography */
+
 .site-footer h3 {
-    margin-bottom: 8px;
     font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .site-footer p {
@@ -243,85 +257,134 @@ section {
     line-height: 1.5;
 }
 
-.msme,
-.udyam {
-    font-size: 13px;
+.tagline {
+    font-weight: 500;
+}
+
+.studio-line {
     opacity: 0.8;
 }
 
+/* brand divider */
+
+.brand-divider-left,
+.brand-divider-center,
+.brand-divider-right {
+    width: 50px;
+    height: 2px;
+    background: #60a5fa;
+    margin: 14px 0 18px 0;
+}
+
+/* MSME text */
+
+.msme,
+.udyam {
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* links */
+
+.site-footer a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #93c5fd;
+}
+
+/* social icons */
+
 .footer-social {
+    display: flex;
+    gap: 16px;
     margin-top: 10px;
 }
 
 .footer-social a {
-    margin-left: 12px;
-    color: #60a5fa;
-    text-decoration: none;
-    font-size: 14px;
+    margin: 0;
 }
 
-.footer-social a:hover {
-    text-decoration: underline;
+.footer-social i {
+    font-size: 24px;
 }
 
-.site-footer a {
-    color: #60a5fa;
+/* bottom bar */
+
+.footer-bottom {
+    border-top: 1px solid rgb(208, 255, 0);
+    margin-top: 30px;
+    padding-top: 18px;
+    text-align: center;
+    opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+/* ===== Mobile ===== */
+
+@media (max-width:768px) {
 
     .footer-container {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
+        gap: 30px;
     }
 
-    .footer-right {
-        text-align: center;
+    .footer-social {
+        display: flex;
+        gap: 16px;
+        margin-top: 10px;
     }
 
     .footer-social a {
-        margin: 0 10px;
+        margin: 0;
     }
 
+    .footer-social i {
+        font-size: 22px;
+    }
+
+    .brand-divider-left,
+    .brand-divider-center,
+    .brand-divider-right {
+        width: 50px;
+        height: 2px;
+        background: #60a5fa;
+        margin: 14px 0;
+    }
+
+    .footer-center {
+        border: none;
+        padding: 0;
+    }
+
+    .footer-links {
+        text-align: left;
+    }
 }
 
-.footer-social a,
-.site-footer a {
-    transition: all 0.25s ease;
+.footer-left p,
+.footer-right p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+/* ==========================
+====== Quick Links =======
+========================== */
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links a {
     text-decoration: none;
+    color: #60a5fa;
 }
 
-.footer-social a:hover,
-.site-footer a:hover {
-    transform: translateY(-2px);
-    opacity: 1;
-    color: #93c5fd;
+.footer-links a:hover {
     text-decoration: underline;
-}
-
-.site-footer {
-    animation: footerFade 0.8s ease-in-out;
-}
-
-@keyframes footerFade {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    margin-top: 35px;
-    padding-top: 18px;
-    text-align: center;
-    font-size: 13px;
-    opacity: 0.8;
 }
 
 /* =========================================
@@ -329,13 +392,13 @@ section {
 =========================================  */
 
 .udyam-verify a {
-  font-size: 13px;
-  color: #60a5fa;
-  text-decoration: none;
+    font-size: 13px;
+    color: #60a5fa;
+    text-decoration: none;
 }
 
 .udyam-verify a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* ===================================================
