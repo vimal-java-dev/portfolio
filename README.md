@@ -1,13 +1,21 @@
-# vimaltech.dev
-## Java Developer Portfolio
-### Click to open Shorter URL <a href="https://vimaltech.dev/" target="_blank" rel="noopener noreferrer">vimaltech.dev</a>
+# Vimal Tech Portfolio
 
-**Home** [Open](https://vimaltech.dev/index.html#hero)
+Personal portfolio for Vimal Patel — Java Backend Developer.
 
-**Services** [Open](https://vimaltech.dev/services.html#hero)
+## Tech Stack
 
-**Expertise** [Open](https://vimaltech.dev/expertise.html#hero)
+HTML  
+CSS  
+JavaScript
 
-**Contact** [Open](https://vimaltech.dev/contact.html)
+## Website
 
-**About** [Open](https://vimaltech.dev/about.html)
+https://vimaltech.dev
+
+## Structure
+
+/pages handled via folder-based routing:
+/about
+/services
+/expertise
+/contact
