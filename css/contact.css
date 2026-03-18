@@ -31,26 +31,29 @@ body.contact-body {
 
 /* Override Common Navbar to be Dark */
 .contact-body .navbar {
-    background-color: rgba(11, 15, 26, 0.95);
+    background-color: #4b76ad;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
     color: var(--text-primary);
 }
 
 .contact-body .navbar .brand-name-vimal {
-    color: #fff;
+    color: #000000;
     /* White instead of black */
 }
 
 .contact-body .nav-links li a {
-    color: #cbd5e1;
+    color: rgb(0, 0, 0);
     /* Light grey instead of dark grey */
 }
 
-.contact-body .nav-links li a:hover,
-.contact-body .nav-links li a.active {
+.contact-body .nav-links li a:hover {
     color: var(--amber);
     /* Amber instead of Tomato red */
+}
+
+.contact-body .nav-links li a.active {
+    color: rgb(255, 255, 255);
 }
 
 /* Fix mobile menu background on dark page */

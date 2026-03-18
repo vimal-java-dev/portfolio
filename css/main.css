@@ -73,122 +73,6 @@
 }
 
 /* ===================================================
-   ===== Skills Section =====
-=================================================== */
-#skills {
-  text-align: center;
-  background-color: #dee2e6;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 1.2rem;
-}
-
-.skill-card {
-  background: #fff;
-  padding: 1.5rem;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.skill-card i {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #ff9800;
-}
-
-.skill-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* ===================================================
-   ===== Projects Section =====
-=================================================== */
-#projects {
-  text-align: center;
-  background-color: #ced4da;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.project-card a {
-  text-decoration: none;
-  color: black;
-}
-
-.project-card a:hover {
-  color: blue;
-}
-
-body.dark .project-card a {
-  color: white;
-}
-
-body.dark .project-card a:hover {
-  color: #467db4;
-}
-
-/* ===================================================
-   ===== Portfolio Section =====
-=================================================== */
-#portfolio {
-  text-align: center;
-  /* height: 20vh; */
-}
-
-.portfolio .btn {
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 30px;
-  background: #ff9800;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.portfolio .btn:hover {
-  background: #e68900;
-  transform: translateY(-3px);
-}
-
-.portfolio-card {
-  background: rgba(179, 105, 105, 0.3);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 60px;
-  margin: 20px 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-body.dark .portfolio-card {
-  background-color: #467db4;
-  color: #000;
-}
-
-/* ===================================================
    ===== Dark Mode =====
 =================================================== */
 body.dark {
@@ -196,36 +80,18 @@ body.dark {
   color: #e0e0e0;
 }
 
-body.dark header.navbar {
-  background: #111;
-}
-
-body.dark nav ul li a {
-  /* color: rgb(201, 238, 99); */
-  /* color: #e0e0e0; */
-}
-
-body.dark nav ul li a:hover {
-  color: #ff9800;
-}
-
-body.dark .hamburger {
-  color: #000;
-}
-
 body.dark #experience,
-body.dark #skills,
 body.dark #projects,
 body.dark #cta-section {
   background-color: #467db4;
   color: #000;
 }
 
-body.dark .skill-card,
 body.dark .project-card {
   background: #242424;
   color: #e0e0e0;
 }
+
 
 body.dark footer {
   background: #111;
