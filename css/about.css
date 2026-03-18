@@ -27,22 +27,25 @@ body.about-body {
 }
 
 .about-body .navbar {
-    background-color: rgba(11, 15, 26, 0.95);
+    background-color: #4b76ad;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
 }
 
 .about-body .navbar .brand-name-vimal {
-    color: #fff;
+    color: #000000;
 }
 
 .about-body .nav-links li a {
-    color: #cbd5e1;
+    color: rgb(0, 0, 0);
 }
 
-.about-body .nav-links li a:hover,
-.about-body .nav-links li a.active {
+.about-body .nav-links li a:hover {
     color: var(--amber);
+}
+
+.about-body .nav-links li a.active {
+    color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
@@ -51,6 +54,7 @@ body.about-body {
         border: 1px solid var(--border);
     }
 }
+
 
 /* ── PAGE STRUCTURE ─────────────────── */
 

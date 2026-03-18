@@ -184,47 +184,71 @@
   <!-- Latest Works Section -->
   <section id="projects" class="projects-wrap">
     <h2 class="section-title">Latest Works</h2>
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="vue">Vue</button>
+      <button class="filter-btn" data-filter="angular">Angular</button>
+    </div>
     <div class="projects-grid">
 
       <!-- Alex Food Corner Card -->
-      <div class="project-card">
+      <div class="project-card" data-category="react">
         <div class="card-inner">
+
+          <!-- FRONT -->
           <div class="card-front">
             <div class="card-thumbnail">
-              <img src="/images/alex-food-corner.png" alt="Alex Food Corner" loading="lazy">
+              <img src="/images/alex-food-corner.png" alt="Alex Food Corner Website UI" loading="lazy">
             </div>
+
             <div class="card-content">
               <h3>Alex Food Corner</h3>
-              <p>Modern restaurant website featuring menu display, online ordering and reservation system.</p>
+              <span class="project-tagline">Responsive • Clean UI • Fast</span>
+              <p>
+                Modern and responsive restaurant website with interactive menu display,
+                clean UI, and seamless user experience built using React and Tailwind CSS.
+              </p>
+
               <div class="tech-stack">
                 <span class="tech-badge">React</span>
                 <span class="tech-badge">Tailwind CSS</span>
                 <span class="tech-badge">Vite</span>
               </div>
+
               <div class="card-links">
-                <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">Live
-                  Demo</a>
+                <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">
+                  Live Demo
+                </a>
               </div>
             </div>
           </div>
-          <!-- BACK (Dribbble-style reveal) -->
+
+          <!-- BACK -->
           <div class="card-back">
-            <h3>🍽️ Restaurant Site</h3>
-            <p>Responsive design with menu filtering, WhatsApp ordering integration, Google Maps location, and contact
-              forms.</p>
+            <h3>🍽️ Restaurant Website UI</h3>
+            <p>
+              Fully responsive frontend project featuring dynamic menu filtering,
+              WhatsApp ordering integration, Google Maps embed, and a smooth,
+              user-focused interface built with modern frontend tools.
+            </p>
+
             <div class="card-links">
-              <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">→ Live
-                Site</a>
+              <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">
+                → Live Site
+              </a>
+
               <a href="https://github.com/vimal-tech-dev/alex-food-corner" class="btn-github" target="_blank">
                 💻 Source Code
               </a>
             </div>
           </div>
+
         </div>
       </div>
 
       <!-- Suman Enterprise Card -->
-      <div class="project-card">
+      <div class="project-card" data-category="vue">
         <div class="card-inner">
           <!-- FRONT -->
           <div class="card-front">
@@ -233,11 +257,15 @@
             </div>
             <div class="card-content">
               <h3>Suman Enterprise</h3>
-              <p>Full-stack enterprise management dashboard with real-time analytics and user authentication.</p>
+              <span class="project-tagline">Responsive • Clean UI • Fast</span>
+              <p>
+                Modern enterprise dashboard interface featuring organized data layouts,
+                smooth navigation, and responsive UI built with Vue.js and Vuetify.
+              </p>
               <div class="tech-stack">
-                <span class="tech-badge">Java</span>
-                <span class="tech-badge">Spring Boot</span>
                 <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">Vue-Router</span>
+                <span class="tech-badge">Vuetify</span>
               </div>
               <div class="card-links">
                 <a href="https://sumanenterprise.vercel.app/" class="btn-live" target="_blank" rel="noopener">Live
@@ -247,9 +275,12 @@
           </div>
           <!-- BACK (Dribbble-style reveal) -->
           <div class="card-back">
-            <h3>🔧 Tech Deep Dive</h3>
-            <p>Scalable Java Spring Boot backend with PostgreSQL, React frontend, real-time analytics via WebSockets.
-              Deployed on Vercel with CI/CD.</p>
+            <h3>📊 Dashboard UI</h3>
+            <p>
+              Frontend dashboard project showcasing structured data presentation,
+              component-based architecture, and responsive design using Vue.js,
+              Vue Router, and Vuetify.
+            </p>
             <div class="card-links">
               <a href="https://sumanenterprise.vercel.app/" class="btn-live" target="_blank" rel="noopener">→ Live
                 Site</a>
@@ -261,7 +292,7 @@
       </div>
 
       <!-- Chai Makers Card -->
-      <div class="project-card">
+      <div class="project-card" data-category="angular">
         <div class="card-inner">
           <div class="card-front">
             <div class="card-thumbnail">
@@ -269,11 +300,15 @@
             </div>
             <div class="card-content">
               <h3>Chai Makers</h3>
-              <p>Interactive chai shop web app with menu, ordering system, and payment integration.</p>
+              <span class="project-tagline">Responsive • Clean UI • Fast</span>
+              <p>
+                Frontend chai ordering interface featuring dynamic menu rendering, reusable components,
+                and smooth user interaction built with Angular.
+              </p>
               <div class="tech-stack">
                 <span class="tech-badge">Angular</span>
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Components</span>
+                <span class="tech-badge">Services</span>
               </div>
               <div class="card-links">
                 <a href="https://chaimakers.vercel.app/" class="btn-live" target="_blank" rel="noopener">Live Demo</a>
@@ -282,8 +317,10 @@
           </div>
           <!-- BACK (Dribbble-style reveal) -->
           <div class="card-back">
-            <h3>☕ Chai Ordering App</h3>
-            <p>Full e-commerce flow: menu browsing → cart → Razorpay/Stripe checkout. PWA-ready with offline support.
+            <h3>☕ Chai Café App</h3>
+            <p>
+              Angular-based web app showcasing menu interaction, component-driven structure,
+              and service-based data handling for a smooth user experience.
             </p>
             <div class="card-links">
               <a href="https://chaimakers.vercel.app/" class="btn-live" target="_blank" rel="noopener">→ Live Site</a>
@@ -421,6 +458,7 @@
   <!-- Popup Window JS -->
   <script src="/js/open-modal-btn.js"></script>
   <script src="/js/dropdown.js"></script>
+  <script src="/js/latest-works.js"></script>
   <script src="/js/main.js"></script>
 </body>
 

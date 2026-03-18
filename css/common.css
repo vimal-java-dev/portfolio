@@ -41,14 +41,18 @@ section {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     background-color: #ffffff;
-    padding: 10px 20px;
+    /* padding: 10px 200px; */
+    padding: 0.05rem 0.5rem;
     /* color: rgb(201, 238, 99); */
     position: fixed;
-    width: 100%;
-    top: 0;
+    /* width: 100%; */
+    top: 10px;
+    left: 116px;
+    right: 116px;
     z-index: 1000;
+    border-radius: 12px;
 }
 
 /* Brand container (logo + name) */
@@ -141,9 +145,15 @@ section {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.05rem 1rem;
+        left: 10px;
+        right: 10px;
+    }
+    
     .nav-links {
         position: absolute;
-        top: 65px;
+        top: 48px;
         right: 0;
         background-color: #333;
         flex-direction: column;
@@ -171,6 +181,38 @@ section {
         display: flex;
     }
 
+}
+
+/* ======================================================
+================ NavBar Dark mode ====================
+====================================================== */
+body.dark .navbar .brand-name-vimal {
+    color: #fff;
+}
+
+body.dark .navbar .brand-name-tech {
+    color: #000000;
+}
+
+body.dark .navbar {
+    background: #4b76ad;
+}
+
+body.dark nav ul li a {
+    /* color: rgb(201, 238, 99); */
+    /* color: #e0e0e0; */
+}
+
+body.dark .nav-links a.active {
+    color: rgb(255, 255, 255);
+}
+
+body.dark nav ul li a:hover {
+    color: #ff9800;
+}
+
+body.dark .hamburger {
+    color: #000;
 }
 
 /* ===================================================
