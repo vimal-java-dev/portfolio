@@ -1,3 +1,5 @@
+/* Services.css */
+/* ===== HERO SECTION ===== */
 /* ===== HERO SECTION ===== */
 .hero-services {
     position: relative;
@@ -6,31 +8,24 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #000000;
     overflow: hidden;
     background: radial-gradient(circle at top right, #ff8c00, #ff5722);
 }
 
 body.dark .hero-services {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
     background: radial-gradient(circle at top right, #805922, #8d4630);
+    color: #fff;
 }
 
-/* Particles.js Canvas */
+/* Particles */
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
     z-index: 0;
 }
+
+
 
 /* Soft neon particle glow for dark mode */
 body.dark #particles-js canvas {
@@ -56,17 +51,14 @@ body.dark canvas {
     filter: drop-shadow(0 0 4px rgba(0, 229, 255, 0.4));
 }
 
+/* Overlay */
 .gradient-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 200%;
     height: 200%;
-    background: var(--overlay-gradient);
-    animation: waveMove 10s ease-in-out infinite alternate;
+    background: linear-gradient(45deg, rgba(255, 87, 34, 0.3), rgba(255, 255, 255, 0.15));
     filter: blur(100px);
     z-index: 1;
-    opacity: 0.6;
 }
 
 /* Animation Keyframes */
@@ -84,13 +76,14 @@ body.dark canvas {
     }
 }
 
-/* Hero Text */
+/* Hero content */
 .hero-services .hero-content {
     position: relative;
     z-index: 2;
     max-width: 850px;
     padding: 20px;
 }
+
 
 .hero-services h1 {
     font-size: 3rem;
@@ -142,6 +135,7 @@ body.dark canvas {
 }
 
 /* Services Grid */
+/* ===== SERVICES GRID ===== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -150,37 +144,33 @@ body.dark canvas {
 }
 
 .service-card {
-    background: linear-gradient(145deg, #ffffff, #f9f9f9);
-    padding: 25px 20px;
-    text-align: center;
+    background: linear-gradient(145deg, #fff, #f9f9f9);
+    padding: 25px;
     border-radius: 15px;
+    text-align: center;
+
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
+    transition: all 0.3s ease;
+
     opacity: 0;
     transform: translateY(30px);
-    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
     animation: fadeUp 0.8s forwards;
     animation-delay: var(--delay);
 }
 
 .service-card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-8px);
     box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(145deg, #ffecb3, #ffe0b2);
 }
 
 .service-card i {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: #ff9800;
-    margin-bottom: 15px;
-    transition: transform 0.3s, color 0.3s;
-    display: inline-block;
-    animation: iconBounce 2s infinite;
+    margin-bottom: 10px;
 }
 
 .service-card:hover i {
-    transform: rotate(15deg) scale(1.2);
-    color: #ff5722;
+    transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -190,6 +180,24 @@ body.dark canvas {
 
 .service-card:hover h3 {
     color: #d2691e;
+}
+
+/* ===== ACCORDION ===== */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion-item.active .accordion-body {
+    max-height: 1000px;
+    /* FIXED */
 }
 
 /* ===================================================
@@ -266,13 +274,17 @@ body.dark .service-card:hover p {
     }
 }
 
-/* Services Offer Section */
-#services-offer {
+/* ===== SECTION COLORS ===== */
+#services-offer,
+#services-help-business,
+#lets-build {
     text-align: center;
     background-color: #ced4da;
 }
 
-body.dark #services-offer {
+body.dark #services-offer,
+body.dark #services-help-business,
+body.dark #lets-build {
     background-color: #467db4;
     color: #000;
 }
@@ -287,6 +299,20 @@ body.dark #services-offer {
 
 body.dark .hamburger {
     color: #000;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== DARK MODE ===== */
+body.dark .service-card {
+    background: #181818;
+    color: #e0e0e0;
 }
 
 /* Accordion Styles */
@@ -323,26 +349,4 @@ body.dark .hamburger {
 .accordion-item.active .accordion-icon {
     transform: rotate(45deg);
     /* + becomes × */
-}
-
-/* Services Help Your Business */
-#services-help-business {
-    text-align: center;
-    background-color: #ced4da;
-}
-
-body.dark #services-help-business {
-    background-color: #467db4;
-    color: #000;
-}
-
-/* Let’s Build Something Solid */
-#lets-build {
-    text-align: center;
-    background-color: #ced4da;
-}
-
-body.dark #lets-build {
-    background-color: #467db4;
-    color: #000;
 }

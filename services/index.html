@@ -156,10 +156,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <!-- CSS -->
+    <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/services.css">
-    <link rel="stylesheet" href="/css/common.css">
     <link rel="stylesheet" href="/css/dropdown.css">
-    <link rel="stylesheet" href="/css/live-projects.css">
     <!-- Popup Window CSS -->
     <link rel="stylesheet" href="/css/open-modal-btn.css">
     <link rel="stylesheet" href="/css/whatsapp-floating.css">
@@ -169,16 +168,6 @@
     <!-- Particles.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
-    <style>
-        a {
-            color: sandybrown;
-        }
-
-        a:hover {
-            color: blue;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -186,7 +175,7 @@
     <nav class="navbar">
         <div>
             <a href="/" class="brand">
-                <img src="/images/logo.jpeg" alt="Vimal Tech Java Developer Logo" class="logo">
+                <img src="/images/logo.jpeg" alt="Vimal Tech Java Developer Logo" class="logo" loading="lazy">
                 <span class="brand-name">
                     <span class="brand-name-vimal">Vimal</span>
                     <span class="brand-name-tech">Tech</span>
@@ -225,19 +214,19 @@
                 We help startups and businesses build scalable, secure, and high-performance
                 software systems — from backend architecture to cloud-ready deployments.
             </h2>
-            <a href="#live-projects" class="btn">My Work</a>
+            <a href="#live-projects" class="btn">View My Work →</a>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services-offer" class="container">
+    <section id="services-offer" class="section container fade-in">
         <h2 class="section-title fade-in">Services We Offer</h2>
         <h3 class="fade-in">Explore our expertise to scale your projects efficiently:</h3>
 
         <div class="services-grid accordion">
 
             <div class="service-card fade-in accordion-item" style="--delay:0s;">
-                <div class="accordion-header">
+                <div class="accordion-header" aria-expanded="false">
                     <i class="fas fa-server"></i>
                     <h3>Backend Development</h3>
                     <span class="accordion-icon">+</span>
@@ -252,7 +241,7 @@
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.1s;">
-                <div class="accordion-header">
+                <div class="accordion-header" aria-expanded="false">
                     <i class="fas fa-cloud"></i>
                     <h3>Cloud Integration</h3>
                     <span class="accordion-icon">+</span>
@@ -266,7 +255,7 @@
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.2s;">
-                <div class="accordion-header">
+                <div class="accordion-header" aria-expanded="false">
                     <i class="fas fa-database"></i>
                     <h3>Database Management</h3>
                     <span class="accordion-icon">+</span>
@@ -280,7 +269,7 @@
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.3s;">
-                <div class="accordion-header">
+                <div class="accordion-header" aria-expanded="false">
                     <i class="fas fa-project-diagram"></i>
                     <h3>Project Consulting</h3>
                     <span class="accordion-icon">+</span>
@@ -294,7 +283,7 @@
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.4s;">
-                <div class="accordion-header">
+                <div class="accordion-header" aria-expanded="false">
                     <i class="fas fa-code"></i>
                     <h3>API Development</h3>
                     <span class="accordion-icon">+</span>
@@ -308,7 +297,7 @@
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.5s;">
-                <div class="accordion-header">
+                <div class="accordion-header" aria-expanded="false">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Security & Optimization</h3>
                     <span class="accordion-icon">+</span>
@@ -322,9 +311,9 @@
             </div>
 
         </div>
-    </section><br />
+    </section>
 
-    <section class="container fade-in">
+    <section class="section container fade-in">
         <h2 class="section-title">Why Work With Me</h2>
         <p>
             I focus on building software that is not only functional today,
@@ -340,7 +329,7 @@
         </ul>
     </section>
 
-    <section id="services-help-business" class="container fade-in">
+    <section id="services-help-business" class="section container fade-in">
         <h2 class="section-title">How These Services Help Your Business</h2>
 
         <div style="margin-top: 30px;">
@@ -374,7 +363,7 @@
         </div>
     </section>
 
-    <section class="container fade-in">
+    <section class="section container fade-in">
         <h2 class="section-title">My Working Process</h2>
 
         <ol style="margin-top: 20px; line-height: 1.9;">
@@ -386,7 +375,7 @@
         </ol>
     </section>
 
-    <section class="container fade-in">
+    <section class="section container fade-in">
         <h2 class="section-title">Engagement Models</h2>
 
         <p>
@@ -409,7 +398,9 @@
         <div class="live-projects-card">
             <h2>Live Websites</h2>
             <!-- Button to open modal -->
-            <button class="open-modal-btn">View My Work</button>
+            <button class="open-modal-btn btn">
+                View Live Projects →
+            </button>
         </div>
     </section>
 
@@ -418,13 +409,13 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <div class="cta-section fade-in" style="--delay:0.6s; margin-bottom: 60px;">
-                <a href="https://sumanenterprise.vercel.app/" target="_blank" class="btn">
+                <a href="https://sumanenterprise.vercel.app/" target="_blank" class="btn" rel="noopener noreferrer">
                     Suman Enterprise
                 </a><br /><br /><br />
-                <a href="https://chaimakers.vercel.app/" target="_blank" class="btn">
+                <a href="https://chaimakers.vercel.app/" target="_blank" class="btn" rel="noopener noreferrer">
                     Chai Makers Café
                 </a><br /><br /><br />
-                <a href="https://alexfoodcorner.netlify.app/" target="_blank" class="btn">
+                <a href="https://alexfoodcorner.netlify.app/" target="_blank" class="btn" rel="noopener noreferrer">
                     Alex Food Corner
                 </a>
             </div>
@@ -437,7 +428,7 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <section class="container fade-in">
+    <section class="section container fade-in">
         <h2 class="section-title">Frequently Asked Questions</h2>
 
         <div style="margin-top: 25px;">
@@ -459,7 +450,7 @@
         </div>
     </section>
 
-    <section id="lets-build" class="container fade-in" style="text-align: center;">
+    <section id="lets-build" class="section container fade-in" style="text-align: center;">
         <h2 class="section-title">Let’s Build Something Solid</h2>
         <h3 style="margin-top: 15px;">
             Have an idea or an existing system that needs improvement?
@@ -469,7 +460,7 @@
                 Get in Touch
             </a>
         </h4>
-    </section><br />
+    </section>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -557,7 +548,7 @@
     </button>
 
     <!-- JS -->
-    <script src="/js/common.js"></script>
+    <script src="/js/global.js"></script>
     <!-- Popup Window JS -->
     <script src="/js/open-modal-btn.js"></script>
     <script src="/js/dropdown.js"></script>

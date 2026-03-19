@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (form) {
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent actual PHP submit for demo purposes
+      e.preventDefault();
 
       let isValid = true;
 
