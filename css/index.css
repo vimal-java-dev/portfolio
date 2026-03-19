@@ -1,63 +1,9 @@
 /* ===================================================
    ===== Hero Section =====
 =================================================== */
+/* 🎨 Premium Typography + Layout */
 .hero {
   background: url('/images/hero.png') no-repeat center/cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(201, 238, 99);
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 12px;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-  padding: 20px;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin: 1rem 0;
-  opacity: 0.9;
-  max-width: 650px;
-}
-
-.hero .btn {
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 30px;
-  background: #ff9800;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
-}
-
-.hero .btn:hover {
-  background: #e68900;
-  transform: translateY(-3px);
 }
 
 /* ===================================================
@@ -73,12 +19,64 @@
 }
 
 /* ===================================================
+   ===== Mini Services Preview Section =====
+=================================================== */
+#services-preview {
+  text-align: center;
+}
+
+/* Services Preview Animations */
+#services-preview .service-card {
+  background: #f5f5f5;
+  padding: 25px 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+#services-preview .service-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  background: #fff3e0;
+  /* Slight highlight color */
+}
+
+#services-preview .service-card i {
+  font-size: 2.5rem;
+  color: sandybrown;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#services-preview .service-card:hover i {
+  transform: rotate(10deg) scale(1.1);
+  color: #ff8c42;
+  /* Slight color change on hover */
+}
+
+#services-preview .service-card h3 {
+  transition: color 0.3s ease;
+}
+
+#services-preview .service-card:hover h3 {
+  color: #d2691e;
+  /* Darker highlight on hover */
+}
+
+/* ===================================================
    ===== Dark Mode =====
 =================================================== */
-body.dark {
-  background: #181818;
+
+body.dark #services-preview .service-card {
+  background: #242424;
   color: #e0e0e0;
 }
+
+/* ===================================================
+   ===== Dark Mode =====
+=================================================== */
 
 body.dark #experience,
 body.dark #projects,
@@ -90,37 +88,6 @@ body.dark #cta-section {
 body.dark .project-card {
   background: #242424;
   color: #e0e0e0;
-}
-
-
-body.dark footer {
-  background: #111;
-}
-
-body.dark .hero::after {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-/* ===== Dark Mode Override ===== */
-body.dark #scrollTopBtn {
-  background-color: #ff9800;
-  color: #fff;
-}
-
-body.dark #scrollTopBtn:hover {
-  background-color: #e68900;
-}
-
-/* Dark mode appearance */
-body.dark #darkModeToggle {
-  background: #00bcd4;
-  /* Cyan glow in dark mode */
-  color: #000;
-  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
-}
-
-body.dark #darkModeToggle:hover {
-  background: #3ce8ff;
 }
 
 /* Wrapper for centering card horizontally */
