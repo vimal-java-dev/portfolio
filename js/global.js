@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+      // This toggles the 'active' class on the hamburger for the rotation
       hamburger.classList.toggle("active");
+      // This opens your actual menu
+      navLinks.classList.toggle("open");
       hamburger.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
     });
 
@@ -164,8 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ============================
-   Active Navbar Link per Page
-============================ */
+    Active Navbar Link per Page
+    ============================ */
   const currentPage = window.location.pathname.split("/").pop();
 
   navItems.forEach((link) => {
@@ -181,6 +184,40 @@ document.addEventListener("DOMContentLoaded", () => {
       linkPage === "index.html"
     ) {
       link.classList.add("active");
+    }
+  });
+
+  // ===== localStorage theme handling =====
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Apply saved theme on load
+  if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+    body.classList.add("dark");
+    darkModeToggle.textContent = "☀️"; // show sun icon if dark mode is active
+  } else {
+    darkModeToggle.textContent = "🌙"; // show moon icon if light mode is active
+  }
+
+  // ===== Dark Mode Persist Across Pages =====
+  darkModeToggle.addEventListener("click", () => {
+    const isDark = body.classList.toggle("dark");
+    darkModeToggle.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    // ===== Optional for Services Page =====
+    if (typeof updateOverlayGradient === "function") updateOverlayGradient();
+
+    // Rebuild particles only if available
+    if (typeof initParticles === "function") {
+      setTimeout(() => {
+        if (window.pJSDom && pJSDom.length) {
+          pJSDom[0].pJS.fn.vendors.destroypJS();
+          document.getElementById("particles-js").innerHTML = "";
+        }
+        initParticles();
+      }, 300);
     }
   });
 });

@@ -2,13 +2,14 @@
    ===== Global Styles =====
 =================================================== */
 :root {
-    --color-bg: #f4f4f4;
+    --color-bg: #cfcfcf;
     --color-text: #111827;
     --color-muted: #6b7280;
     --color-accent: #38bdf8;
     --color-primary: #ff9800;
 
     --font-primary: 'Inter', sans-serif;
+    --nav-bg: #c3c7ca;
 }
 
 /* RESET */
@@ -27,18 +28,24 @@ html {
 body {
     font-family: var(--font-primary);
     background: var(--color-bg);
-    color: #333;
+    color: var(--color-text);
 }
 
 h1 {
     font-size: clamp(2.2rem, 5vw, 3rem);
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: -1px;
+    font-optical-sizing: auto;
 }
 
 h2 {
     font-size: clamp(1.6rem, 3vw, 2.2rem);
     font-weight: 700;
+    font-weight: bold;
 }
 
 h3 {
@@ -49,6 +56,191 @@ h3 {
 /* TYPOGRAPHY */
 p {
     color: var(--color-muted);
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ===================================================
+   ===== Navbar =====
+=================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--nav-bg);
+    padding: 0.2rem 0.8rem;
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 12px;
+    align-items: center;
+}
+
+/* Brand container (logo + name) */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* Logo image */
+.logo {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 6px;
+    /* optional for a softer look */
+}
+
+.brand-name {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    gap: 5px;
+}
+
+.brand-name-vimal {
+    color: #000000;
+    font-weight: 700;
+}
+
+.brand-name-tech {
+    color: #a6e22e;
+    /* neon green */
+}
+
+.brand-gradient-text {
+    background: linear-gradient(90deg,
+            #000000,
+            #dcffa5,
+            #34ff7e,
+            #01628b);
+    background-size: 900% auto;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    animation: gradientMove 4s linear infinite;
+    filter: drop-shadow(0 0 6px rgba(163, 230, 53, 0.4));
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 22px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: #333;
+}
+
+.nav-links li a.active {
+    color: #003cff;
+    font-weight: 300;
+}
+
+.nav-links li a:hover {
+    color: #ff6347;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.nav-links .dropdown li a {
+    color: #a6e22e;
+    /* neon green */
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active {
+    transform: rotate(180deg);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 10px;
+        right: 10px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .brand-name {
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-display: block;
+        position: absolute;
+        /* Takes the text out of the normal flow */
+        left: 50%;
+        /* Pushes the left edge to the exact middle */
+        transform: translateX(-50%);
+        /* Pulls it back by half its own width for true centering */
+
+        /* Ensure the text is laid out nicely */
+        display: flex;
+        gap: 6px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: var(--nav-bg);
+        flex-direction: column;
+        width: 300px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 /* =========================================
@@ -62,9 +254,6 @@ p {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* padding: 60px 20px; */
-    padding-top: 100px;
-    /* push below fixed navbar */
     color: #fff;
 }
 
@@ -83,6 +272,10 @@ p {
     opacity: 0;
     transform: translateY(30px);
     animation: heroFadeUp 1s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 @keyframes heroFadeUp {
@@ -117,6 +310,7 @@ p {
 .hero p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    gap: 30px;
 }
 
 .hero-subtext {
@@ -132,7 +326,7 @@ p {
 
 .hero-buttons {
     display: flex;
-    gap: 12px;
+    gap: 20px;
     justify-content: center;
     opacity: 0;
     animation: fadeUp 0.8s ease forwards;
@@ -198,15 +392,6 @@ p {
     transition: all 0.3s ease;
 }
 
-/* .btn::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(120deg, #ff9800, #ff5722);
-    z-index: -1;
-    transition: transform 0.4s ease;
-} */
-
 .btn:hover {
     box-shadow: 0 0 20px rgba(255, 152, 0, 0.6);
 }
@@ -242,150 +427,6 @@ p {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* ===================================================
-   ===== Navbar =====
-=================================================== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    background-color: #ffffff;
-    padding: 0.05rem 0.5rem;
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    right: 20px;
-    z-index: 1000;
-    border-radius: 12px;
-}
-
-/* Brand container (logo + name) */
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-}
-
-.brand-name {
-    font-size: 1.8rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.brand-name-vimal {
-    color: #000000;
-    font-weight: 700;
-}
-
-.brand-name-tech {
-    color: #a6e22e;
-    /* neon green */
-}
-
-/* Logo image */
-.logo {
-    height: 36px;
-    width: 36px;
-    object-fit: contain;
-    border-radius: 6px;
-    /* optional for a softer look */
-}
-
-/* .logo {
-    font-size: 20px;
-    font-weight: bold;
-} */
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    font-size: 20px;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    z-index: 1000;
-}
-
-.nav-links .dropdown li a {
-    color: #a6e22e;
-    /* neon green */
-}
-
-.nav-links li a {
-    text-decoration: none;
-    transition: color 0.3s;
-    color: #333;
-}
-
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #ff6347;
-}
-
-.nav-links a.active {
-    color: #00bcd4;
-    font-weight: 600;
-}
-
-/* Hamburger menu */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.3s ease;
-}
-
-.hamburger.active {
-    transform: rotate(180deg);
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        padding: 0.05rem 1rem;
-        left: 10px;
-        right: 10px;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 48px;
-        right: 0;
-        background-color: #333;
-        flex-direction: column;
-        width: 200px;
-        display: none;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-
-    .nav-links li a {
-        color: #fff;
-        transition: color 0.3s;
-
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
 }
 
 /* ======================================================
@@ -455,8 +496,6 @@ body.dark p {
 /* ===================================================
    ===== Footer =====
 =================================================== */
-
-/* ===== Footer ===== */
 
 .site-footer {
     background: linear-gradient(180deg, #0f172a, #020617);
@@ -564,7 +603,7 @@ body.dark p {
 }
 
 .footer-social i {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 /* bottom bar */
@@ -598,7 +637,7 @@ body.dark p {
     }
 
     .footer-social i {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .brand-divider-left,
@@ -739,4 +778,29 @@ body.dark p {
         transform: scale(1);
         box-shadow: 0 0 8px rgba(255, 152, 0, 0.4);
     }
+}
+
+/* ===================================================
+   ===== Dark Mode =====
+=================================================== */
+/* ===== Dark Mode Override ===== */
+body.dark #scrollTopBtn {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+body.dark #scrollTopBtn:hover {
+    background-color: #e68900;
+}
+
+/* Dark mode appearance */
+body.dark #darkModeToggle {
+    background: #00bcd4;
+    /* Cyan glow in dark mode */
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+body.dark #darkModeToggle:hover {
+    background: #3ce8ff;
 }
