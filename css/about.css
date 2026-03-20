@@ -26,36 +26,6 @@ body.about-body {
     font-family: 'Inter', 'DM Sans', sans-serif;
 }
 
-.about-body .navbar {
-    background-color: #4b76ad;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-}
-
-.about-body .navbar .brand-name-vimal {
-    color: #000000;
-}
-
-.about-body .nav-links li a {
-    color: rgb(0, 0, 0);
-}
-
-.about-body .nav-links li a:hover {
-    color: var(--amber);
-}
-
-.about-body .nav-links li a.active {
-    color: rgb(255, 255, 255);
-}
-
-@media (max-width: 768px) {
-    .about-body .nav-links {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border);
-    }
-}
-
-
 /* ── PAGE STRUCTURE ─────────────────── */
 
 .about-container {

@@ -182,10 +182,6 @@ body.dark .project-card a:hover {
 /* ===================================================
    ===== Dark Mode =====
 =================================================== */
-body.dark {
-    background: #181818;
-    color: #e0e0e0;
-}
 
 body.dark #skills,
 body.dark #projects {
@@ -202,30 +198,4 @@ body.dark .project-card {
 body.dark .portfolio-card {
     background-color: #467db4;
     color: #000;
-}
-
-body.dark .hero::after {
-    background: rgba(0, 0, 0, 0.7);
-}
-
-/* ===== Dark Mode Override ===== */
-body.dark #scrollTopBtn {
-    background-color: #ff9800;
-    color: #fff;
-}
-
-body.dark #scrollTopBtn:hover {
-    background-color: #e68900;
-}
-
-/* Dark mode appearance */
-body.dark #darkModeToggle {
-    background: #00bcd4;
-    /* Cyan glow in dark mode */
-    color: #000;
-    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
-}
-
-body.dark #darkModeToggle:hover {
-    background: #3ce8ff;
 }
