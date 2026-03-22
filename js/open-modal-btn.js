@@ -7,6 +7,8 @@ const close = document.querySelector(".close");
 if (btn && modal) {
   btn.addEventListener("click", () => {
     modal.classList.add("show");
+    // Prevent background scrolling
+    document.body.style.overflow = "hidden";
   });
 }
 
@@ -14,6 +16,8 @@ if (btn && modal) {
 if (close && modal) {
   close.addEventListener("click", () => {
     modal.classList.remove("show");
+    // Restore background scrolling
+    document.body.style.overflow = "auto";
   });
 }
 
@@ -22,6 +26,8 @@ if (modal) {
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.classList.remove("show");
+      // Restore background scrolling
+      document.body.style.overflow = "auto";
     }
   });
 }

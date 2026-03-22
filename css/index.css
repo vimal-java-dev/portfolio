@@ -10,12 +10,12 @@
    ===== Experience Section =====
 =================================================== */
 #experience {
-  /* background: #fff; */
   background-color: #e9ecef;
   padding: 3rem 2rem;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-bottom: 50px;
 }
 
 /* ===================================================
@@ -78,7 +78,7 @@ body.dark #experience,
 body.dark #projects,
 body.dark #cta-section {
   background-color: #467db4;
-  color: #000;
+  color: #ffffff;
 }
 
 body.dark .project-card {
@@ -98,21 +98,6 @@ body.dark .project-card {
 .cta-section {
   text-align: center;
   margin-top: 50px;
-}
-
-.cta-section a.btn {
-  background: #ff9800;
-  color: #fff;
-  padding: 14px 30px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.cta-section a.btn:hover {
-  background: #ff5722;
-  transform: scale(1.05);
 }
 
 /* Container */

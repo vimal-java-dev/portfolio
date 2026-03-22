@@ -44,21 +44,28 @@ h1 {
 
 h2 {
     font-size: clamp(1.6rem, 3vw, 2.2rem);
-    font-weight: 700;
-    font-weight: bold;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 h3 {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 1.5rem;
 }
 
 /* TYPOGRAPHY */
 p {
+    font-size: 1.1rem;
     color: var(--color-muted);
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -149,7 +156,8 @@ p {
     color: #333;
 }
 
-.nav-links li a.active {
+.nav-links li a.active,
+.nav-links li a.active:hover {
     color: #003cff;
     font-weight: 300;
 }
@@ -303,7 +311,7 @@ p {
     animation: fadeUp 0.8s ease forwards;
 }
 
-.highlight {
+.highlight-text {
     color: #a3e635;
 }
 
@@ -378,6 +386,20 @@ p {
 .section-title {
     text-align: center;
     margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: linear-gradient(90deg, #38bdf8, #22c55e, #a3e635, #38bdf8);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--color-text);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    animation: gradientMove 4s linear infinite;
+    filter: drop-shadow(0 0 6px rgba(163, 230, 53, 0.4));
+}
+
+body.dark .section-title {
+    --color-text: #e0e0e0;
 }
 
 /* ===== BUTTON FIX (IMPORTANT) ===== */
@@ -394,6 +416,7 @@ p {
 
 .btn:hover {
     box-shadow: 0 0 20px rgba(255, 152, 0, 0.6);
+    transform: scale(1.05);
 }
 
 .btn:hover::after {
@@ -432,6 +455,11 @@ p {
 /* ======================================================
 ================ NavBar Dark mode ====================
 ====================================================== */
+body.dark {
+    background: #181818;
+    color: #e0e0e0;
+}
+
 body.dark .navbar .brand-name-vimal {
     color: #fff;
 }
@@ -461,13 +489,12 @@ body.dark .hamburger {
     color: #000;
 }
 
-body.dark {
-    background: #181818;
-    color: #e0e0e0;
-}
-
 body.dark p {
     color: #ccc;
+}
+
+body.dark .site-footer {
+    background: #0f172a;
 }
 
 /* ===================================================
@@ -498,10 +525,10 @@ body.dark p {
 =================================================== */
 
 .site-footer {
-    background: linear-gradient(180deg, #0f172a, #020617);
-    color: #e5e7eb;
+    background: linear-gradient(180deg, #112c6d, #020617);
+    color: #e5ff7a;
     padding: 60px 20px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 /* top divider */
@@ -518,7 +545,7 @@ body.dark p {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;
+    gap: 10px;
 }
 
 /* 3-Column Layout */
@@ -526,13 +553,13 @@ body.dark p {
 .footer-center,
 .footer-links {
     flex: 1;
-    max-width: 320px;
+    /* max-width: 320px; */
 }
 
 .footer-center {
     border-left: 1px solid rgb(208, 255, 0);
     border-right: 1px solid rgb(208, 255, 0);
-    padding: 0 80px;
+    padding: 0 0 70px 10px;
 }
 
 .footer-links {
@@ -550,6 +577,7 @@ body.dark p {
 .site-footer p {
     margin: 6px 0;
     line-height: 1.5;
+    color: #fff;
 }
 
 .tagline {
@@ -565,7 +593,7 @@ body.dark p {
 .brand-divider-left,
 .brand-divider-center,
 .brand-divider-right {
-    width: 50px;
+    width: 110px;
     height: 2px;
     background: #60a5fa;
     margin: 14px 0 18px 0;
@@ -575,7 +603,7 @@ body.dark p {
 
 .msme,
 .udyam {
-    font-size: 13px;
+    font-size: 16px;
     opacity: 0.85;
 }
 
@@ -611,9 +639,15 @@ body.dark p {
 .footer-bottom {
     border-top: 1px solid rgb(208, 255, 0);
     margin-top: 30px;
-    padding-top: 18px;
+    padding-top: 10px;
     text-align: center;
     opacity: 0.8;
+}
+
+.footer-left p,
+.footer-right p {
+    margin: 8px 0;
+    line-height: 1.6;
 }
 
 /* ===== Mobile ===== */
@@ -657,12 +691,6 @@ body.dark p {
     .footer-links {
         text-align: left;
     }
-}
-
-.footer-left p,
-.footer-right p {
-    margin: 8px 0;
-    line-height: 1.6;
 }
 
 /* ==========================
