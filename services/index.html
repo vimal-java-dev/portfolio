@@ -27,6 +27,37 @@
         content="Backend development, microservices architecture, cloud deployment, and API engineering services.">
     <meta name="twitter:image" content="https://vimaltech.dev/images/logo.jpeg">
     <meta name="twitter:site" content="@VimalTech">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <!-- Popup Window CSS -->
+    <link rel="stylesheet" href="/css/open-modal-btn.css">
+    <link rel="stylesheet" href="/css/whatsapp-floating.css">
+    <!-- Font Awesome -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- Space+Grotesk -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- Lexend -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <!-- SEO SCHEMA: Services Page -->
     <script type="application/ld+json">
@@ -150,35 +181,9 @@
   ]
 }
 </script>
-
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/services.css">
-    <link rel="stylesheet" href="/css/dropdown.css">
-    <!-- Popup Window CSS -->
-    <link rel="stylesheet" href="/css/open-modal-btn.css">
-    <link rel="stylesheet" href="/css/whatsapp-floating.css">
-    <!-- Font Awesome -->
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <!-- Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
-        rel="stylesheet">
-    <!-- Space+Grotesk -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
-        rel="stylesheet">
     <!-- Particles.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js">
+    </script>
 
 </head>
 
@@ -219,268 +224,322 @@
     </nav>
 
     <!-- Hero Section with Particles + Animated Overlay -->
-    <section id="hero" class="hero-services">
+    <section id="hero" class="hero hero-services">
         <div id="particles-js"></div>
         <div class="gradient-overlay"></div>
         <div class="hero-content">
-            <h1>Our <span class="highlight">Professional Services</span></h1>
-            <p>
-                We help startups and businesses build scalable, secure, and high-performance
-                software systems — from backend architecture to cloud-ready deployments.
+            <h1>Our <span class="highlight-text">Professional Services</span>
+                <span class="gradient-text">Handling Virtual Infrastructure</span>
+                Software Architect
+            </h1>
+            <p class="hero-subtext">
+                We help <span class="highlight-text">startups and businesses</span> build scalable, secure, and
+                high-performance
+                software systems — from <span class="highlight-text">backend architecture</span> to <span
+                    class="highlight-text">cloud-ready deployments</span>.
             </p>
-            <a href="#live-projects" class="btn">View My Work →</a>
+            <div class="hero-buttons">
+                <a href="#services-offer" class="btn primary">Explore Services</a>
+                <a href="#live-projects" class="btn secondary">View My Work</a>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section id="services-offer" class="section container fade-in">
-        <h2 class="section-title fade-in">Services We Offer</h2>
-        <h3 class="fade-in">Explore our expertise to scale your projects efficiently:</h3>
+        <div class="section-header">
+            <h2 class="section-title fade-in">Services We Offer</h2>
+            <h3 class="fade-in section-subtitle">Explore our expertise to scale your projects efficiently.</h3>
+        </div>
 
         <div class="services-grid accordion">
-
             <div class="service-card fade-in accordion-item" style="--delay:0s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <i class="fas fa-server"></i>
+                    <div class="icon-wrapper"><i class="fas fa-server"></i></div>
                     <h3>Backend Development</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>
-                        Design and development of scalable backend systems using Java,
-                        Spring Boot, and Microservices. Ideal for APIs, SaaS platforms,
-                        and enterprise-grade applications.
-                    </p>
+                    <p>Design and development of scalable backend systems using Java, Spring Boot, and Microservices.
+                        Ideal for APIs, SaaS platforms, and enterprise-grade applications.</p>
                 </div>
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.1s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <i class="fas fa-cloud"></i>
+                    <div class="icon-wrapper"><i class="fas fa-cloud"></i></div>
                     <h3>Cloud Integration</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>
-                        Cloud-ready deployment, configuration, and scaling using AWS
-                        and modern hosting platforms for reliability and performance.
-                    </p>
+                    <p>Cloud-ready deployment, configuration, and scaling using AWS and modern hosting platforms for
+                        reliability and performance.</p>
                 </div>
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.2s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <i class="fas fa-database"></i>
+                    <div class="icon-wrapper"><i class="fas fa-database"></i></div>
                     <h3>Database Management</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>
-                        Optimized relational and NoSQL database design, query tuning,
-                        backups, and data integrity management.
-                    </p>
+                    <p>Optimized relational and NoSQL database design, query tuning, backups, and data integrity
+                        management.</p>
                 </div>
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.3s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <i class="fas fa-project-diagram"></i>
+                    <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
                     <h3>Project Consulting</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>
-                        System architecture planning, microservices strategy,
-                        and technical guidance to reduce long-term technical debt.
-                    </p>
+                    <p>System architecture planning, microservices strategy, and technical guidance to reduce long-term
+                        technical debt.</p>
                 </div>
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.4s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <i class="fas fa-code"></i>
+                    <div class="icon-wrapper"><i class="fas fa-code"></i></div>
                     <h3>API Development</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>
-                        Secure REST API development and third-party integrations
-                        for web and mobile applications.
-                    </p>
+                    <p>Secure REST API development and third-party integrations for web and mobile applications.</p>
                 </div>
             </div>
 
             <div class="service-card fade-in accordion-item" style="--delay:0.5s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <i class="fas fa-shield-alt"></i>
+                    <div class="icon-wrapper"><i class="fas fa-shield-alt"></i></div>
                     <h3>Security & Optimization</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>
-                        Performance tuning, security best practices, and maintainable
-                        code standards for long-term system stability.
-                    </p>
+                    <p>Performance tuning, security best practices, and maintainable code standards for long-term system
+                        stability.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <section class="section container fade-in">
-        <h2 class="section-title">Why Work With Me</h2>
-        <p>
-            I focus on building software that is not only functional today,
-            but scalable, maintainable, and cost-effective in the long run.
-        </p>
+    <section class="section container fade-in alt-bg">
+        <div class="section-header">
+            <h2 class="section-title">Why Work With Me</span></h2>
+            <p class="section-subtitle">Building software that is scalable, maintainable, and cost-effective.</p>
+        </div>
 
-        <ul style="margin-top: 20px; line-height: 1.8;">
-            <li>✔ Clean, production-ready backend code</li>
-            <li>✔ Scalable system & microservice architecture</li>
-            <li>✔ Performance-optimized & secure applications</li>
-            <li>✔ Clear communication & structured delivery</li>
-            <li>✔ Long-term support and optimization</li>
-        </ul>
+        <div class="features-grid">
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Clean, production-ready backend code</div>
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Scalable system & microservice architecture
+            </div>
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Performance-optimized & secure apps</div>
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Clear communication & structured delivery
+            </div>
+            <div class="feature-item"><i class="fas fa-check-circle"></i> Long-term support and optimization</div>
+        </div>
     </section>
 
     <section id="services-help-business" class="section container fade-in">
-        <h2 class="section-title">How These Services Help Your Business</h2>
+        <h2 class="section-title">How These Services Help Your Business</span></h2>
 
-        <div style="margin-top: 30px;">
-            <h3>Backend Development</h3>
-            <p>
-                Ideal for applications that require secure APIs, business logic,
-                and high traffic handling. I design backend systems that are
-                stable, scalable, and easy to extend.
-            </p>
-            <hr /><br>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-cogs"></i>
+                <h3>Backend Development</h3>
+                <p>Ideal for applications that require secure APIs, business logic, and high traffic handling. I design
+                    systems that are stable and easy to extend.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-network-wired"></i>
+                <h3>Cloud Integration</h3>
+                <p>Suitable for growing products that need reliable deployment, scalability, and cost-optimized
+                    infrastructure on cloud platforms.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-server"></i>
+                <h3>Database Management</h3>
+                <p>Designed for data-driven applications that require fast queries, reliable storage, and secure data
+                    handling.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>API Development</h3>
+                <p>Enables seamless communication between web apps, mobile apps, and third-party services using secure
+                    REST APIs.</p>
+            </div>
+        </div>
+    </section>
 
-            <h3>Cloud Integration</h3>
-            <p>
-                Suitable for growing products that need reliable deployment,
-                scalability, and cost-optimized infrastructure on cloud platforms.
-            </p>
-            <hr /><br>
+    <section class="section container fade-in alt-bg">
+        <div class="section-header">
+            <h2 class="section-title">My Working Process</span></h2>
+            <p class="section-subtitle">A structured approach to bringing your vision to life.</p>
+        </div>
 
-            <h3>Database Management</h3>
-            <p>
-                Designed for data-driven applications that require fast queries,
-                reliable storage, and secure data handling.
-            </p>
-            <hr /><br>
-
-            <h3>API Development</h3>
-            <p>
-                Enables seamless communication between web apps, mobile apps,
-                and third-party services using secure REST APIs.
-            </p>
+        <div class="process-timeline">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Requirement Discussion</h4>
+                <p>Understand business & technical goals</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Architecture Planning</h4>
+                <p>Design scalable system structure</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Development</h4>
+                <p>Clean, modular, and testable code</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Testing & Deployment</h4>
+                <p>Stability and performance validation</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <h4>Support & Optimization</h4>
+                <p>Continuous system improvements</p>
+            </div>
         </div>
     </section>
 
     <section class="section container fade-in">
-        <h2 class="section-title">My Working Process</h2>
+        <div class="section-header">
+            <h2 class="section-title">Engagement Models</h2>
+            <p class="section-subtitle">Flexible engagement options depending on your project needs.</p>
+        </div>
 
-        <ol style="margin-top: 20px; line-height: 1.9;">
-            <li><strong>Requirement Discussion</strong> – Understand business & technical goals</li>
-            <li><strong>Architecture Planning</strong> – Design scalable system structure</li>
-            <li><strong>Development</strong> – Clean, modular, and testable code</li>
-            <li><strong>Testing & Deployment</strong> – Stability and performance validation</li>
-            <li><strong>Support & Optimization</strong> – Continuous improvements</li>
-        </ol>
-    </section>
-
-    <section class="section container fade-in">
-        <h2 class="section-title">Engagement Models</h2>
-
-        <p>
-            I offer flexible engagement options depending on your project needs:
-        </p>
-
-        <ul style="margin-top: 20px; line-height: 1.8;">
-            <li><strong>Project-Based</strong> – Fixed scope with clear deliverables</li>
-            <li><strong>Hourly / Monthly Retainer</strong> – Ongoing development & support</li>
-            <li><strong>Consulting</strong> – Architecture review, planning, and guidance</li>
-        </ul>
-
-        <p style="margin-top: 15px;">
-            Pricing depends on project complexity, timeline, and requirements.
-        </p>
+        <div class="engagement-grid">
+            <div class="engagement-card">
+                <div class="card-icon"><i class="fas fa-box-open"></i></div>
+                <h3>Project-Based</h3>
+                <p>Perfect for projects with a fixed scope, specific features, and clear deliverables.</p>
+            </div>
+            <div class="engagement-card highlight-card">
+                <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                <h3>Hourly / Retainer</h3>
+                <p>Ideal for ongoing development, continuous support, and evolving feature sets.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="card-icon"><i class="fas fa-comments"></i></div>
+                <h3>Consulting</h3>
+                <p>Best for architecture review, technical planning, and long-term tech strategy guidance.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Live Projects Section -->
     <section id="live-projects" class="container fade-in live-projects card-container">
-        <div class="live-projects-card">
-            <h2>Live Websites</h2>
-            <!-- Button to open modal -->
-            <button class="open-modal-btn btn">
-                View Live Projects →
+        <div class="live-projects-card elegant-card">
+            <h2>Live Websites & Systems</h2>
+            <p>Check out some of the systems currently running in production.</p>
+            <button class="open-modal-btn btn glow-btn">
+                <i class="fas fa-rocket"></i> View Live Projects
             </button>
         </div>
     </section>
 
     <!-- The Modal -->
     <div class="modal" id="myModal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="cta-section fade-in" style="--delay:0.6s; margin-bottom: 60px;">
-                <a href="https://sumanenterprise.vercel.app/" target="_blank" class="btn" rel="noopener noreferrer">
-                    Suman Enterprise
-                </a><br /><br /><br />
-                <a href="https://chaimakers.vercel.app/" target="_blank" class="btn" rel="noopener noreferrer">
-                    Chai Makers Café
-                </a><br /><br /><br />
-                <a href="https://alexfoodcorner.netlify.app/" target="_blank" class="btn" rel="noopener noreferrer">
-                    Alex Food Corner
+        <div class="modal-content glass-modal">
+            <div class="modal-header">
+                <h3>Select a Project</h3>
+                <span class="close" title="Close"><i class="fas fa-times"></i></span>
+            </div>
+
+            <div class="project-menu">
+                <a href="https://alexfoodcorner.netlify.app/" target="_blank" class="project-tile"
+                    rel="noopener noreferrer">
+                    <div class="project-icon" style="color: #22c55e; background: rgba(34, 197, 94, 0.1);">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-details">
+                        <span class="project-title">Alex Food Corner</span>
+                        <span class="project-tech">React Restaurant UI</span>
+                    </div>
+                    <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+                <a href="https://sumanenterprise.vercel.app/" target="_blank" class="project-tile"
+                    rel="noopener noreferrer">
+                    <div class="project-icon" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="project-details">
+                        <span class="project-title">Suman Enterprise</span>
+                        <span class="project-tech">Vue.js Dashboard</span>
+                    </div>
+                    <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+                <a href="https://chaimakers.vercel.app/" target="_blank" class="project-tile" rel="noopener noreferrer">
+                    <div class="project-icon" style="color: #ff9800; background: rgba(255, 152, 0, 0.1);">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <div class="project-details">
+                        <span class="project-title">Chai Makers Café</span>
+                        <span class="project-tech">Angular Web App</span>
+                    </div>
+                    <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+                <a href="https://vimaltech.dev" target="_blank" class="project-tile" rel="noopener noreferrer">
+                    <div class="project-icon" style="color: #8b5cf6; background: rgba(139, 92, 246, 0.1);">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-details">
+                        <span class="project-title">Vimal Tech Portfolio</span>
+                        <span class="project-tech">HTML | CSS | JavaScript / Java Backend</span>
+                    </div>
+                    <div class="project-arrow"><i class="fas fa-arrow-right"></i></div>
                 </a>
             </div>
         </div>
     </div>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/919638474047?text=Hello%20Vimal%2C%0AI%20would%20like%20to%20know%20more%20about%20your%20tech%20services."
-        class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <section class="section container fade-in">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-
-        <div style="margin-top: 25px;">
-            <p><strong>How long does a project take?</strong><br>
-                Small projects usually take 2–4 weeks. Larger systems vary based on scope.
-            </p>
-
-            <p><strong>Do you provide post-deployment support?</strong><br>
-                Yes. I offer maintenance, optimization, and feature enhancements.
-            </p>
-
-            <p><strong>Can you work with existing codebases?</strong><br>
-                Absolutely. I can extend, refactor, or optimize existing systems.
-            </p>
-
-            <p><strong>Do you help with MVP development?</strong><br>
-                Yes. I specialize in MVPs built with scalable architecture.
-            </p>
+    <section class="section container fade-in alt-bg faq-section">
+        <h2 class="section-title">Frequently Asked Questions</span></h2>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <h4>How long does a project take?</h4>
+                <p>Small projects usually take 2–4 weeks. Larger enterprise systems vary based on the specific scope and
+                    integrations needed.</p>
+            </div>
+            <div class="faq-card">
+                <h4>Do you provide post-deployment support?</h4>
+                <p>Yes. I offer maintenance, performance optimization, and continuous feature enhancements to keep your
+                    app running smoothly.</p>
+            </div>
+            <div class="faq-card">
+                <h4>Can you work with existing codebases?</h4>
+                <p>Absolutely. I can extend, refactor, or optimize existing legacy systems and migrate them to modern
+                    architectures.</p>
+            </div>
+            <div class="faq-card">
+                <h4>Do you help with MVP development?</h4>
+                <p>Yes. I specialize in building MVPs with an underlying scalable architecture so you don't have to
+                    rewrite everything when you grow.</p>
+            </div>
         </div>
     </section>
 
-    <section id="lets-build" class="section container fade-in" style="text-align: center;">
-        <h2 class="section-title">Let’s Build Something Solid</h2>
-        <h3 style="margin-top: 15px;">
-            Have an idea or an existing system that needs improvement?
-        </h3>
-        <h4>
-            <a href="/contact" class="btn" style="margin-top: 20px;">
-                Get in Touch
-            </a>
-        </h4>
+    <section id="lets-build" class="section container fade-in">
+        <div class="cta-card theme-neon">
+            <h2 class="cta-title">Let’s Build Something Solid</h2>
+            <p class="cta-subtitle" style="color: #fff; margin-bottom: 25px;">Have an idea or an existing system that
+                needs improvement?</p>
+            <a href="/contact" class="btn primary">Get in Touch <i class="fas fa-arrow-right"
+                    style="margin-left:8px;"></i></a>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-divider"></div>
         <div class="footer-container">
-
             <!-- LEFT : Business -->
             <div class="footer-left">
                 <h3>Vimal Tech</h3>
@@ -488,13 +547,10 @@
                 <p class="tagline">
                     Freelance Software Development Services
                 </p>
-
                 <p class="studio-line">
                     Independent Software Development Studio
                 </p>
-
                 <div class="brand-divider-left"></div>
-
                 <p class="msme">
                     MSME Registered Micro Enterprise<br />
                     Under the Ministry of Micro, Small and Medium Enterprises<br />
@@ -516,15 +572,11 @@
                 <h3>Vimal Patel</h3>
                 <div class="brand-divider-center"></div>
                 <p>Founder & Software Developer</p>
-
                 <div class="brand-divider-center"></div>
-
                 <p>Phone: <a href="tel:+919638474047">+91 9638 474047</a></p>
                 <p>Email: <a href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a></p>
                 <p>Valsad, Gujarat, India - 396001</p>
-
                 <div class="brand-divider-center"></div>
-
                 <p>Follow me on social media:</p>
                 <div class="footer-social">
                     <a href="https://github.com/vimal-tech-dev" target="_blank" rel="noopener"
@@ -554,6 +606,12 @@
             <p>© 2026 Vimal Tech. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919638474047?text=Hello%20Vimal%2C%0AI%20would%20like%20to%20know%20more%20about%20your%20tech%20services."
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Dark Mode Toggle & ScrollTop Button -->
     <button id="darkModeToggle" class="tooltip">🌙</button>

@@ -1,69 +1,177 @@
-  /* Modal backdrop */
-  .modal {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.5);
-      /* semi-transparent background */
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-  }
+/* ===== MODAL BACKDROP ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    /* Deep dark blue tint */
+    backdrop-filter: blur(8px);
+    /* Modern Glass blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
 
-  .modal.show {
-      display: flex;
-      opacity: 1;
-  }
+.modal.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
 
-  /* Modal content */
-  .modal-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      max-width: 400px;
-      width: 80%;
-      text-align: center;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      position: relative;
-      transform: translateY(-50px);
-      transition: transform 0.3s ease;
-  }
+/* ===== MODAL CONTENT (GLASSMORPHISM) ===== */
+.glass-modal {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-  .modal.show .modal-content {
-      transform: translateY(0);
-  }
+.modal.show .glass-modal {
+    transform: scale(1) translateY(0);
+}
 
-  /* Close button */
-  .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 24px;
-      cursor: pointer;
-  }
+/* ===== MODAL HEADER ===== */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
-  /* Button styling */
-  .open-modal-btn {
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      display: inline-block;
-      padding: 12px 25px;
-      border-radius: 30px;
-      background: #ff9800;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.3s;
-  }
+.modal-header h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: var(--font-primary);
+}
 
-  .open-modal-btn:hover {
-      background-color: #0056b3;
-  }
+.close {
+    color: #94a3b8;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    transform: rotate(90deg);
+}
+
+/* ===== PROJECT TILES MENU ===== */
+.project-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-tile {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect for Tiles */
+.project-tile:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.project-details {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.project-tech {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-family: "Outfit", sans-serif;
+}
+
+.project-arrow {
+    color: #94a3b8;
+    font-size: 1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.project-tile:hover .project-arrow {
+    transform: translateX(5px);
+    color: #fff;
+}
+
+/* ===== BUTTON UPGRADE ===== */
+.glow-btn {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #ff9800, #ff5722);
+    border: none;
+    color: #fff;
+}
+
+.glow-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.glow-btn:hover::before {
+    left: 100%;
+}
