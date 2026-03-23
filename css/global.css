@@ -59,6 +59,15 @@ h3 {
     margin-bottom: 1.5rem;
 }
 
+h4 {
+    font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
 /* TYPOGRAPHY */
 p {
     font-size: 1.1rem;
@@ -120,6 +129,7 @@ p {
 
 .brand-name-tech {
     color: #a6e22e;
+    font-weight: 700;
     /* neon green */
 }
 
@@ -163,7 +173,11 @@ p {
 }
 
 .nav-links li a:hover {
-    color: #ff6347;
+    color: #a51a01;
+}
+
+.nav-links ul li a:hover {
+    color: #a51a01;
 }
 
 .dropdown-menu {
@@ -246,6 +260,10 @@ p {
         display: block;
     }
 
+    body.dark .nav-links {
+        background: #4b76ad;
+    }
+
     .nav-links.active {
         display: flex;
     }
@@ -276,14 +294,15 @@ p {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 750px;
+    max-width: 850px;
     opacity: 0;
     transform: translateY(30px);
     animation: heroFadeUp 1s ease forwards;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
+    padding: 20px;
 }
 
 @keyframes heroFadeUp {
@@ -317,8 +336,8 @@ p {
 
 .hero p {
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-    gap: 30px;
+    /* margin-bottom: 2rem; */
+    /* gap: 30px; */
 }
 
 .hero-subtext {
@@ -326,7 +345,7 @@ p {
     color: #e5e7eb;
     line-height: 1.6;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     opacity: 0;
     animation: fadeUp 0.8s ease forwards;
     animation-delay: 0.3s;
@@ -482,7 +501,7 @@ body.dark .nav-links a.active {
 }
 
 body.dark nav ul li a:hover {
-    color: #ff9800;
+    color: #a51a01;
 }
 
 body.dark .hamburger {

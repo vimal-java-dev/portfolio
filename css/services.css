@@ -425,14 +425,6 @@ body.dark p {
 }
 
 @media (max-width: 768px) {
-    .hero-services h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-services p {
-        font-size: 1rem;
-    }
-
     .process-step {
         min-width: 100%;
     }
