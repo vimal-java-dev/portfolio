@@ -244,6 +244,17 @@ body.contact-body {
     border-bottom: 1px solid var(--border);
 }
 
+.section-title-contact {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
 .info-item {
     display: flex;
     align-items: flex-start;
@@ -586,7 +597,7 @@ body.contact-body {
 
 /* ── RESPONSIVE ───────────────────────── */
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .contact-hero {
         padding: 120px 20px 80px;
     }
@@ -600,7 +611,8 @@ body.contact-body {
     }
 
     .contact-section {
-        margin: 48px auto;
+        margin: 40px auto;
+        width: 100%;
     }
 
     .contact-info {

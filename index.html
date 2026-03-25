@@ -16,17 +16,12 @@
 
   <!-- SEO section start -->
   <title>Vimal Patel | Java Backend Developer | Spring Boot & Microservices</title>
-
   <meta name="description"
     content="Portfolio of Vimal Patel, a Java backend developer specializing in Spring Boot, REST APIs, microservices, and scalable enterprise applications.">
-
   <meta name="keywords"
     content="Java Developer, Spring Boot Developer, Backend Developer, Microservices Developer, REST API Developer, Java Portfolio">
-
   <meta name="author" content="Vimal Patel">
-
   <meta name="robots" content="index, follow">
-
   <link rel="canonical" href="https://vimaltech.dev/">
 
   <!-- Open Graph (Social Sharing SEO) -->
@@ -75,6 +70,8 @@
   <!-- Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <!-- Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <script type="application/ld+json">
   {
@@ -90,7 +87,6 @@
     ]
   }
   </script>
-
 </head>
 
 <body>
@@ -115,15 +111,13 @@
         <ul class="dropdown-menu">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#services-preview">Offering</a></li>
-          <li><a href="#projects">Live</a></li>
+          <li><a href="#projects">Live Works</a></li>
         </ul>
       </li>
-      <!-- New Services link -->
       <li><a href="/services">Services</a></li>
-      <!-- New Expertise link -->
       <li><a href="/expertise">Expertise</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/aboutUs">About Us</a></li>
+      <li><a href="/contactUs">Contact</a></li>
     </ul>
     <!-- hamburger icon -->
     <div style="display: flex; align-items: center;">
@@ -133,78 +127,89 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
+    <div id="particles-js"></div>
+    <div class="gradient-overlay"></div>
     <div class="hero-content">
-
       <h1>
         Building Scalable
         <span class="gradient-text">Backend Systems</span>
       </h1>
 
       <p class="hero-subtext">
-        I'm <span class="highlight-text">Vimal Patel</span>, a Java Backend Developer specializing in
-        <span class="highlight-text">Spring Boot</span>,
-        <span class="highlight-text">Docker</span> and
-        <span class="highlight-text">Microservices</span>.
+        I'm <span class="highlight-text" style="font-weight: 600;">Vimal Patel</span>, a Java Backend
+        Developer specializing in
+        <span class="highlight-text" style="color: #38bdf8;">Spring Boot</span>,
+        <span class="highlight-text" style="color: #2496ed;">Docker</span> and
+        <span class="highlight-text" style="color: #a3e635;">Microservices</span>.
       </p>
 
       <div class="hero-buttons">
-        <a href="#projects" class="btn primary">View My Work</a>
-        <a href="/contact" class="btn secondary">Let's Connect</a>
+        <a href="#projects" class="btn primary glow-btn">View My Work</a>
+        <a href="/contactUs" class="btn secondary"
+          style="border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); backdrop-filter: blur(5px);">Let's
+          Connect</a>
       </div>
 
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section id="experience" class="container fade-in">
-    <h2 class="section-title">Experience</h2>
-    <h3>Competency and Proficiency</h3>
-    <p>
-      I have a good exposure on Java Technologies with hands-on experience in building backend systems, REST APIs, and
-      enterprise
-      applications.
-      Skilled in <strong>Java, Spring Boot, Hibernate, Java Persistence API, Spring Framework, SQL, NoSQL</strong>, and
-      <strong>Cloud
-        Technologies</strong>.
-      Passionate about writing clean, maintainable, and efficient code.
-    </p>
+  <section id="experience" class="section container fade-in">
+    <div class="glass-panel text-center">
+      <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+      <h2 class="section-title fade-in">
+        Competency & Proficiency
+      </h2>
+      <p>
+        I have deep exposure to Java Technologies with hands-on experience building robust backend systems, REST APIs,
+        and enterprise applications.
+        Highly skilled in <strong>Java, Spring Boot, Hibernate, Java Persistence API, Spring Framework, SQL,
+          NoSQL</strong>, and <strong>Cloud Technologies</strong>.
+        Passionate about writing clean, maintainable, and efficient code.
+      </p>
+    </div>
   </section>
 
-  <!-- Mini Services Preview Section -->
-  <section id="services-preview" class="container fade-in">
-    <h2 class="section-title">Services | Offer | Preview</h2>
-    <h3>Explore professional services to help build and scale your projects:</h3>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fas fa-server"></i>
+  <!-- Services Preview Section -->
+  <section id="services-preview" class="section container fade-in alt-bg">
+    <div class="section-header">
+      <h2 class="section-title">Professional | Services | Preview</h2>
+      <p class="section-subtitle">Explore solutions tailored to build and scale your projects efficiently.</p>
+    </div>
+    <div class="services-preview-grid">
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-server"></i></div>
         <h3>Backend Development</h3>
         <p>Scalable backend apps using Java, Spring Boot, and Microservices.</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-cloud"></i>
-        <h3>Cloud Integration</h3>
-        <p>Deploy and manage applications efficiently on AWS.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-database"></i>
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-database"></i></div>
         <h3>Database Management</h3>
-        <p>Manage relational and NoSQL databases like Oracle, MySQL, PostgreSQL, MongoDB, Cassandra.</p>
+        <p>Relational and NoSQL management (Oracle, MySQL, PostgreSQL, MongoDB, Cassandra).</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-project-diagram"></i>
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud Integration</h3>
+        <p>Deploy and manage applications efficiently on AWS infrastructure.</p>
+      </div>
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
         <h3>Project Consulting</h3>
         <p>Architecture guidance and microservices design for enterprise projects.</p>
       </div>
     </div>
 
-    <div class="services-preview" style="margin-top:20px; margin-bottom:10px">
-      <a href="/services" class="btn">View All Services</a>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/services" class="btn primary glow-btn">View All Services →</a>
     </div>
   </section>
 
   <!-- Latest Works Section -->
   <section id="projects" class="projects-wrap">
-    <h2 class="section-title">Latest Works</h2>
+    <div class="section-header">
+      <h2 class="section-title">Latest Works</h2>
+      <p class="section-subtitle">A selection of recent frontend interfaces and live
+    </div>
     <div class="project-filters">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="react">React</button>
@@ -212,17 +217,14 @@
       <button class="filter-btn" data-filter="angular">Angular</button>
     </div>
     <div class="projects-grid">
-
       <!-- Alex Food Corner Card -->
       <div class="project-card" data-category="react">
         <div class="card-inner">
-
           <!-- FRONT -->
           <div class="card-front">
             <div class="card-thumbnail">
               <img src="/images/alex-food-corner.png" alt="Alex Food Corner Website UI" loading="lazy">
             </div>
-
             <div class="card-content">
               <h3>Alex Food Corner</h3>
               <span class="project-tagline">Responsive • Clean UI • Fast</span>
@@ -230,13 +232,11 @@
                 Modern and responsive restaurant website with interactive menu display,
                 clean UI, and seamless user experience built using React and Tailwind CSS.
               </p>
-
               <div class="tech-stack">
                 <span class="tech-badge">React</span>
                 <span class="tech-badge">Tailwind CSS</span>
                 <span class="tech-badge">Vite</span>
               </div>
-
               <div class="card-links">
                 <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">
                   Live Demo
@@ -244,7 +244,6 @@
               </div>
             </div>
           </div>
-
           <!-- BACK -->
           <div class="card-back">
             <h3>🍽️ Restaurant Website UI</h3>
@@ -253,18 +252,15 @@
               WhatsApp ordering integration, Google Maps embed, and a smooth,
               user-focused interface built with modern frontend tools.
             </p>
-
             <div class="card-links">
               <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">
                 → Live Site
               </a>
-
               <a href="https://github.com/vimal-tech-dev/alex-food-corner" class="btn-github" target="_blank">
                 💻 Source Code
               </a>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -280,7 +276,7 @@
               <h3>Suman Enterprise</h3>
               <span class="project-tagline">Responsive • Clean UI • Fast</span>
               <p>
-                Modern enterprise dashboard interface featuring organized data layouts,
+                Modern enterprise product lists interface featuring organized data layouts,
                 smooth navigation, and responsive UI built with Vue.js and Vuetify.
               </p>
               <div class="tech-stack">
@@ -296,9 +292,9 @@
           </div>
           <!-- BACK (Dribbble-style reveal) -->
           <div class="card-back">
-            <h3>📊 Dashboard UI</h3>
+            <h3>📊 Product Lists UI</h3>
             <p>
-              Frontend dashboard project showcasing structured data presentation,
+              Frontend project showcasing product lists structured UI data presentation,
               component-based architecture, and responsive design using Vue.js,
               Vue Router, and Vuetify.
             </p>
@@ -356,28 +352,23 @@
   </section>
 
   <!-- Visiting Card Section -->
-  <section id="cta-section" class="cta-wrap">
+  <section id="cta-section" class="section container fade-in">
     <div class="cta-card theme-neon">
-      <div class="cta-header">
-        <div class="cta-titles">
-          <h2 class="cta-title">Thanks for visiting 👋</h2>
-          <p class="cta-subtitle">Ready to turn your idea into reality?</p>
-        </div>
-      </div>
-
-      <div class="cta-body">
-        <p class="cta-description">
-          Helping local businesses thrive in the Digital Era.
-          Whether it's a <strong>local business website</strong> or an <strong>enterprise backend system</strong>,
-          I am ready to code your vision.
-        </p>
-      </div>
-
-      <div class="cta-footer">
-        <a href="tel:+919638474047" class="cta-button" target="_blank">
-          Make your own website
-        </a>
-      </div>
+      <h2 class="cta-title">
+        Thanks for visiting 👋
+      </h2>
+      <p class="cta-subtitle" style="color: #fff; margin-bottom: 20px;">
+        Ready to turn your idea into reality?
+      </p>
+      <p class="cta-description" style="max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6; color: #cbd5e1;">
+        Helping businesses thrive in the Digital Era. Whether it's a
+        <strong>local business website</strong>
+        or a complex <strong>enterprise backend system</strong>,
+        I am ready to code your vision.
+      </p>
+      <a href="tel:+919638474047" class="btn primary glow-btn" target="_blank">
+        Let's Build Together <i class="fas fa-phone-alt" style="margin-left: 8px;"></i>
+      </a>
     </div>
   </section>
 
@@ -449,8 +440,8 @@
         <p><a href="/">Home</a></p>
         <p><a href="/services">Services</a></p>
         <p><a href="/expertise">Expertise</a></p>
-        <p><a href="/about">About</a></p>
-        <p><a href="/contact">Contact</a></p>
+        <p><a href="/aboutUs">About Us</a></p>
+        <p><a href="/contactUs">Contact</a></p>
       </div>
 
     </div>

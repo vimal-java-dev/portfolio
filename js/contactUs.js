@@ -53,21 +53,19 @@ function reloadParticles() {
 }
 
 // ===================================================
-// ===== 2. CUSTOM PHYSICS (IDLE TIMER + EXPLOSION) ==
+// ===== 2. CUSTOM PHYSICS (MAGNET + EXPLOSION) =====
 // ===================================================
 let mouseX = -9999;
 let mouseY = -9999;
 let isMousePresent = false;
 let hasActuallyMoved = false;
 
-// THE FIX: Idle Timer variables
-let isMouseActive = false;
-let idleTimeout = null;
 let initialX = null;
 let initialY = null;
+let isMouseActive = false;
+let idleTimeout = null;
 
 document.addEventListener("mousemove", (e) => {
-    // 25-Pixel Deadzone Lock
     if (!hasActuallyMoved) {
         if (initialX === null && initialY === null) {
             initialX = e.clientX;
@@ -80,30 +78,33 @@ document.addEventListener("mousemove", (e) => {
         hasActuallyMoved = true;
     }
 
-    // Update coordinates
     mouseX = e.clientX;
     mouseY = e.clientY;
     isMousePresent = true;
-
-    // Turn the magnet ON because the mouse is currently moving
     isMouseActive = true;
 
-    // Reset the Idle Timer every time the mouse moves
     clearTimeout(idleTimeout);
     idleTimeout = setTimeout(() => {
-        // If the mouse stops moving for 1 second, turn the magnet OFF
         isMouseActive = false;
     }, 1000);
 });
 
 document.addEventListener("mouseleave", () => {
     isMousePresent = false;
-    isMouseActive = false; // Turn off magnet if mouse leaves window
+    isMouseActive = false;
 });
 
-// Click to Explode (Now uses exact click coordinates)
+document.addEventListener("mouseenter", () => {
+    if (hasActuallyMoved) isMousePresent = true;
+});
+
 document.addEventListener("click", (e) => {
     if (!window.pJSDom || window.pJSDom.length === 0) return;
+
+    // Prevent particles from exploding if clicking inside the form inputs
+    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA" || e.target.tagName === "BUTTON") {
+        return;
+    }
 
     const clickX = e.clientX;
     const clickY = e.clientY;
@@ -122,13 +123,11 @@ document.addEventListener("click", (e) => {
     });
 });
 
-// The Physics Engine Loop
 function applyCustomPhysics() {
     if (window.pJSDom && window.pJSDom.length > 0) {
         const pJS = window.pJSDom[0].pJS;
         const particles = pJS.particles.array;
 
-        // Hide native library cursor tracking if idle or deadzone locked
         if (!hasActuallyMoved || !isMouseActive) {
             pJS.interactivity.mouse.pos_x = null;
             pJS.interactivity.mouse.pos_y = null;
@@ -138,13 +137,11 @@ function applyCustomPhysics() {
         }
 
         particles.forEach(p => {
-            // Air Resistance (Slows them down after explosion)
             if (Math.abs(p.vx) > 1.0 || Math.abs(p.vy) > 1.0) {
                 p.vx *= 0.88;
                 p.vy *= 0.88;
             }
 
-            // Magnetic Pull (ONLY runs if the mouse is actively moving)
             if (isMouseActive && isMousePresent) {
                 const dx = mouseX - p.x;
                 const dy = mouseY - p.y;
@@ -163,7 +160,7 @@ function applyCustomPhysics() {
 applyCustomPhysics();
 
 // ===================================================
-// ===== 3. UI, THEME =====
+// ===== 3. UI, THEME, AND FORM LOGIC =====
 // ===================================================
 function updateOverlayGradient() {
     const overlay = document.querySelector(".gradient-overlay");
@@ -210,4 +207,27 @@ document.addEventListener("DOMContentLoaded", () => {
     updateOverlayGradient();
     updateToggleIcon();
     initParticles();
+
+    // Simple Form Submission Mock
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Stop page reload
+
+            // Show Success Message
+            formStatus.textContent = "✓ Message sent successfully! I will get back to you soon.";
+            formStatus.className = "form-status success";
+
+            // Clear inputs
+            contactForm.reset();
+
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formStatus.style.display = 'none';
+                formStatus.className = "form-status";
+            }, 5000);
+        });
+    }
 });
