@@ -37,9 +37,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- Space+Grotesk -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Lexend -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/about.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
 
     <script type="application/ld+json">
 {
@@ -91,8 +112,13 @@
             <li><a href="/">Home</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/expertise">Expertise</a></li>
-            <li><a href="/about" class="active">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li class="dropdown">
+                <a href="/about" class="dropdown-toggle active">About Me</a>
+                <ul class="dropdown-menu">
+                    <li><a href="/aboutUs">About Us</a></li>
+                </ul>
+            </li>
+            <li><a href="/contactUs">Contact</a></li>
         </ul>
 
         <div class="nav-toggle-wrapper">
@@ -311,13 +337,16 @@
                     </div>
                 </div>
             </section>
-        </div><br />
-        <hr style="height:4px;border-width:0;color:rgb(56, 0, 0);background-color:rgb(92, 35, 35)">
-        <div class="about-conclusion fade-in" style="text-align: center;">
-            <p style="font-weight:bold;margin-top:10px;">
-                See more backend services on <br />
-                <a href="/services">Java Development Services</a>.
+        </div>
+
+        <div class="service-card-link about-conclusion fade-in" style="text-align: center; margin-top: 40px;">
+            <p style="font-weight: 500;">
+                See more details for
+                <a href="/services">
+                    Java Development Services →
+                </a>
             </p>
+        </div>
     </main>
 
     <!-- Footer -->
@@ -389,8 +418,8 @@
                 <p><a href="/">Home</a></p>
                 <p><a href="/services">Services</a></p>
                 <p><a href="/expertise">Expertise</a></p>
-                <p><a href="/about">About</a></p>
-                <p><a href="/contact">Contact</a></p>
+                <p><a href="/aboutUs">About Us</a></p>
+                <p><a href="/contactUs">Contact</a></p>
             </div>
 
         </div>
@@ -401,6 +430,7 @@
 
     <!-- JS -->
     <script src="/js/global.js"></script>
+    <script src="/js/dropdown.js"></script>
     <script src="/js/about.js"></script>
 </body>
 

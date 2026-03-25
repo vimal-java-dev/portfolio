@@ -345,7 +345,7 @@ body.dark .category-title {
 .underline-hover {
     text-decoration: none;
     position: relative;
-    color: #333;
+    color: sandybrown;
 }
 
 .underline-hover::after {
@@ -356,7 +356,7 @@ body.dark .category-title {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000;
+    background-color: blue;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }

@@ -3,66 +3,198 @@
 =================================================== */
 /* 🎨 Premium Typography + Layout */
 .hero {
-  background: url('/images/hero.png') no-repeat center/cover;
+  /* background: url('/images/hero.png') no-repeat center/cover; */
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1e293b, #020617);
+}
+
+/* Glow Button */
+.glow-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.glow-btn:hover::before {
+  left: 100%;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+.fade-in.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ===== UTILITIES & SECTIONS ===== */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-muted);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.alt-bg {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  padding: 4rem 2rem;
+}
+
+body.dark .alt-bg {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* ===================================================
    ===== Experience Section =====
 =================================================== */
 #experience {
-  background-color: #e9ecef;
-  padding: 3rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+#experience p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--color-text);
+}
+
+/* ===== GLASS PANEL (For Experience Section) ===== */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 20px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .glass-panel {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .glass-panel p {
+  color: #cbd5e1 !important;
+}
+
+.card-icon {
+  margin: 0 auto 15px auto;
+  width: 60px;
+  height: 60px;
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--color-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+/* ===== SERVICES PREVIEW GRID ===== */
+.services-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.preview-card {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 16px;
   text-align: center;
-  margin-bottom: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+  border-bottom: 4px solid transparent;
+  transition: all 0.3s ease;
 }
 
-/* ===================================================
-   ===== Mini Services Preview Section =====
-=================================================== */
-#services-preview {
-  text-align: center;
+.preview-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-bottom-color: var(--color-primary);
 }
 
-/* Services Preview Animations */
-#services-preview .service-card {
-  background: #f5f5f5;
-  padding: 25px 15px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  cursor: pointer;
+.preview-card .card-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 152, 0, 0.1);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 15px auto;
+  transition: transform 0.3s ease;
 }
 
-#services-preview .service-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-  background: #fff3e0;
-  /* Slight highlight color */
+.preview-card:hover .card-icon {
+  transform: scale(1.1);
+  background: var(--color-primary);
+  color: #fff;
 }
 
-#services-preview .service-card i {
-  font-size: 2.5rem;
-  color: sandybrown;
-  margin-bottom: 12px;
-  transition: transform 0.3s ease, color 0.3s ease;
+.preview-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--color-text);
 }
 
-#services-preview .service-card:hover i {
-  transform: rotate(10deg) scale(1.1);
-  color: #ff8c42;
-  /* Slight color change on hover */
+.preview-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-#services-preview .service-card h3 {
-  transition: color 0.3s ease;
+body.dark .preview-card {
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 4px solid transparent;
 }
 
-#services-preview .service-card:hover h3 {
-  color: #d2691e;
-  /* Darker highlight on hover */
+body.dark .preview-card h3 {
+  color: #fff;
+}
+
+body.dark .preview-card:hover {
+  border-bottom-color: var(--color-primary);
 }
 
 /* ===================================================
@@ -74,10 +206,8 @@ body.dark #services-preview .service-card {
   color: #e0e0e0;
 }
 
-body.dark #experience,
-body.dark #projects,
-body.dark #cta-section {
-  background-color: #467db4;
+body.dark #projects {
+  background: #242424;
   color: #ffffff;
 }
 
@@ -86,80 +216,36 @@ body.dark .project-card {
   color: #e0e0e0;
 }
 
-/* Wrapper for centering card horizontally */
-.card-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  /* margin-top: 10px; */
-}
-
 /* CTA Section */
-.cta-section {
-  text-align: center;
-  margin-top: 50px;
-}
-
-/* Container */
-.cta-wrap {
-  text-align: center;
-  padding: 4rem 1rem;
-  background: #e9ecef;
-  /* Match your site bg */
-}
-
-/* The Card */
+/* ===== CTA SECTION (NEON STYLE) ===== */
 .cta-card {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2.5rem;
-  border: 1px solid #333;
-  border-radius: 12px;
-  background: #1a1a1a;
-  /* Slightly lighter than bg */
-  box-shadow: 0 4px 20px rgba(0, 255, 0, 0.05);
-  /* Subtle neon glow */
-}
-
-/* Typography */
-.cta-title {
-  font-size: 2rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #fff;
-  margin-bottom: 0.5rem;
+  padding: 60px 40px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.cta-subtitle {
-  color: #aaa;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+.theme-neon {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  position: relative;
+  overflow: hidden;
 }
 
-.cta-description {
-  color: #ccc;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
+.theme-neon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.1) 0%, transparent 60%);
+  z-index: 0;
 }
 
-.cta-description strong {
-  color: #00ff88;
-  /* Your neon color */
-}
-
-/* The Button */
-.cta-button {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #00ff88;
-  /* Your neon green */
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+.theme-neon>* {
+  position: relative;
+  z-index: 1;
 }

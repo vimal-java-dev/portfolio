@@ -243,3 +243,11 @@ body.about-body {
 .about-body section {
     border-radius: var(--radius);
 }
+
+@media (max-width: 768px) {
+
+    .service-card-link p {
+        white-space: pre-line;
+    }
+
+}
