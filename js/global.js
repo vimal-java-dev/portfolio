@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+      // This toggles the 'active' class on the hamburger for the rotation
       hamburger.classList.toggle("active");
+      // This opens your actual menu
+      navLinks.classList.toggle("open");
       hamburger.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
     });
 
@@ -164,8 +167,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ============================
-   Active Navbar Link per Page
-============================ */
+    Active Navbar Link per Page
+    ============================ */
   const currentPage = window.location.pathname.split("/").pop();
 
   navItems.forEach((link) => {
@@ -183,4 +186,5 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("active");
     }
   });
+
 });

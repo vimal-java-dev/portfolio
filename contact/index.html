@@ -34,9 +34,30 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <!-- Space+Grotesk -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Lexend -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
 
     <script type="application/ld+json">
 {
@@ -62,26 +83,18 @@
 }
 </script>
 
-    <style>
-        a {
-            color: sandybrown;
-        }
-
-        a:hover {
-            color: blue;
-        }
-    </style>
 </head>
 
 <body class="contact-body">
-
-    <nav class="navbar">
+    <nav class="navbar glass-nav">
         <div>
             <a href="/" class="brand">
-                <img src="/images/logo.jpeg" alt="Vimal Tech Logo" class="logo">
+                <img src="/images/logo.jpeg" alt="Vimal Tech Java Developer Logo" class="logo" loading="lazy">
                 <span class="brand-name">
                     <span class="brand-name-vimal">Vimal</span>
-                    <span class="brand-name-tech">Tech</span>
+                    <span class="brand-name-tech brand-gradient-text">
+                        Tech
+                    </span>
                 </span>
             </a>
         </div>
@@ -90,8 +103,13 @@
             <li><a href="/">Home</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="/expertise">Expertise</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact" class="active">Contact</a></li>
+            <li><a href="/aboutUs">About Us</a></li>
+            <li class="dropdown">
+                <a href="/contact" class="dropdown-toggle active">Contact Form</a>
+                <ul class="dropdown-menu glass-dropdown">
+                    <li><a href="/contactUs">Contact</a></li>
+                </ul>
+            </li>
         </ul>
 
         <div class="nav-toggle-wrapper">
@@ -130,7 +148,7 @@
 
         <section class="contact-section container" id="contact">
             <aside class="contact-info fade-in">
-                <h2 class="section-title">Contact Information</h2>
+                <h2 class="section-title-contact">Contact Information</h2>
 
                 <div class="info-item">
                     <div class="info-icon">
@@ -185,8 +203,8 @@
 
                 <h3 style="font-weight: bold; color: red;">This form is being worked on as part of a production issue.
                 </h3>
-                <h4 style="font-weight: bold; color: red;">API Monitoring: Prometheus + Grafana for observability</h4>
-                <a href="https://github.com/vimal-java-dev/vimaltech-contact-api/issues/31" target="_blank"
+                <h4 style="font-weight: bold; color: red;">Deployment Automation (CI/CD) with zero downtime.</h4>
+                <a href="https://github.com/vimal-java-dev/vimaltech-contact-api/issues/34" target="_blank"
                     rel="noopener noreferrer">ISSUE CODE ON GITHUB</a>
 
                 <form id="contactForm" class="contact-form" novalidate><br>
@@ -266,53 +284,58 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="footer-divider"></div>
+        <div class="footer-divider-top"></div>
         <div class="footer-container">
 
-            <!-- LEFT : Business -->
             <div class="footer-left">
-                <h3>Vimal Tech</h3>
-
-                <p class="tagline">
-                    Freelance Software Development Services
-                </p>
-
-                <p class="studio-line">
-                    Independent Software Development Studio
-                </p>
-
-                <div class="brand-divider-left"></div>
-
-                <p class="msme">
-                    MSME Registered Micro Enterprise<br />
-                    Under the Ministry of Micro, Small and Medium Enterprises<br />
-                    Government of India
-                </p>
-                <div class="brand-divider-left"></div>
-                <p class="udyam">
-                    Udyam Registration Number: UDYAM-GJ-25-0089795
-                </p>
+                <div class="footer-brand-header">
+                    <a href="/" class="brand">
+                        <img src="/images/vimal-logo-transparent.png" alt="Vimal Tech Logo" class="footer-logo">
+                        <h3>Vimal Tech</h3>
+                    </a>
+                </div>
+                <div class="brand-divider"></div>
+                <p class="tagline">Freelance Software Development Services</p>
+                <p class="studio-line">Independent Software Development Studio</p>
+                <div class="brand-divider"></div>
+                <div class="msme-header">
+                    <a href="https://udyamregistration.gov.in/" class="brand" target="_blank" rel="noopener">
+                        <img src="/images/msme-logo-transparent.png" alt="MSME Logo" class="msme-logo">
+                        <div class="msme-text-block">
+                            <p class="msme"><strong>MSME Registered Micro Enterprise</strong></p>
+                            <p class="studio-line">Under the Ministry of Micro, Small and Medium
+                                Enterprises<br />Government of India
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="brand-divider"></div>
+                <p class="udyam">Udyam Registration Number: <strong>UDYAM-GJ-25-0089795</strong></p>
                 <p class="udyam-verify">
                     <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank" rel="noopener">
-                        ✓ Verify MSME Registration
+                        <i class="fas fa-check-circle"></i> Verify MSME Registration
                     </a>
                 </p>
             </div>
 
-            <!-- CENTER : Contact -->
             <div class="footer-center">
-                <p><strong>Vimal Patel</strong></p>
-                <p>Founder & Software Developer</p>
+                <h3>Vimal Patel</h3>
+                <div class="brand-divider"></div>
+                <p class="role-highlight">Founder & Software Developer</p>
 
-                <div class="brand-divider-center"></div>
+                <div class="brand-divider"></div>
 
-                <p>Phone: <a href="tel:+919638474047">+91 9638 474047</a></p>
-                <p>Email: <a href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a></p>
-                <p>Valsad, Gujarat, India - 396001</p>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+919638474047">+91 9638 474047</a></li>
+                    <li><i class="fas fa-envelope"></i> <a
+                            href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a>
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> Valsad, Gujarat, India - 396001</li>
+                </ul>
 
-                <div class="brand-divider-center"></div>
+                <div class="brand-divider"></div>
 
-                <p>Follow us on social media:</p>
+                <p>Follow me on social media:</p>
                 <div class="footer-social">
                     <a href="https://github.com/vimal-tech-dev" target="_blank" rel="noopener"
                         aria-label="Vimal Tech GitHub">
@@ -325,26 +348,28 @@
                 </div>
             </div>
 
-            <!-- RIGHT : Quick Links -->
             <div class="footer-links">
-                <p><strong>Quick Links</strong></p>
-                <div class="brand-divider-right"></div>
-                <p><a href="/">Home</a></p>
-                <p><a href="/services">Services</a></p>
-                <p><a href="/expertise">Expertise</a></p>
-                <p><a href="/about">About</a></p>
-                <p><a href="/contact" class="active">Contact</a></p>
+                <h3>Quick Links</h3>
+                <div class="brand-divider right-align-divider"></div>
+                <ul class="quick-links-list">
+                    <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
+                    <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
+                    <li><a href="/expertise"><i class="fas fa-angle-right"></i> Expertise</a></li>
+                    <li><a href="/aboutUs"><i class="fas fa-angle-right"></i> About Us</a></li>
+                    <li><a href="/contactUs"><i class="fas fa-angle-right"></i> Contact</a></li>
+                </ul>
             </div>
-
         </div>
+
         <div class="footer-bottom">
-            <p>© 2026 Vimal Tech • Built with HTML, CSS & JavaScript</p>
+            <p>&copy; 2026 Vimal Tech. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="/js/common.js"></script>
+    <!-- JS -->
+    <script src="/js/global.js"></script>
+    <script src="/js/dropdown.js"></script>
     <script src="/js/contact.js"></script>
-
 </body>
 
 </html>

@@ -53,21 +53,23 @@ function reloadParticles() {
 }
 
 // ===================================================
-// ===== 2. CUSTOM PHYSICS (IDLE TIMER + EXPLOSION) ==
+// ===== 2. CUSTOM PHYSICS (MAGNET + EXPLOSION) =====
 // ===================================================
 let mouseX = -9999;
 let mouseY = -9999;
 let isMousePresent = false;
 let hasActuallyMoved = false;
 
-// THE FIX: Idle Timer variables
-let isMouseActive = false;
-let idleTimeout = null;
+// Variables for the Strict 25-Pixel Radial Deadzone
 let initialX = null;
 let initialY = null;
 
+// Idle Timer Variables
+let isMouseActive = false;
+let idleTimeout = null;
+
 document.addEventListener("mousemove", (e) => {
-    // 25-Pixel Deadzone Lock
+    // DEADZONE LOCK
     if (!hasActuallyMoved) {
         if (initialX === null && initialY === null) {
             initialX = e.clientX;
@@ -80,28 +82,28 @@ document.addEventListener("mousemove", (e) => {
         hasActuallyMoved = true;
     }
 
-    // Update coordinates
     mouseX = e.clientX;
     mouseY = e.clientY;
     isMousePresent = true;
-
-    // Turn the magnet ON because the mouse is currently moving
     isMouseActive = true;
 
-    // Reset the Idle Timer every time the mouse moves
+    // Reset Idle Timer
     clearTimeout(idleTimeout);
     idleTimeout = setTimeout(() => {
-        // If the mouse stops moving for 1 second, turn the magnet OFF
         isMouseActive = false;
     }, 1000);
 });
 
 document.addEventListener("mouseleave", () => {
     isMousePresent = false;
-    isMouseActive = false; // Turn off magnet if mouse leaves window
+    isMouseActive = false;
 });
 
-// Click to Explode (Now uses exact click coordinates)
+document.addEventListener("mouseenter", () => {
+    if (hasActuallyMoved) isMousePresent = true;
+});
+
+// Click to Explode
 document.addEventListener("click", (e) => {
     if (!window.pJSDom || window.pJSDom.length === 0) return;
 
@@ -128,7 +130,7 @@ function applyCustomPhysics() {
         const pJS = window.pJSDom[0].pJS;
         const particles = pJS.particles.array;
 
-        // Hide native library cursor tracking if idle or deadzone locked
+        // FORCE NATIVE LIBRARY TO IGNORE MOUSE IF IDLE
         if (!hasActuallyMoved || !isMouseActive) {
             pJS.interactivity.mouse.pos_x = null;
             pJS.interactivity.mouse.pos_y = null;
@@ -138,13 +140,13 @@ function applyCustomPhysics() {
         }
 
         particles.forEach(p => {
-            // Air Resistance (Slows them down after explosion)
+            // Air Resistance
             if (Math.abs(p.vx) > 1.0 || Math.abs(p.vy) > 1.0) {
                 p.vx *= 0.88;
                 p.vy *= 0.88;
             }
 
-            // Magnetic Pull (ONLY runs if the mouse is actively moving)
+            // Magnetic Pull
             if (isMouseActive && isMousePresent) {
                 const dx = mouseX - p.x;
                 const dy = mouseY - p.y;
@@ -163,7 +165,7 @@ function applyCustomPhysics() {
 applyCustomPhysics();
 
 // ===================================================
-// ===== 3. UI, THEME, AND ACCORDION LOGIC =====
+// ===== 3. UI, THEME, AND SCROLL LOGIC =====
 // ===================================================
 function updateOverlayGradient() {
     const overlay = document.querySelector(".gradient-overlay");
@@ -210,20 +212,4 @@ document.addEventListener("DOMContentLoaded", () => {
     updateOverlayGradient();
     updateToggleIcon();
     initParticles();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const accordionItems = document.querySelectorAll(".accordion-item");
-    if (!accordionItems.length) return;
-
-    accordionItems.forEach(item => {
-        const header = item.querySelector(".accordion-header");
-        if (!header) return;
-
-        header.addEventListener("click", () => {
-            const isActive = item.classList.contains("active");
-            accordionItems.forEach(i => i.classList.remove("active"));
-            if (!isActive) item.classList.add("active");
-        });
-    });
 });

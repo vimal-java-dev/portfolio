@@ -26,32 +26,6 @@ body.about-body {
     font-family: 'Inter', 'DM Sans', sans-serif;
 }
 
-.about-body .navbar {
-    background-color: rgba(11, 15, 26, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-}
-
-.about-body .navbar .brand-name-vimal {
-    color: #fff;
-}
-
-.about-body .nav-links li a {
-    color: #cbd5e1;
-}
-
-.about-body .nav-links li a:hover,
-.about-body .nav-links li a.active {
-    color: var(--amber);
-}
-
-@media (max-width: 768px) {
-    .about-body .nav-links {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border);
-    }
-}
-
 /* ── PAGE STRUCTURE ─────────────────── */
 
 .about-container {
@@ -268,4 +242,12 @@ body.about-body {
 /* Override common.css section radius to let custom cards control it */
 .about-body section {
     border-radius: var(--radius);
+}
+
+@media (max-width: 768px) {
+
+    .service-card-link p {
+        white-space: pre-line;
+    }
+
 }

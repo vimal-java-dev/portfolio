@@ -163,7 +163,7 @@ function applyCustomPhysics() {
 applyCustomPhysics();
 
 // ===================================================
-// ===== 3. UI, THEME, AND ACCORDION LOGIC =====
+// ===== 3. UI, THEME =====
 // ===================================================
 function updateOverlayGradient() {
     const overlay = document.querySelector(".gradient-overlay");
@@ -210,20 +210,4 @@ document.addEventListener("DOMContentLoaded", () => {
     updateOverlayGradient();
     updateToggleIcon();
     initParticles();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const accordionItems = document.querySelectorAll(".accordion-item");
-    if (!accordionItems.length) return;
-
-    accordionItems.forEach(item => {
-        const header = item.querySelector(".accordion-header");
-        if (!header) return;
-
-        header.addEventListener("click", () => {
-            const isActive = item.classList.contains("active");
-            accordionItems.forEach(i => i.classList.remove("active"));
-            if (!isActive) item.classList.add("active");
-        });
-    });
 });
