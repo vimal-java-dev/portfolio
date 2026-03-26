@@ -689,8 +689,7 @@ body.dark .section-title {
     font-size: 1.3rem;
     margin-bottom: 12px;
     font-weight: 600;
-    color: #ffffff;
-    font-family: var(--font-primary);
+    color: var(--color-primary);
 }
 
 .site-footer p {
@@ -879,19 +878,36 @@ body.dark .section-title {
         width: 100%;
     }
 
+    /* --- QUICK LINKS MOBILE FIX --- */
     .footer-links {
-        text-align: left;
+        text-align: left !important;
         width: 100%;
     }
 
     .right-align-divider {
-        margin-left: 0;
-        /* Reset divider to left for mobile */
+        margin-left: 0 !important;
+        margin-right: auto;
     }
 
+    .quick-links-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+        /* Strips any hidden browser padding */
+        margin-left: 0;
+    }
+
+    /* Force the arrow to be permanently visible and in place on mobile */
+    .quick-links-list a i {
+        opacity: 1 !important;
+        transform: translateX(0) !important;
+    }
+
+    /* Completely disable the sliding hover effect for touch screens */
+    .quick-links-list a,
     .quick-links-list a:hover {
-        transform: translateX(5px);
-        /* Move right instead of left on mobile */
+        transform: none !important;
     }
 }
 
@@ -912,6 +928,7 @@ body.dark .section-title {
     margin-bottom: 0;
     /* Overrides default spacing so it centers perfectly with the V */
     font-size: 1.5rem;
+    margin-left: 5px;
 }
 
 .footer-logo {
@@ -921,6 +938,7 @@ body.dark .section-title {
     object-fit: contain;
     /* Optional: Gives your lime-green 'V' a tiny subtle glow against the dark background */
     filter: drop-shadow(0 0 6px rgba(163, 230, 53, 0.4));
+    margin-bottom: -10px;
 }
 
 /* MSME Logo Alignment */
