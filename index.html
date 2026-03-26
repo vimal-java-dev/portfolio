@@ -16,17 +16,12 @@
 
   <!-- SEO section start -->
   <title>Vimal Patel | Java Backend Developer | Spring Boot & Microservices</title>
-
   <meta name="description"
     content="Portfolio of Vimal Patel, a Java backend developer specializing in Spring Boot, REST APIs, microservices, and scalable enterprise applications.">
-
   <meta name="keywords"
     content="Java Developer, Spring Boot Developer, Backend Developer, Microservices Developer, REST API Developer, Java Portfolio">
-
   <meta name="author" content="Vimal Patel">
-
   <meta name="robots" content="index, follow">
-
   <link rel="canonical" href="https://vimaltech.dev/">
 
   <!-- Open Graph (Social Sharing SEO) -->
@@ -50,26 +45,33 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/global.css">
   <link rel="stylesheet" href="/css/latest-works.css">
-  <link rel="stylesheet" href="/css/mini-services.css">
   <link rel="stylesheet" href="/css/dropdown.css">
   <!-- Popup Window CSS -->
-  <link rel="stylesheet" href="/css/open-modal-btn.css">
   <link rel="stylesheet" href="/css/whatsapp-floating.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    a {
-      color: sandybrown;
-    }
-
-    a:hover {
-      color: blue;
-    }
-  </style>
+  <!-- Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+  <!-- Space+Grotesk -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+    rel="stylesheet">
+  <!-- Lexend -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
   <script type="application/ld+json">
   {
@@ -85,18 +87,17 @@
     ]
   }
   </script>
-
 </head>
 
 <body>
   <!-- Header / Navbar -->
-  <nav class="navbar">
+  <nav class="navbar glass-nav">
     <div>
       <a href="/" class="brand">
-        <img src="/images/logo.jpeg" alt="Vimal Tech Java Developer Logo" class="logo">
+        <img src="/images/logo.jpeg" alt="Vimal Tech Java Developer Logo" class="logo" loading="lazy">
         <span class="brand-name">
           <span class="brand-name-vimal">Vimal</span>
-          <span class="brand-name-tech">Tech</span>
+          <span class="brand-name-tech brand-gradient-text">Tech</span>
         </span>
       </a>
     </div>
@@ -105,18 +106,16 @@
       <!-- Dropdown Section -->
       <li class="dropdown">
         <a href="/" class="dropdown-toggle active">Home</a>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu glass-dropdown">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#services-preview">Offering</a></li>
-          <li><a href="#projects">Live</a></li>
+          <li><a href="#projects">Live Works</a></li>
         </ul>
       </li>
-      <!-- New Services link -->
       <li><a href="/services">Services</a></li>
-      <!-- New Expertise link -->
       <li><a href="/expertise">Expertise</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/aboutUs">About Us</a></li>
+      <li><a href="/contactUs">Contact</a></li>
     </ul>
     <!-- hamburger icon -->
     <div style="display: flex; align-items: center;">
@@ -126,95 +125,135 @@
 
   <!-- Hero Section -->
   <section id="hero" class="hero">
+    <div id="particles-js"></div>
+    <div class="gradient-overlay"></div>
     <div class="hero-content">
-      <h1>I'm Java Backend Developer - <br />Vimal Patel</h1>
-      <h2>Building <strong>scalable backend</strong> applications with Spring Boot and Microservices.</h2>
-      <a href="#projects" class="btn">My Work</a>
+      <h1>
+        Building Scalable
+        <span class="gradient-text">Backend Systems</span>
+      </h1>
+
+      <p class="hero-subtext">
+        I'm <span class="highlight-text" style="font-weight: 600;">Vimal Patel</span>, a Java Backend
+        Developer specializing in
+        <span class="highlight-text" style="color: #38bdf8;">Spring Boot</span>,
+        <span class="highlight-text" style="color: #2496ed;">Docker</span> and
+        <span class="highlight-text" style="color: #a3e635;">Microservices</span>.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary glow-btn">View My Work</a>
+        <a href="/contactUs" class="btn secondary"
+          style="border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); backdrop-filter: blur(5px);">Let's
+          Connect</a>
+      </div>
+
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="experience" class="container fade-in">
-    <h2 class="section-title">Experience</h2>
-    <h3>Competency and Proficiency</h3>
-    <p>
-      I have a good exposure on Java Technologies with hands-on experience in building backend systems, REST APIs, and
-      enterprise
-      applications.
-      Skilled in <strong>Java, Spring Boot, Hibernate, Java Persistence API, Spring Framework, SQL, NoSQL</strong>, and
-      <strong>Cloud
-        Technologies</strong>.
-      Passionate about writing clean, maintainable, and efficient code.
-    </p>
+  <!-- Experience Section -->
+  <section id="experience" class="section container fade-in">
+    <div class="glass-panel text-center">
+      <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+      <h2 class="section-title fade-in">
+        Competency & Proficiency
+      </h2>
+      <p>
+        I have deep exposure to Java Technologies with hands-on experience building robust backend systems, REST APIs,
+        and enterprise applications.
+        Highly skilled in <strong>Java, Spring Boot, Hibernate, Java Persistence API, Spring Framework, SQL,
+          NoSQL</strong>, and <strong>Cloud Technologies</strong>.
+        Passionate about writing clean, maintainable, and efficient code.
+      </p>
+    </div>
   </section>
 
-  <!-- Mini Services Preview Section -->
-  <section id="services-preview" class="container fade-in">
-    <h2 class="section-title">Services | Offer | Preview</h2>
-    <p>Explore professional services to help build and scale your projects:</p><br>
-
-    <div class="services-grid">
-      <div class="service-card">
-        <i class="fas fa-server"></i>
+  <!-- Services Preview Section -->
+  <section id="services-preview" class="section container fade-in alt-bg">
+    <div class="section-header">
+      <h2 class="section-title">Professional | Services | Preview</h2>
+      <p class="section-subtitle">Explore solutions tailored to build and scale your projects efficiently.</p>
+    </div>
+    <div class="services-preview-grid">
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-server"></i></div>
         <h3>Backend Development</h3>
         <p>Scalable backend apps using Java, Spring Boot, and Microservices.</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-cloud"></i>
-        <h3>Cloud Integration</h3>
-        <p>Deploy and manage applications efficiently on AWS.</p>
-      </div>
-      <div class="service-card">
-        <i class="fas fa-database"></i>
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-database"></i></div>
         <h3>Database Management</h3>
-        <p>Manage relational and NoSQL databases like Oracle, MySQL, PostgreSQL, MongoDB, Cassandra.</p>
+        <p>Relational and NoSQL management (Oracle, MySQL, PostgreSQL, MongoDB, Cassandra).</p>
       </div>
-      <div class="service-card">
-        <i class="fas fa-project-diagram"></i>
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-cloud"></i></div>
+        <h3>Cloud Integration</h3>
+        <p>Deploy and manage applications efficiently on AWS infrastructure.</p>
+      </div>
+      <div class="preview-card">
+        <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
         <h3>Project Consulting</h3>
         <p>Architecture guidance and microservices design for enterprise projects.</p>
       </div>
-    </div><br>
+    </div>
 
-    <div class="services-preview" style="margin-top:20px; margin-bottom:10px">
-      <a href="/services" class="btn">View All Services</a>
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/services" class="btn primary glow-btn">View All Services →</a>
     </div>
   </section>
 
   <!-- Latest Works Section -->
   <section id="projects" class="projects-wrap">
-    <h2 class="section-title">Latest Works</h2>
+    <div class="section-header">
+      <h2 class="section-title">Latest Works</h2>
+      <p class="section-subtitle">A selection of recent frontend interfaces and live
+    </div>
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="vue">Vue</button>
+      <button class="filter-btn" data-filter="angular">Angular</button>
+    </div>
     <div class="projects-grid">
-
       <!-- Alex Food Corner Card -->
-      <div class="project-card">
+      <div class="project-card" data-category="react">
         <div class="card-inner">
+          <!-- FRONT -->
           <div class="card-front">
             <div class="card-thumbnail">
-              <img src="/images/alex-food-corner.png" alt="Alex Food Corner" loading="lazy">
+              <img src="/images/alex-food-corner.png" alt="Alex Food Corner Website UI" loading="lazy">
             </div>
             <div class="card-content">
               <h3>Alex Food Corner</h3>
-              <p>Modern restaurant website featuring menu display, online ordering and reservation system.</p>
+              <span class="project-tagline">Responsive • Clean UI • Fast</span>
+              <p>
+                Modern and responsive restaurant website with interactive menu display,
+                clean UI, and seamless user experience built using React and Tailwind CSS.
+              </p>
               <div class="tech-stack">
                 <span class="tech-badge">React</span>
                 <span class="tech-badge">Tailwind CSS</span>
                 <span class="tech-badge">Vite</span>
               </div>
               <div class="card-links">
-                <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">Live
-                  Demo</a>
+                <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">
+                  Live Demo
+                </a>
               </div>
             </div>
           </div>
-          <!-- BACK (Dribbble-style reveal) -->
+          <!-- BACK -->
           <div class="card-back">
-            <h3>🍽️ Restaurant Site</h3>
-            <p>Responsive design with menu filtering, WhatsApp ordering integration, Google Maps location, and contact
-              forms.</p>
+            <h3>🍽️ Restaurant Website UI</h3>
+            <p>
+              Fully responsive frontend project featuring dynamic menu filtering,
+              WhatsApp ordering integration, Google Maps embed, and a smooth,
+              user-focused interface built with modern frontend tools.
+            </p>
             <div class="card-links">
-              <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">→ Live
-                Site</a>
+              <a href="https://alexfoodcorner.netlify.app/" class="btn-live" target="_blank" rel="noopener">
+                → Live Site
+              </a>
               <a href="https://github.com/vimal-tech-dev/alex-food-corner" class="btn-github" target="_blank">
                 💻 Source Code
               </a>
@@ -224,7 +263,7 @@
       </div>
 
       <!-- Suman Enterprise Card -->
-      <div class="project-card">
+      <div class="project-card" data-category="vue">
         <div class="card-inner">
           <!-- FRONT -->
           <div class="card-front">
@@ -233,11 +272,15 @@
             </div>
             <div class="card-content">
               <h3>Suman Enterprise</h3>
-              <p>Full-stack enterprise management dashboard with real-time analytics and user authentication.</p>
+              <span class="project-tagline">Responsive • Clean UI • Fast</span>
+              <p>
+                Modern enterprise product lists interface featuring organized data layouts,
+                smooth navigation, and responsive UI built with Vue.js and Vuetify.
+              </p>
               <div class="tech-stack">
-                <span class="tech-badge">Java</span>
-                <span class="tech-badge">Spring Boot</span>
                 <span class="tech-badge">Vue.js</span>
+                <span class="tech-badge">Vue-Router</span>
+                <span class="tech-badge">Vuetify</span>
               </div>
               <div class="card-links">
                 <a href="https://sumanenterprise.vercel.app/" class="btn-live" target="_blank" rel="noopener">Live
@@ -247,9 +290,12 @@
           </div>
           <!-- BACK (Dribbble-style reveal) -->
           <div class="card-back">
-            <h3>🔧 Tech Deep Dive</h3>
-            <p>Scalable Java Spring Boot backend with PostgreSQL, React frontend, real-time analytics via WebSockets.
-              Deployed on Vercel with CI/CD.</p>
+            <h3>📊 Product Lists UI</h3>
+            <p>
+              Frontend project showcasing product lists structured UI data presentation,
+              component-based architecture, and responsive design using Vue.js,
+              Vue Router, and Vuetify.
+            </p>
             <div class="card-links">
               <a href="https://sumanenterprise.vercel.app/" class="btn-live" target="_blank" rel="noopener">→ Live
                 Site</a>
@@ -261,7 +307,7 @@
       </div>
 
       <!-- Chai Makers Card -->
-      <div class="project-card">
+      <div class="project-card" data-category="angular">
         <div class="card-inner">
           <div class="card-front">
             <div class="card-thumbnail">
@@ -269,11 +315,15 @@
             </div>
             <div class="card-content">
               <h3>Chai Makers</h3>
-              <p>Interactive chai shop web app with menu, ordering system, and payment integration.</p>
+              <span class="project-tagline">Responsive • Clean UI • Fast</span>
+              <p>
+                Frontend chai ordering interface featuring dynamic menu rendering, reusable components,
+                and smooth user interaction built with Angular.
+              </p>
               <div class="tech-stack">
                 <span class="tech-badge">Angular</span>
-                <span class="tech-badge">Node.js</span>
-                <span class="tech-badge">Stripe</span>
+                <span class="tech-badge">Components</span>
+                <span class="tech-badge">Services</span>
               </div>
               <div class="card-links">
                 <a href="https://chaimakers.vercel.app/" class="btn-live" target="_blank" rel="noopener">Live Demo</a>
@@ -282,8 +332,10 @@
           </div>
           <!-- BACK (Dribbble-style reveal) -->
           <div class="card-back">
-            <h3>☕ Chai Ordering App</h3>
-            <p>Full e-commerce flow: menu browsing → cart → Razorpay/Stripe checkout. PWA-ready with offline support.
+            <h3>☕ Chai Café App</h3>
+            <p>
+              Angular-based web app showcasing menu interaction, component-driven structure,
+              and service-based data handling for a smooth user experience.
             </p>
             <div class="card-links">
               <a href="https://chaimakers.vercel.app/" class="btn-live" target="_blank" rel="noopener">→ Live Site</a>
@@ -295,81 +347,79 @@
       </div>
 
     </div>
-  </section><br><br>
+  </section>
 
   <!-- Visiting Card Section -->
-  <section id="cta-section" class="cta-wrap">
+  <section id="cta-section" class="section container fade-in">
     <div class="cta-card theme-neon">
-      <div class="cta-header">
-        <div class="cta-titles">
-          <h2 class="cta-title">Thanks for visiting 👋</h2>
-          <p class="cta-subtitle">Ready to turn your idea into reality?</p>
-        </div>
-      </div>
-
-      <div class="cta-body">
-        <p class="cta-description">
-          Helping local businesses thrive in the Digital Era.
-          Whether it's a <strong>local business website</strong> or an <strong>enterprise backend system</strong>,
-          I am ready to code your vision.
-        </p>
-      </div>
-
-      <div class="cta-footer">
-        <a href="tel:+919638474047" class="cta-button">
-          Make your own website
-        </a>
-      </div>
+      <h2 class="cta-title">
+        Thanks for visiting 👋
+      </h2>
+      <p class="cta-subtitle" style="color: #fff; margin-bottom: 20px;">
+        Ready to turn your idea into reality?
+      </p>
+      <p class="cta-description" style="max-width: 600px; margin: 0 auto 30px auto; line-height: 1.6; color: #cbd5e1;">
+        Helping businesses thrive in the Digital Era. Whether it's a
+        <strong>local business website</strong>
+        or a complex <strong>enterprise backend system</strong>,
+        I am ready to code your vision.
+      </p>
+      <a href="tel:+919638474047" class="btn primary glow-btn" target="_blank">
+        Let's Build Together <i class="fas fa-phone-alt" style="margin-left: 8px;"></i>
+      </a>
     </div>
-  </section><br><br>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-divider"></div>
+    <div class="footer-divider-top"></div>
     <div class="footer-container">
 
-      <!-- LEFT : Business -->
       <div class="footer-left">
-        <h3>Vimal Tech</h3>
-
-        <p class="tagline">
-          Freelance Software Development Services
-        </p>
-
-        <p class="studio-line">
-          Independent Software Development Studio
-        </p>
-
-        <div class="brand-divider-left"></div>
-
-        <p class="msme">
-          MSME Registered Micro Enterprise<br />
-          Under the Ministry of Micro, Small and Medium Enterprises<br />
-          Government of India
-        </p>
-        <div class="brand-divider-left"></div>
-        <p class="udyam">
-          Udyam Registration Number: UDYAM-GJ-25-0089795
-        </p>
+        <div class="footer-brand-header">
+          <a href="/" class="brand">
+            <img src="/images/vimal-logo-transparent.png" alt="Vimal Tech Logo" class="footer-logo">
+            <h3>Vimal Tech</h3>
+          </a>
+        </div>
+        <div class="brand-divider"></div>
+        <p class="tagline">Freelance Software Development Services</p>
+        <p class="studio-line">Independent Software Development Studio</p>
+        <div class="brand-divider"></div>
+        <div class="msme-header">
+          <a href="https://udyamregistration.gov.in/" class="brand" target="_blank" rel="noopener">
+            <img src="/images/msme-logo-transparent.png" alt="MSME Logo" class="msme-logo">
+            <div class="msme-text-block">
+              <p class="msme"><strong>MSME Registered Micro Enterprise</strong></p>
+              <p class="studio-line">Under the Ministry of Micro, Small and Medium Enterprises<br />Government of India
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="brand-divider"></div>
+        <p class="udyam">Udyam Registration Number: <strong>UDYAM-GJ-25-0089795</strong></p>
         <p class="udyam-verify">
           <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank" rel="noopener">
-            ✓ Verify MSME Registration
+            <i class="fas fa-check-circle"></i> Verify MSME Registration
           </a>
         </p>
       </div>
 
-      <!-- CENTER : Contact -->
       <div class="footer-center">
-        <p><strong>Vimal Patel</strong></p>
-        <p>Founder & Software Developer</p>
+        <h3>Vimal Patel</h3>
+        <div class="brand-divider"></div>
+        <p class="role-highlight">Founder & Software Developer</p>
 
-        <div class="brand-divider-center"></div>
+        <div class="brand-divider"></div>
 
-        <p>Phone: <a href="tel:+919638474047">+91 9638 474047</a></p>
-        <p>Email: <a href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a></p>
-        <p>Valsad, Gujarat, India - 396001</p>
+        <ul class="footer-contact-list">
+          <li><i class="fas fa-phone-alt"></i> <a href="tel:+919638474047">+91 9638 474047</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a>
+          </li>
+          <li><i class="fas fa-map-marker-alt"></i> Valsad, Gujarat, India - 396001</li>
+        </ul>
 
-        <div class="brand-divider-center"></div>
+        <div class="brand-divider"></div>
 
         <p>Follow me on social media:</p>
         <div class="footer-social">
@@ -383,20 +433,21 @@
         </div>
       </div>
 
-      <!-- RIGHT : Quick Links -->
       <div class="footer-links">
-        <p><strong>Quick Links</strong></p>
-        <div class="brand-divider-right"></div>
-        <p><a href="/">Home</a></p>
-        <p><a href="/services">Services</a></p>
-        <p><a href="/expertise">Expertise</a></p>
-        <p><a href="/about">About</a></p>
-        <p><a href="/contact">Contact</a></p>
+        <h3>Quick Links</h3>
+        <div class="brand-divider right-align-divider"></div>
+        <ul class="quick-links-list">
+          <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
+          <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
+          <li><a href="/expertise"><i class="fas fa-angle-right"></i> Expertise</a></li>
+          <li><a href="/aboutUs"><i class="fas fa-angle-right"></i> About Us</a></li>
+          <li><a href="/contactUs"><i class="fas fa-angle-right"></i> Contact</a></li>
+        </ul>
       </div>
-
     </div>
+
     <div class="footer-bottom">
-      <p>© 2026 Vimal Tech • Built with HTML, CSS & JavaScript</p>
+      <p>&copy; 2026 Vimal Tech. All rights reserved.</p>
     </div>
   </footer>
 
@@ -417,11 +468,11 @@
   </button>
 
   <!-- JS -->
-  <script src="/js/common.js"></script>
+  <script src="/js/global.js"></script>
   <!-- Popup Window JS -->
-  <script src="/js/open-modal-btn.js"></script>
   <script src="/js/dropdown.js"></script>
-  <script src="/js/main.js"></script>
+  <script src="/js/latest-works.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

@@ -29,39 +29,6 @@ body.contact-body {
     color: var(--text-primary);
 }
 
-/* Override Common Navbar to be Dark */
-.contact-body .navbar {
-    background-color: rgba(11, 15, 26, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border);
-    color: var(--text-primary);
-}
-
-.contact-body .navbar .brand-name-vimal {
-    color: #fff;
-    /* White instead of black */
-}
-
-.contact-body .nav-links li a {
-    color: #cbd5e1;
-    /* Light grey instead of dark grey */
-}
-
-.contact-body .nav-links li a:hover,
-.contact-body .nav-links li a.active {
-    color: var(--amber);
-    /* Amber instead of Tomato red */
-}
-
-/* Fix mobile menu background on dark page */
-@media (max-width: 768px) {
-    .contact-body .nav-links {
-        background-color: var(--bg-card);
-        border: 1px solid var(--border);
-    }
-}
-
-
 /* ── HERO ─────────────────────────────── */
 
 .contact-hero {
@@ -275,6 +242,17 @@ body.contact-body {
     margin-bottom: 32px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--border);
+}
+
+.section-title-contact {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 26px;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
 }
 
 .info-item {
@@ -619,7 +597,7 @@ body.contact-body {
 
 /* ── RESPONSIVE ───────────────────────── */
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .contact-hero {
         padding: 120px 20px 80px;
     }
@@ -633,7 +611,8 @@ body.contact-body {
     }
 
     .contact-section {
-        margin: 48px auto;
+        margin: 40px auto;
+        width: 100%;
     }
 
     .contact-info {
