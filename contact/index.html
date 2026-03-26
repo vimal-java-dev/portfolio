@@ -86,8 +86,7 @@
 </head>
 
 <body class="contact-body">
-
-    <nav class="navbar">
+    <nav class="navbar glass-nav">
         <div>
             <a href="/" class="brand">
                 <img src="/images/logo.jpeg" alt="Vimal Tech Java Developer Logo" class="logo" loading="lazy">
@@ -107,7 +106,7 @@
             <li><a href="/aboutUs">About Us</a></li>
             <li class="dropdown">
                 <a href="/contact" class="dropdown-toggle active">Contact Form</a>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu glass-dropdown">
                     <li><a href="/contactUs">Contact</a></li>
                 </ul>
             </li>
@@ -285,52 +284,56 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="footer-divider"></div>
+        <div class="footer-divider-top"></div>
         <div class="footer-container">
 
-            <!-- LEFT : Business -->
             <div class="footer-left">
-                <h3>Vimal Tech</h3>
-                <div class="brand-divider-left"></div>
-                <p class="tagline">
-                    Freelance Software Development Services
-                </p>
-
-                <p class="studio-line">
-                    Independent Software Development Studio
-                </p>
-
-                <div class="brand-divider-left"></div>
-
-                <p class="msme">
-                    MSME Registered Micro Enterprise<br />
-                    Under the Ministry of Micro, Small and Medium Enterprises<br />
-                    Government of India
-                </p>
-                <div class="brand-divider-left"></div>
-                <p class="udyam">
-                    Udyam Registration Number: UDYAM-GJ-25-0089795
-                </p>
+                <div class="footer-brand-header">
+                    <a href="/" class="brand">
+                        <img src="/images/vimal-logo-transparent.png" alt="Vimal Tech Logo" class="footer-logo">
+                        <h3>Vimal Tech</h3>
+                    </a>
+                </div>
+                <div class="brand-divider"></div>
+                <p class="tagline">Freelance Software Development Services</p>
+                <p class="studio-line">Independent Software Development Studio</p>
+                <div class="brand-divider"></div>
+                <div class="msme-header">
+                    <a href="https://udyamregistration.gov.in/" class="brand" target="_blank" rel="noopener">
+                        <img src="/images/msme-logo-transparent.png" alt="MSME Logo" class="msme-logo">
+                        <div class="msme-text-block">
+                            <p class="msme"><strong>MSME Registered Micro Enterprise</strong></p>
+                            <p class="studio-line">Under the Ministry of Micro, Small and Medium
+                                Enterprises<br />Government of India
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="brand-divider"></div>
+                <p class="udyam">Udyam Registration Number: <strong>UDYAM-GJ-25-0089795</strong></p>
                 <p class="udyam-verify">
                     <a href="https://udyamregistration.gov.in/Udyam_Verify.aspx" target="_blank" rel="noopener">
-                        ✓ Verify MSME Registration
+                        <i class="fas fa-check-circle"></i> Verify MSME Registration
                     </a>
                 </p>
             </div>
 
-            <!-- CENTER : Contact -->
             <div class="footer-center">
                 <h3>Vimal Patel</h3>
-                <div class="brand-divider-center"></div>
-                <p>Founder & Software Developer</p>
+                <div class="brand-divider"></div>
+                <p class="role-highlight">Founder & Software Developer</p>
 
-                <div class="brand-divider-center"></div>
+                <div class="brand-divider"></div>
 
-                <p>Phone: <a href="tel:+919638474047">+91 9638 474047</a></p>
-                <p>Email: <a href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a></p>
-                <p>Valsad, Gujarat, India - 396001</p>
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+919638474047">+91 9638 474047</a></li>
+                    <li><i class="fas fa-envelope"></i> <a
+                            href="mailto:vimal.patel@vimaltech.dev">vimal.patel@vimaltech.dev</a>
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i> Valsad, Gujarat, India - 396001</li>
+                </ul>
 
-                <div class="brand-divider-center"></div>
+                <div class="brand-divider"></div>
 
                 <p>Follow me on social media:</p>
                 <div class="footer-social">
@@ -345,20 +348,21 @@
                 </div>
             </div>
 
-            <!-- RIGHT : Quick Links -->
             <div class="footer-links">
                 <h3>Quick Links</h3>
-                <div class="brand-divider-right"></div>
-                <p><a href="/">Home</a></p>
-                <p><a href="/services">Services</a></p>
-                <p><a href="/expertise">Expertise</a></p>
-                <p><a href="/aboutUs">About Us</a></p>
-                <p><a href="/contactUs">Contact</a></p>
+                <div class="brand-divider right-align-divider"></div>
+                <ul class="quick-links-list">
+                    <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
+                    <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
+                    <li><a href="/expertise"><i class="fas fa-angle-right"></i> Expertise</a></li>
+                    <li><a href="/aboutUs"><i class="fas fa-angle-right"></i> About Us</a></li>
+                    <li><a href="/contactUs"><i class="fas fa-angle-right"></i> Contact</a></li>
+                </ul>
             </div>
-
         </div>
+
         <div class="footer-bottom">
-            <p>© 2026 Vimal Tech. All rights reserved.</p>
+            <p>&copy; 2026 Vimal Tech. All rights reserved.</p>
         </div>
     </footer>
 
