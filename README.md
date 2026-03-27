@@ -15,7 +15,11 @@ https://vimaltech.dev
 ## Structure
 
 /pages handled via folder-based routing:
-/about
+
 /services
+
 /expertise
+
+/about
+
 /contact
