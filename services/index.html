@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3G79ZS5DSS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3G79ZS5DSS');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,8 +18,28 @@
 
     <meta name="description"
         content="Professional backend development, API engineering, cloud integration, and database optimization services using Java, Spring Boot, and scalable microservice architecture.">
-
+    <meta name="author" content="Vimal Patel">
     <link rel="canonical" href="https://vimaltech.dev/services">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Font Awesome (Optimized Non-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" referrerpolicy="no-referrer">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            referrerpolicy="no-referrer">
+    </noscript>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <!-- Popup Window CSS -->
+    <link rel="stylesheet" href="/css/open-modal-btn.css">
+    <link rel="stylesheet" href="/css/whatsapp-floating.css">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Backend Development & Cloud Services | Vimal Tech">
@@ -31,15 +59,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/services.css">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/dropdown.css">
-    <!-- Popup Window CSS -->
-    <link rel="stylesheet" href="/css/open-modal-btn.css">
-    <link rel="stylesheet" href="/css/whatsapp-floating.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Outfit -->
@@ -263,15 +283,14 @@
                 </div>
             </div>
 
-            <div class="service-card fade-in accordion-item" style="--delay:0.1s;">
+            <div class="service-card fade-in accordion-item" style="--delay:0.4s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <div class="icon-wrapper"><i class="fas fa-cloud"></i></div>
-                    <h3>Cloud Integration</h3>
+                    <div class="icon-wrapper"><i class="fas fa-code"></i></div>
+                    <h3>API Development</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>Cloud-ready deployment, configuration, and scaling using AWS and modern hosting platforms for
-                        reliability and performance.</p>
+                    <p>Secure REST API development and third-party integrations for web and mobile applications.</p>
                 </div>
             </div>
 
@@ -287,26 +306,15 @@
                 </div>
             </div>
 
-            <div class="service-card fade-in accordion-item" style="--delay:0.3s;">
+            <div class="service-card fade-in accordion-item" style="--delay:0.1s;">
                 <div class="accordion-header" aria-expanded="false">
-                    <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
-                    <h3>Project Consulting</h3>
+                    <div class="icon-wrapper"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Integration</h3>
                     <span class="accordion-icon">+</span>
                 </div>
                 <div class="accordion-body">
-                    <p>System architecture planning, microservices strategy, and technical guidance to reduce long-term
-                        technical debt.</p>
-                </div>
-            </div>
-
-            <div class="service-card fade-in accordion-item" style="--delay:0.4s;">
-                <div class="accordion-header" aria-expanded="false">
-                    <div class="icon-wrapper"><i class="fas fa-code"></i></div>
-                    <h3>API Development</h3>
-                    <span class="accordion-icon">+</span>
-                </div>
-                <div class="accordion-body">
-                    <p>Secure REST API development and third-party integrations for web and mobile applications.</p>
+                    <p>Cloud-ready deployment, configuration, and scaling using AWS and modern hosting platforms for
+                        reliability and performance.</p>
                 </div>
             </div>
 
@@ -321,6 +329,19 @@
                         stability.</p>
                 </div>
             </div>
+
+            <div class="service-card fade-in accordion-item" style="--delay:0.3s;">
+                <div class="accordion-header" aria-expanded="false">
+                    <div class="icon-wrapper"><i class="fas fa-project-diagram"></i></div>
+                    <h3>Project Consulting</h3>
+                    <span class="accordion-icon">+</span>
+                </div>
+                <div class="accordion-body">
+                    <p>System architecture planning, microservices strategy, and technical guidance to reduce long-term
+                        technical debt.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -352,10 +373,10 @@
                     systems that are stable and easy to extend.</p>
             </div>
             <div class="benefit-card">
-                <i class="fas fa-network-wired"></i>
-                <h3>Cloud Integration</h3>
-                <p>Suitable for growing products that need reliable deployment, scalability, and cost-optimized
-                    infrastructure on cloud platforms.</p>
+                <i class="fas fa-exchange-alt"></i>
+                <h3>API Development</h3>
+                <p>Enables seamless communication between web apps, mobile apps, and third-party services using secure
+                    REST APIs.</p>
             </div>
             <div class="benefit-card">
                 <i class="fas fa-server"></i>
@@ -364,10 +385,10 @@
                     handling.</p>
             </div>
             <div class="benefit-card">
-                <i class="fas fa-exchange-alt"></i>
-                <h3>API Development</h3>
-                <p>Enables seamless communication between web apps, mobile apps, and third-party services using secure
-                    REST APIs.</p>
+                <i class="fas fa-network-wired"></i>
+                <h3>Cloud Integration</h3>
+                <p>Suitable for growing products that need reliable deployment, scalability, and cost-optimized
+                    infrastructure on cloud platforms.</p>
             </div>
         </div>
     </section>
@@ -597,6 +618,17 @@
                         aria-label="Vimal Tech LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
+                    <a href="https://x.com/vimal_tech_dev/" target="_blank" rel="noopener" aria-label="Vimal Tech X">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vimaltech/" target="_blank" rel="noopener"
+                        aria-label="Vimal Tech Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/vimaltech.dev/" target="_blank" rel="noopener"
+                        aria-label="Vimal Tech Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
                 </div>
             </div>
 
@@ -604,11 +636,11 @@
                 <h3>Quick Links</h3>
                 <div class="brand-divider right-align-divider"></div>
                 <ul class="quick-links-list">
-                    <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
-                    <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
-                    <li><a href="/expertise"><i class="fas fa-angle-right"></i> Expertise</a></li>
-                    <li><a href="/aboutUs"><i class="fas fa-angle-right"></i> About Us</a></li>
-                    <li><a href="/contactUs"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    <li><a href="/">Home<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/services">Services<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/expertise">Expertise<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/aboutUs">About Us<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/contactUs">Contact<i class="fas fa-angle-left"></i></a></li>
                 </ul>
             </div>
         </div>

@@ -406,8 +406,12 @@ body.dark .accordion-icon {
     color: #94a3b8;
 }
 
+/* If i uncomment color footer section  */
+/* Visibility gone in dark mode */
+/* Founder & Software Developer */
+
 body.dark p {
-    color: #94a3b8;
+    /* color: #94a3b8; */
     /* slightly lighter muted color for dark mode reading */
 }
 
