@@ -2,7 +2,15 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3G79ZS5DSS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3G79ZS5DSS');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,12 +23,27 @@
         content="Java Developer skills, Spring Boot developer, microservices architecture, REST API developer, backend developer portfolio, AWS developer, Docker developer, Java projects">
 
     <meta name="author" content="Vimal Patel">
-
     <!-- Canonical -->
     <link rel="canonical" href="https://vimaltech.dev/expertise">
-
     <!-- Robots -->
     <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Font Awesome (Optimized Non-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" referrerpolicy="no-referrer">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            referrerpolicy="no-referrer">
+    </noscript>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/expertise.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/whatsapp-floating.css">
 
     <!-- Open Graph (Social Sharing) -->
     <meta property="og:title" content="Java Developer Expertise | Spring Boot, Microservices & Cloud">
@@ -41,19 +64,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/expertise.css">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/dropdown.css">
-    <link rel="stylesheet" href="/css/whatsapp-floating.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
 
     <!-- Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -271,6 +281,16 @@
             <p class="section-subtitle" style="margin-bottom: 40px;">
                 Hi Geeks and Nerds 👋 Explore my live frontend interfaces and robust backend systems.</p>
             <div class="projects-grid" style="margin-bottom: 40px;">
+                <a href="https://alexfoodcorner.netlify.app/" target="_blank" class="project-card">
+                    <div class="project-header">
+                        <h4>Alex Food Corner</h4>
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                    <p>Restaurant UI with modern hooks and fast rendering.</p>
+                    <div class="tech-tags">
+                        <span>React</span><span>TailwindCSS</span><span>Vite</span>
+                    </div>
+                </a>
                 <a href="https://sumanenterprise.vercel.app/" target="_blank" class="project-card">
                     <div class="project-header">
                         <h4>Suman Enterprise</h4>
@@ -289,16 +309,6 @@
                     <p>Component-driven web app featuring routing and dynamic menus.</p>
                     <div class="tech-tags">
                         <span>Angular</span><span>RxJS</span><span>Services</span>
-                    </div>
-                </a>
-                <a href="https://alexfoodcorner.netlify.app/" target="_blank" class="project-card">
-                    <div class="project-header">
-                        <h4>Alex Food Corner</h4>
-                        <i class="fas fa-external-link-alt"></i>
-                    </div>
-                    <p>Restaurant UI with modern hooks and fast rendering.</p>
-                    <div class="tech-tags">
-                        <span>React</span><span>TailwindCSS</span><span>Vite</span>
                     </div>
                 </a>
             </div>
@@ -433,6 +443,17 @@
                         aria-label="Vimal Tech LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
+                    <a href="https://x.com/vimal_tech_dev/" target="_blank" rel="noopener" aria-label="Vimal Tech X">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vimaltech/" target="_blank" rel="noopener"
+                        aria-label="Vimal Tech Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/vimaltech.dev/" target="_blank" rel="noopener"
+                        aria-label="Vimal Tech Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
                 </div>
             </div>
 
@@ -440,11 +461,11 @@
                 <h3>Quick Links</h3>
                 <div class="brand-divider right-align-divider"></div>
                 <ul class="quick-links-list">
-                    <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
-                    <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
-                    <li><a href="/expertise"><i class="fas fa-angle-right"></i> Expertise</a></li>
-                    <li><a href="/aboutUs"><i class="fas fa-angle-right"></i> About Us</a></li>
-                    <li><a href="/contactUs"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    <li><a href="/">Home<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/services">Services<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/expertise">Expertise<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/aboutUs">About Us<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/contactUs">Contact<i class="fas fa-angle-left"></i></a></li>
                 </ul>
             </div>
         </div>

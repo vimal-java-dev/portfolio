@@ -2,7 +2,15 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3G79ZS5DSS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-3G79ZS5DSS');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,8 +20,24 @@
     <meta name="keywords"
         content="About Vimal Tech, Java Developer, MSME registered software company, Backend Engineering, Valsad Gujarat IT company">
     <meta name="author" content="Vimal Patel">
-
     <link rel="canonical" href="https://vimaltech.dev/aboutUs">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Font Awesome (Optimized Non-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'" referrerpolicy="no-referrer">
+
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+            referrerpolicy="no-referrer">
+    </noscript>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/aboutUs.css">
+    <link rel="stylesheet" href="/css/dropdown.css">
+    <link rel="stylesheet" href="/css/whatsapp-floating.css">
 
     <meta property="og:title" content="About Vimal Tech | Innovation Through Code">
     <meta property="og:description"
@@ -25,18 +49,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/aboutUs.css">
-    <link rel="stylesheet" href="/css/dropdown.css">
-    <link rel="stylesheet" href="/css/whatsapp-floating.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </noscript>
 
     <!-- Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -141,7 +153,8 @@
             <div class="about-card">
                 <div class="card-icon"><i class="fas fa-server"></i></div>
                 <h3>Backend Engineering</h3>
-                <p>Expert Java-based development focusing on secure, scalable, and high-concurrency systems.</p>
+                <p>Expert Java-based development focusing on secure, scalable, debug-customize already made code and
+                    high-concurrency systems.</p>
             </div>
             <div class="about-card">
                 <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
@@ -158,7 +171,8 @@
             <div class="about-card">
                 <div class="card-icon"><i class="fas fa-chart-line"></i></div>
                 <h3>Digital Transformation</h3>
-                <p>Helping local enterprises and medical agencies transition from traditional workflows to highly
+                <p>Helping small local as well as global enterprises and agencies transition from traditional workflows
+                    to highly
                     efficient digital platforms.</p>
             </div>
         </div>
@@ -198,7 +212,7 @@
                 <div class="partner-icon"><i class="fas fa-globe-asia"></i></div>
                 <div class="partner-text">
                     <h4>Local Roots, Global Standards</h4>
-                    <p>Whether we are supporting a local business in Valsad or pitching to international clients, our
+                    <p>Whether we are supporting a local business in India or pitching to international clients, our
                         quality remains world-class.</p>
                 </div>
             </div>
@@ -254,7 +268,7 @@
                     </a>
                 </p>
             </div>
-            
+
             <div class="footer-center">
                 <h3>Vimal Patel</h3>
                 <div class="brand-divider"></div>
@@ -282,6 +296,17 @@
                         aria-label="Vimal Tech LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
+                    <a href="https://x.com/vimal_tech_dev/" target="_blank" rel="noopener" aria-label="Vimal Tech X">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/vimaltech/" target="_blank" rel="noopener"
+                        aria-label="Vimal Tech Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/vimaltech.dev/" target="_blank" rel="noopener"
+                        aria-label="Vimal Tech Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
                 </div>
             </div>
 
@@ -289,11 +314,11 @@
                 <h3>Quick Links</h3>
                 <div class="brand-divider right-align-divider"></div>
                 <ul class="quick-links-list">
-                    <li><a href="/"><i class="fas fa-angle-right"></i> Home</a></li>
-                    <li><a href="/services"><i class="fas fa-angle-right"></i> Services</a></li>
-                    <li><a href="/expertise"><i class="fas fa-angle-right"></i> Expertise</a></li>
-                    <li><a href="/aboutUs"><i class="fas fa-angle-right"></i> About Us</a></li>
-                    <li><a href="/contactUs"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    <li><a href="/">Home<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/services">Services<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/expertise">Expertise<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/aboutUs">About Us<i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="/contactUs">Contact<i class="fas fa-angle-left"></i></a></li>
                 </ul>
             </div>
         </div>
