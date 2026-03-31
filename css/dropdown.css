@@ -95,11 +95,13 @@
     content: "▾";
     display: inline-block;
     margin-left: 6px;
+    /* This transition automatically handles BOTH the forward (0 to 180) 
+       and reverse (180 back to 0) animations. */
     transition: transform 0.3s ease;
 }
 
-/* Rotate arrow upward when open */
-.dropdown.open .dropdown-toggle::after {
+/* Rotate arrow upward when HOVERING over the dropdown wrapper */
+.dropdown:hover .dropdown-toggle::after {
     transform: rotate(180deg);
 }
 
@@ -135,5 +137,22 @@
         font-size: 1rem;
         display: block;
         width: 100%;
+    }
+
+    /* Mobile view click/tap effect */
+    /* Target the active state when JS adds the 'open' class */
+    .dropdown.open .dropdown-toggle::after {
+        transform: rotate(180deg);
+    }
+
+    /* Optional: Disable the hover effect on mobile to prevent "sticky" tap bugs */
+    .dropdown:hover .dropdown-toggle::after {
+        transform: rotate(0deg);
+    }
+
+    /* Make sure the arrow stays rotated as long as the menu is open, 
+       even if the user taps elsewhere on the dropdown */
+    .dropdown.open:hover .dropdown-toggle::after {
+        transform: rotate(180deg);
     }
 }

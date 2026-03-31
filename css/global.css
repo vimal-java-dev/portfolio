@@ -6,7 +6,7 @@
     --color-text: #111827;
     --color-muted: #6b7280;
     --color-accent: #38bdf8;
-    --color-primary: #ff9800;
+    --color-primary: #EF5A00;
 
     --font-primary: 'Inter', sans-serif;
     --nav-bg: #c3c7ca;
@@ -85,15 +85,17 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 2rem;
     position: fixed;
-    top: 15px;
+    top: 5px;
     left: 20px;
     right: 20px;
     z-index: 1000;
-    border-radius: 16px;
+    border-radius: 20px;
     transition: all 0.3s ease;
 }
+
+/* The styles that apply ONLY when scrolling down */
 
 /* Light Mode Glass Effect */
 /* .glass-nav {
@@ -105,77 +107,111 @@ p {
 } */
 
 .glass-nav {
-    /* 1. Lowered opacity (0.3) so the blur is more visible */
-    background: rgba(255, 255, 255, 0.3);
-
+    /* 1. Gives it a solid color */
+    /* background-color: #ffffff; */
+    background-color: transparent;
     /* 2. Increased blur to a heavy but stable range */
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    /* backdrop-filter: blur(40px); */
+    /* -webkit-backdrop-filter: blur(40px); */
 
     /* 3. Subtle border and shadow to define the edges */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); */
 
     /* 4. Performance boost for heavy filters */
-    will-change: backdrop-filter;
+    /* will-change: backdrop-filter; */
 }
 
+.glass-nav.scrolled {
+    top: 15px;
+    left: 120px;
+    right: 120px;
+    /* Ensures smooth scrolling accounts for the navbar height */
+    background: rgba(255, 255, 255, 0.3);
+    /* Lowered opacity (0.3) so the blur is more visible */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(40px);
+    /* Makes it slightly thinner */
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    /* Adds a nice shadow underneath */
+
+}
+
+.glass-nav.scrolled .nav-links li a {
+    color: #475569;
+    /* Darker text for better contrast */
+}
+
+body.dark .glass-nav.scrolled .nav-links li a {
+    color: #ffffff;
+    /* Bright white for dark mode */
+}
+
+.glass-nav.scrolled .nav-links li a.active {
+    color: rgba(30, 41, 59, 0.85);
+}
+
+.glass-nav.scrolled .nav-links li a:hover {
+    color: var(--color-primary);
+    /* Unified orange highlight */
+    transform: translateY(-2px);
+}
+
+body.dark .glass-nav.scrolled .nav-links li a.active,
+body.dark .glass-nav.scrolled .nav-links li a:hover {
+    color: #38bdf8;
+    /* Bright white for dark mode */
+}
 
 /* Brand container (logo + name) */
 .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
     font-style: italic;
 }
 
 .logo {
-    height: 45px;
-    width: 45px;
+    height: 40px;
+    width: auto;
     object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    transition: filter 0.3s ease;
 }
 
 .brand-name {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
     display: flex;
-    gap: 6px;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.glass-nav.scrolled .brand-name-vimal {
+    color: #1e293b;
+    /* Darker text for better contrast */
+    transition: color 0.3s ease;
+}
+
+body.dark .glass-nav.scrolled .brand-name-vimal {
+    color: #ffffff;
+    /* Bright white for dark mode */
 }
 
 .brand-name-vimal {
-    color: #1e293b;
-    font-weight: 800;
+    color: #ffffff;
     transition: color 0.3s ease;
 }
 
 .brand-name-tech {
-    font-weight: 800;
-}
-
-/* Gradient Animation */
-.brand-gradient-text {
-    background: linear-gradient(90deg, #000000, #84cc16, #22c55e, #0ea5e9);
-    background-size: 300% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientMove 4s linear infinite;
-    filter: drop-shadow(0 0 4px rgba(163, 230, 53, 0.3));
-}
-
-@keyframes gradientMove {
-    0% {
-        background-position: 0% center;
-    }
-
-    100% {
-        background-position: 200% center;
-    }
+    color: var(--color-primary);
 }
 
 /* ===== Nav Links ===== */
@@ -191,23 +227,24 @@ p {
 
 .nav-links li a {
     text-decoration: none;
-    color: #475569;
+    /* color: #475569; */
     /* Slate grey for light mode */
+    color: #ffffff;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
 }
 
-/* Hover State */
-.nav-links li a:hover {
-    color: #ff9800;
-    /* Unified orange highlight */
-    transform: translateY(-2px);
-}
-
 /* Active State */
 .nav-links li a.active {
-    color: rgba(30, 41, 59, 0.85);
+    color: var(--color-primary);
     font-weight: 700;
+}
+
+/* Hover State */
+.nav-links li a:hover {
+    color: var(--color-primary);
+    /* Unified orange highlight */
+    transform: translateY(-2px);
 }
 
 /* Hamburger Menu */
@@ -216,12 +253,18 @@ p {
     font-size: 28px;
     cursor: pointer;
     user-select: none;
-    color: #1e293b;
-    transition: transform 0.3s ease;
+    /* color: #1e293b; */
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .hamburger.active {
     transform: rotate(180deg);
+}
+
+/* When the navbar has the 'scrolled' class, make the hamburger black */
+nav.scrolled .hamburger {
+    color: #000000;
 }
 
 /* ===================================================
@@ -242,22 +285,22 @@ body.dark {
 
 body.dark .glass-nav {
     /* 1. Dropped opacity to 0.45 to let the blur 'pop' */
-    background: rgba(15, 23, 42, 0.45);
+    /* background: rgba(15, 23, 42, 0.45); */
+    /* background-color: transparent; */
 
     /* 2. Increased blur to match the heavy light mode style */
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    /* backdrop-filter: blur(40px); */
+    /* -webkit-backdrop-filter: blur(40px); */
 
     /* 3. Subtle light border to define the edge against the dark background */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
 
     /* 4. Stronger shadow for depth */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); */
 
     /* 5. GPU optimization */
-    will-change: backdrop-filter;
+    /* will-change: backdrop-filter; */
 }
-
 
 body.dark .brand-name-vimal {
     color: #ffffff;
@@ -291,6 +334,11 @@ body.dark .hamburger {
     color: #ffffff;
 }
 
+/* Keep it white if scrolled while in Dark Mode */
+body.dark nav.scrolled .hamburger {
+    color: #ffffff;
+}
+
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
     .navbar {
@@ -302,13 +350,24 @@ body.dark .hamburger {
         right: 10px;
     }
 
+    .navbar.scrolled {
+        top: 15px;
+        left: 20px;
+        right: 20px;
+    }
+
     .brand {
         display: flex;
         align-items: center;
     }
 
+    .logo {
+        height: 30px;
+        width: auto;
+        object-fit: contain;
+    }
+
     .brand-name {
-        font-size: 1.8rem;
         letter-spacing: 0.5px;
         text-transform: uppercase;
         font-display: block;
@@ -324,10 +383,23 @@ body.dark .hamburger {
         gap: 6px;
     }
 
+    .glass-nav.scrolled .brand-name {
+        font-size: 1.3rem;
+    }
+
     .hamburger {
         display: block;
         font-size: 28px;
         cursor: pointer;
+        color: #ffffff;
+        transition: transform 0.3s ease;
+    }
+
+    .glass-nav.hamburger.scrolled {
+        top: 15px;
+        left: 20px;
+        right: 20px;
+        color: #1e293b;
     }
 
     .nav-links {
@@ -339,7 +411,7 @@ body.dark .hamburger {
         flex-direction: column;
         gap: 15px;
         padding: 20px;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(112, 108, 108, 0.95);
         backdrop-filter: blur(15px);
         border-radius: 12px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -349,21 +421,18 @@ body.dark .hamburger {
 
     .nav-links li {
         margin: 10px 0;
+        /* color: #475569; */
     }
 
-    body.dark .nav-links {
+    /* body.dark .nav-links {
         background: rgba(15, 23, 42, 0.95);
         border: 1px solid rgba(255, 255, 255, 0.1);
-    }
+    } */
 
     .nav-links.active {
         display: flex;
     }
 
-    .nav-links li a.active {
-        color: #ff9800;
-        font-weight: 700;
-    }
 }
 
 /* =========================================
@@ -583,7 +652,11 @@ body.dark .section-title {
 
 .btn.secondary {
     border: 1px solid #fff;
-    color: #fff;
+    /* color: #fff; */
+
+    border: 2px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(5px);
 }
 
 /* ===== FADE-IN FIX (SINGLE SYSTEM ONLY) ===== */
@@ -900,19 +973,14 @@ body.dark .section-title {
 .footer-brand-header {
     display: flex;
     align-items: center;
-    gap: 15px;
+    /* gap: 15px; */
     margin-bottom: 15px;
     margin-left: 15px;
     text-decoration: none;
 }
 
-.footer-brand-header a:hover {
-    color: var(--color-accent);
-    text-decoration: underline;
-}
-
 .footer-brand-header h3 {
-    margin-bottom: 0;
+    margin-bottom: -5px;
     /* Overrides default spacing so it centers perfectly with the V */
     font-size: 1.5rem;
     margin-left: 5px;
@@ -957,7 +1025,7 @@ body.dark .section-title {
 /* Ensure logos shrink nicely on very small mobile screens */
 @media (max-width: 400px) {
     .footer-logo {
-        height: 32px;
+        height: 30px;
     }
 
     .msme-logo {

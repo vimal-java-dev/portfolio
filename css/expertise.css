@@ -50,22 +50,6 @@ body.dark #particles-js canvas {
     max-width: 650px;
 }
 
-.hero .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
-    background: #ff9800;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.hero .btn:hover {
-    background: #e68900;
-    transform: translateY(-3px);
-}
-
 /* ===== UTILITIES ===== */
 .section-header {
     text-align: center;
