@@ -111,7 +111,6 @@
         position: static;
         /* Prevents overlap */
         /* background: #333; */
-        box-shadow: none;
         background: transparent;
         border: none;
         display: none;
@@ -123,8 +122,31 @@
         max-height: 0;
         transition: max-height 0.3s ease;
 
+        /* background: rgba(30, 41, 59, 0.85); */
+        /* order work for this BG */
+
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        will-change: max-height;
+    }
+
+    body.dark .dropdown-menu {
+        background: rgba(15, 23, 42, 0.85);
+        /* order work for this BG */
+        box-shadow: 0 8px 32px rgba(255, 255, 255, 0.5);
+    }
+    
+    nav.scrolled .dropdown-menu {
         background: rgba(30, 41, 59, 0.85);
         /* order work for this BG */
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    body.dark nav.scrolled .dropdown-menu {
+        background: rgba(15, 23, 42, 0.85);
+        /* order work for this BG */
+        box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
     }
 
     .dropdown.open .dropdown-menu {
