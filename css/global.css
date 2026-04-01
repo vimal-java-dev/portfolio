@@ -139,6 +139,10 @@ p {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
     /* Adds a nice shadow underneath */
 
+    text-shadow: 0 8px 32px rgba(255, 255, 255, 0.9);
+    /* Subtle glow to make the text pop against the blur */
+    will-change: backdrop-filter;
+
 }
 
 .glass-nav.scrolled .nav-links li a {
@@ -189,11 +193,27 @@ body.dark .glass-nav.scrolled .nav-links li a:hover {
     font-size: 1.8rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
     display: flex;
     gap: 7px;
+    transition: all 0.3s ease;
+    /* Transition color and shadow */
+
+    text-shadow: 0 8px 32px rgba(255, 255, 255, 0.5);
+    /* Subtle shadow for better visibility on light backgrounds */
+}
+
+.glass-nav.scrolled .brand-name {
     transition: color 0.3s ease;
+    text-shadow: 1px 1px 3px black;
+}
+
+/* Add a hover effect for extra flair */
+.brand-name:hover {
+    color: #000;
+    text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
 }
 
 .glass-nav.scrolled .brand-name-vimal {
@@ -234,6 +254,7 @@ body.dark .glass-nav.scrolled .brand-name-vimal {
     color: #ffffff;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
+    text-shadow: 0 8px 32px rgba(255, 255, 255, 0.7);
 }
 
 /* Active State */
@@ -247,6 +268,7 @@ body.dark .glass-nav.scrolled .brand-name-vimal {
     color: var(--color-primary);
     /* Unified orange highlight */
     transform: translateY(-2px);
+    text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Hamburger Menu */
@@ -303,15 +325,33 @@ body.dark .glass-nav.scrolled {
     will-change: backdrop-filter;
 }
 
+body.dark .brand-name {
+    text-shadow: 0 8px 32px rgba(255, 255, 255, 0.9);
+}
+
+body.dark .brand-name:hover {
+    color: #000;
+    text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
 body.dark .brand-name-vimal {
     color: #ffffff;
 }
 
 body.dark .nav-links li a {
     color: #cbd5e1;
+    /* Lighter slate for better contrast in dark mode */
+    text-shadow: 0 8px 32px rgba(255, 255, 255);
+
 }
 
-body.dark .nav-links li a:hover,
+body.dark .nav-links li a:hover {
+    color: #38bdf8;
+    /* Cyan highlight for dark mode */
+    text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 body.dark .nav-links li a.active {
     color: #38bdf8;
     /* Cyan highlight for dark mode */
@@ -325,6 +365,7 @@ body.dark .glass-dropdown {
 
 body.dark .dropdown-menu li a {
     color: #cbd5e1 !important;
+    text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 body.dark .dropdown-menu li a:hover {
@@ -384,7 +425,16 @@ body.dark nav.scrolled .hamburger {
         /* Ensure the text is laid out nicely */
         display: flex;
         gap: 5px;
-        transition: color 0.3s ease;
+
+        white-space: nowrap;
+        transition: all 0.3s ease;
+        font-size: 1.5rem;
+
+        text-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
+    }
+
+    body.dark .brand-name {
+        text-shadow: 0 8px 32px rgba(255, 255, 255, 0.3);
     }
 
     .hamburger {
@@ -453,6 +503,11 @@ body.dark nav.scrolled .hamburger {
     .nav-links li {
         margin: 10px 0;
         /* color: #475569; */
+    }
+
+    .nav-links li a,
+    body.dark .nav-links li a {
+        text-shadow: 1px 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     .nav-links.active {
@@ -788,7 +843,9 @@ body.dark .section-title {
     font-size: 1.3rem;
     margin-bottom: 12px;
     font-weight: 600;
-    color: var(--color-primary);
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
 }
 
 .site-footer p {
@@ -1010,6 +1067,14 @@ body.dark .section-title {
     /* Overrides default spacing so it centers perfectly with the V */
     font-size: 1.5rem;
     margin-left: 5px;
+}
+
+.left-part {
+    color: #ffffff;
+}
+
+.right-part {
+    color: var(--color-primary);
 }
 
 .footer-logo {
