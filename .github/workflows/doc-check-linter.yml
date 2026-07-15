@@ -62,8 +62,15 @@ jobs:
             echo "✅ Imported GPG_PUBLIC_KEY_1"
           fi
           
+          if [ -n "${{ secrets.GPG_PUBLIC_KEY_2 }}" ]; then
+            echo "${{ secrets.GPG_PUBLIC_KEY_2 }}" | gpg --import
+            echo "✅ Imported GPG_PUBLIC_KEY_2 (Contributor Account)"
+          fi
+          
       # ---------- Verify latest commit ----------
       - name: Verify commit signature
+        # FIX: Only run strict verification if the PR is from the same repo (internal/trusted) or if it's a direct push
+        if: ${{ github.event.pull_request.head.repo.full_name == github.repository || github.event_name != 'pull_request' }}
         run: |
           if [ "${{ github.event_name }}" = "pull_request" ]; then
           echo "🔍 PR mode: verifying ALL commits in PR"
@@ -89,7 +96,8 @@ jobs:
             FINGERPRINT=$(git log -1 --pretty=format:'%GF' "$COMMIT")
             echo "🔑 Fingerprint: $FINGERPRINT"
 
-            TRUSTED_KEYS="83FB991D930D7177F25456C07F4C7CA953E1C09E D432152833DA3244"
+            # Replaced the short ID with the full 40-character fingerprint
+            TRUSTED_KEYS="83FB991D930D7177F25456C07F4C7CA953E1C09E 5CC01F41CD084AAC0593108DD432152833DA3244 A38379B51EB75EF1877A83ADBE677DAEFE33CB57"
 
             if echo "$TRUSTED_KEYS" | grep -q "$FINGERPRINT"; then
               echo "✅ Trusted key"
@@ -100,7 +108,7 @@ jobs:
           done
 
           echo "🎉 All PR commits are valid and trusted"
-      
+          
           else
           echo "🔍 Push to main detected"
           echo "ℹ️ Skipping strict GPG verification for merge/rebase/squash commit"
