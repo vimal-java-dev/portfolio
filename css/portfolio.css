@@ -322,6 +322,20 @@
   transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+/* This only applies to mobile screens */
+@media (max-width: 576px) {
+  .panel-bg {
+    /* 'contain' forces the whole image to show without zooming or cropping */
+    object-fit: contain; 
+    
+    /* Centers the un-zoomed image perfectly */
+    object-position: center; 
+    
+    /* Optional: Adds a dark background behind the image if there is any empty space */
+    background-color: #1e293b; 
+  }
+}
+
 .gallery-panel:hover .panel-icon,
 .gallery-panel.active .panel-icon {
   opacity: 0;

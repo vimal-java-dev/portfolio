@@ -61,12 +61,17 @@ jobs:
             echo "${{ secrets.GPG_PUBLIC_KEY_1 }}" | gpg --import
             echo "✅ Imported GPG_PUBLIC_KEY_1"
           fi
-          
+
           if [ -n "${{ secrets.GPG_PUBLIC_KEY_2 }}" ]; then
             echo "${{ secrets.GPG_PUBLIC_KEY_2 }}" | gpg --import
             echo "✅ Imported GPG_PUBLIC_KEY_2 (Contributor Account)"
           fi
-          
+
+          if [ -n "${{ secrets.GPG_PUBLIC_KEY_3 }}" ]; then
+            echo "${{ secrets.GPG_PUBLIC_KEY_3 }}" | gpg --import
+            echo "✅ Imported GPG_PUBLIC_KEY_3 (Contributor Account)"
+          fi
+
       # ---------- Verify latest commit ----------
       - name: Verify commit signature
         # FIX: Only run strict verification if the PR is from the same repo (internal/trusted) or if it's a direct push
@@ -97,7 +102,7 @@ jobs:
             echo "🔑 Fingerprint: $FINGERPRINT"
 
             # Replaced the short ID with the full 40-character fingerprint
-            TRUSTED_KEYS="83FB991D930D7177F25456C07F4C7CA953E1C09E 5CC01F41CD084AAC0593108DD432152833DA3244 A38379B51EB75EF1877A83ADBE677DAEFE33CB57"
+            TRUSTED_KEYS="83FB991D930D7177F25456C07F4C7CA953E1C09E 5CC01F41CD084AAC0593108DD432152833DA3244 A38379B51EB75EF1877A83ADBE677DAEFE33CB57 1606642895F688C9299B9E0AC97540DA6C9FA85C"
 
             if echo "$TRUSTED_KEYS" | grep -q "$FINGERPRINT"; then
               echo "✅ Trusted key"
@@ -108,7 +113,7 @@ jobs:
           done
 
           echo "🎉 All PR commits are valid and trusted"
-          
+
           else
           echo "🔍 Push to main detected"
           echo "ℹ️ Skipping strict GPG verification for merge/rebase/squash commit"
