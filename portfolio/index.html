@@ -133,7 +133,7 @@
       </p>
       <div class="hero-buttons">
         <a href="#frontend-works" class="btn primary glow-btn">Frontend Interfaces</a>
-        <a href="#case-studies" class="btn secondary glow-btn">Backend Architecture</a>        
+        <a href="#case-studies" class="btn secondary glow-btn">Backend Architecture</a>
       </div>
     </div>
   </section>
@@ -149,8 +149,13 @@
 
       <!-- 1. Foodaholic -->
       <div class="gallery-panel active">
-        <img src="/images/foodaholic-preview.png" alt="Foodaholic"
-          onerror="this.src='https://placehold.co/800x600/1e293b/38bdf8?text=Foodaholic'" class="panel-bg">
+        <picture>
+          <!-- Show this mobile screenshot on screens change from 768px to 576px wide or smaller -->
+          <source media="(max-width: 576px)" srcset="/images/foodaholic-mobile.png">
+
+          <!-- Default to this desktop screenshot on larger screens -->
+          <img src="/images/foodaholic-preview.png" alt="Foodaholic" class="panel-bg">
+        </picture>
         <div class="panel-overlay"></div>
 
         <div class="panel-icon"><i class="fas fa-hamburger"></i></div>
@@ -172,8 +177,13 @@
 
       <!-- 2. RED & BLUE Clothing Studio -->
       <div class="gallery-panel">
-        <img src="/images/red-n-blue-preview.png" alt="RED & BLUE"
-          onerror="this.src='https://placehold.co/800x600/1e293b/e23636?text=RED+%26+BLUE'" class="panel-bg">
+        <picture>
+          <!-- Show this mobile screenshot on screens 768px wide or smaller -->
+          <source media="(max-width: 768px)" srcset="/images/red-n-blue-mobile.png">
+
+          <!-- Default to this desktop screenshot on larger screens -->
+          <img src="/images/red-n-blue-preview.png" alt="RED & BLUE" class="panel-bg">
+        </picture>
         <div class="panel-overlay"></div>
 
         <div class="panel-icon"><i class="fas fa-tshirt"></i></div>
@@ -196,8 +206,13 @@
 
       <!-- 3. Golden Planet Jewellers -->
       <div class="gallery-panel">
-        <img src="/images/golden-planet-preview.png" alt="Golden Planet"
-          onerror="this.src='https://placehold.co/800x600/1e293b/eab308?text=Golden+Planet'" class="panel-bg">
+        <picture>
+          <!-- Show this mobile screenshot on screens 768px wide or smaller -->
+          <source media="(max-width: 768px)" srcset="/images/golden-planet-mobile.png">
+
+          <!-- Default to this desktop screenshot on larger screens -->
+          <img src="/images/golden-planet-preview.png" alt="Golden Planet" class="panel-bg">
+        </picture>
         <div class="panel-overlay"></div>
 
         <div class="panel-icon"><i class="fas fa-gem"></i></div>
@@ -219,8 +234,13 @@
 
       <!-- 4. Hotel Best Inn -->
       <div class="gallery-panel">
-        <img src="/images/hotel-best-inn-preview.png" alt="Hotel Best Inn"
-          onerror="this.src='https://placehold.co/800x600/1e293b/22c55e?text=Hotel+Best+Inn'" class="panel-bg">
+        <picture>
+          <!-- Show this mobile screenshot on screens 768px wide or smaller -->
+          <source media="(max-width: 768px)" srcset="/images/hotel-best-inn-mobile.png">
+
+          <!-- Default to this desktop screenshot on larger screens -->
+          <img src="/images/hotel-best-inn-preview.png" alt="Hotel Best Inn" class="panel-bg">
+        </picture>
         <div class="panel-overlay"></div>
 
         <div class="panel-icon"><i class="fas fa-hotel"></i></div>
@@ -243,8 +263,13 @@
 
       <!-- 5. Jay Ambe Jewellers -->
       <div class="gallery-panel">
-        <img src="/images/jay-ambe-preview.png" alt="Jay Ambe"
-          onerror="this.src='https://placehold.co/800x600/1e293b/a855f7?text=Jay+Ambe'" class="panel-bg">
+                <picture>
+          <!-- Show this mobile screenshot on screens 768px wide or smaller -->
+          <source media="(max-width: 768px)" srcset="/images/jay-ambe-mobile.png">
+
+          <!-- Default to this desktop screenshot on larger screens -->
+          <img src="/images/jay-ambe-preview.png" alt="Jay Ambe" class="panel-bg">
+        </picture>
         <div class="panel-overlay"></div>
 
         <div class="panel-icon"><i class="fas fa-ring"></i></div>
@@ -489,7 +514,7 @@
         </ul>
       </div>
     </div>
-    
+
     <div class="footer-bottom">
       <p>&copy; 2026 Vimal Tech. All rights reserved.</p>
     </div>
