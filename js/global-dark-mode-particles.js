@@ -186,15 +186,17 @@ function updateToggleIcon() {
   if (!darkModeToggle) return;
 
   if (document.body.classList.contains("dark")) {
-    darkModeToggle.textContent = "☀️";
-    darkModeToggle.title = "Switch to light mode";
-    darkModeToggle.style.background = "#00bcd4";
-    darkModeToggle.style.color = "#000";
+    darkModeToggle.innerHTML = '<i class="far fa-sun"></i>';
+    darkModeToggle.title = "Switch Theme";
+    darkModeToggle.style.background = "transparent";
+    darkModeToggle.style.color = "#ffffffff";
+    darkModeToggle.style.border = "none";
   } else {
-    darkModeToggle.textContent = "🌙";
-    darkModeToggle.title = "Switch to dark mode";
-    darkModeToggle.style.background = "#000000";
-    darkModeToggle.style.color = "#fff";
+    darkModeToggle.innerHTML = '<i class="far fa-moon"></i>';
+    darkModeToggle.title = "Switch Theme";
+    darkModeToggle.style.background = "#000000ff";
+    darkModeToggle.style.color = "#ffffffff";
+    darkModeToggle.style.border = "none";
   }
 }
 

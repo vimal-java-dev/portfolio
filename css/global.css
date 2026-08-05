@@ -823,28 +823,24 @@ body.dark .section-title {
 
 /* Container */
 .footer-container {
-    max-width: 1150px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;
+    gap: 20px;
 }
 
-/* 3-Column Layout */
-.footer-left,
-.footer-center,
-.footer-links {
-    flex: 1;
-}
-
-.footer-center {
+.footer-vimal-tech,
+.footer-vimal-patel,
+.footer-quick-links,
+.footer-resources,
+.footer-more-info {
     border-left: 1px solid rgba(255, 255, 255, 0.08);
-    border-right: 1px solid rgba(255, 255, 255, 0.08);
     padding: 0 30px;
 }
 
-.footer-links {
+.footer-quick-links {
     text-align: left;
 }
 
@@ -1020,27 +1016,48 @@ body.dark .section-title {
 /* Bottom Bar */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    padding: 10px;
     text-align: center;
     font-size: 0.9rem;
     opacity: 0.7;
-    margin-bottom: 35px;
 }
 
 /* ===== Mobile Responsive ===== */
 @media (max-width: 900px) {
     .footer-container {
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
 
-    .footer-center {
+    .footer-vimal-tech {
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        padding: 0px 0px;
+        width: 100%;
+    }
+
+    .footer-vimal-patel,
+    .footer-more-info {
         border-left: none;
         border-right: none;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: none;
+        padding: 20px 20px;
+        width: 100%;
+    }
+
+    .footer-social {
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 30px 0;
+        padding: 20px 20px;
+        width: 100%;
+    }
+
+    .footer-quick-links,
+    .footer-resources {
+        padding: 20px 20px;
         width: 100%;
     }
 
@@ -1055,6 +1072,48 @@ body.dark .section-title {
     .quick-links-list a,
     .quick-links-list a:hover {
         transform: none !important;
+    }
+
+    /* Bottom Bar */
+    .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: 40px;
+        padding-top: 20px;
+        text-align: center;
+        font-size: 0.9rem;
+        opacity: 0.7;
+        margin-bottom: 35px;
+    }
+}
+
+/* Forces the two divs to sit side-by-side (50% width each) */
+.footer-links-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Optional: If you want them to stack on EXTREMELY small screens (like old foldables under 320px) */
+@media (max-width: 320px) {
+    .footer-links-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-more-info .quick-links-list {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allows links to wrap to the next line when space runs out */
+        gap: 10px;
+        /* Adds space between the links */
+    }
+
+    /* Reset any 100% width on the list items */
+    .footer-more-info .quick-links-list li {
+        width: auto;
+        margin-bottom: 0;
+        /* Removes bottom margin if your default list has it */
     }
 }
 
@@ -1147,7 +1206,7 @@ body.dark .section-title {
     height: 55px;
     border-radius: 50%;
     border: none;
-    background: #000000;
+    background: transparent;
     color: #fff;
     font-size: 22px;
     cursor: pointer;
@@ -1171,8 +1230,8 @@ body.dark .section-title {
     height: 50px;
     border: none;
     outline: none;
-    background-color: #ff9800;
-    color: white;
+    background-color: #bfb5a6;
+    color: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 50%;
     display: flex;
@@ -1224,23 +1283,14 @@ body.dark .section-title {
    ===== Dark Mode =====
 =================================================== */
 /* ===== Dark Mode Override ===== */
-body.dark #scrollTopBtn {
-    background-color: #ff9800;
-    color: #fff;
-}
-
-body.dark #scrollTopBtn:hover {
-    background-color: #e68900;
-}
 
 /* Dark mode appearance */
 body.dark #darkModeToggle {
     background: #00bcd4;
     /* Cyan glow in dark mode */
-    color: #000;
-    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 225, 255, 0.4);
 }
 
 body.dark #darkModeToggle:hover {
-    background: #3ce8ff;
+    background: #00e1ff;
 }

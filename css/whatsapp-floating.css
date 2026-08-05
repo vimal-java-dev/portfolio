@@ -16,6 +16,9 @@
     box-shadow: 0 0 8px rgba(37, 211, 102, 0.5);
     transition: transform 0.3s ease, background 0.3s, box-shadow 0.3s;
     animation: pulseWhatsApp 2.5s infinite ease-in-out;
+
+    /* Added to remove the underline */
+    text-decoration: none;
 }
 
 .whatsapp-float:hover {
