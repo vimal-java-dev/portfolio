@@ -1,4 +1,7 @@
+# robots.txt for https://vimaltech.dev
+
 User-agent: *
 Allow: /
 
+# XML Sitemap
 Sitemap: https://vimaltech.dev/sitemap.xml
