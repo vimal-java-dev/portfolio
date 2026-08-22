@@ -312,7 +312,7 @@ This project follows several frontend development best practices including:
 
 # 🤝 Contributing
 
-Contributions are welcome.
+I do contribute with a feature branch as below.
 
 1. Fork the repository.
 
@@ -325,13 +325,13 @@ git checkout -b feature/new-feature
 3. Commit your changes.
 
 ```bash
-git commit -S -m "Add new feature"
+git commit -S -s -m "Add new feature"
 ```
 
 4. Push your branch.
 
 ```bash
-git push origin feature/new-feature
+git push -u origin feature/new-feature
 ```
 
 5. Open a Pull Request.

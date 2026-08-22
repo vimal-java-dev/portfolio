@@ -50,9 +50,9 @@
         <priority>0.7</priority>
     </url>
 
-    <!-- FAQ -->
+    <!-- FAQs -->
     <url>
-        <loc>https://vimaltech.dev/faq</loc>
+        <loc>https://vimaltech.dev/faqs</loc>
         <lastmod>2026-08-06</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
