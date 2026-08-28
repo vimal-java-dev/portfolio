@@ -1,0 +1,248 @@
+/* =========================================================
+   LATEST BLOG POSTS
+   ========================================================= */
+
+.latest-blog-section {
+  width: 100%;
+  padding: 90px 6%;
+  box-sizing: border-box;
+}
+
+.latest-blog-section .section-header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.latest-blog-section .section-header h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.latest-blog-section .section-header h2 span {
+  font-weight: 400;
+}
+
+.latest-blog-section .section-header p {
+  margin-top: 12px;
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   CATEGORY CONTAINER
+   ========================================================= */
+
+.blog-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  width: 100%;
+}
+
+
+/* =========================================================
+   CATEGORY CARD
+   ========================================================= */
+
+.blog-category {
+  min-width: 0;
+  padding: 28px;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 14px;
+  background: rgba(172, 3, 3, 0.04);
+  box-sizing: border-box;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.blog-category:hover {
+  transform: translateY(-5px);
+  border-color: rgba(128, 128, 128, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   CATEGORY HEADER
+   ========================================================= */
+
+.blog-category-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.blog-category-label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  opacity: 0.6;
+}
+
+.blog-category h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
+
+.blog-view-all {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: opacity 0.2s ease;
+}
+
+.blog-view-all:hover {
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   POSTS
+   ========================================================= */
+
+.blog-posts {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   INDIVIDUAL POST
+   ========================================================= */
+
+.blog-post {
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.16);
+}
+
+.blog-post:last-child {
+  border-bottom: none;
+}
+
+.blog-post a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-post-title {
+  margin: 0 0 7px;
+
+  font-size: 0.98rem;
+  line-height: 1.45;
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.blog-post a:hover .blog-post-title {
+  opacity: 0.65;
+}
+
+.blog-post-date {
+  font-size: 0.75rem;
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.blog-loading,
+.blog-error {
+  padding: 25px 0;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .blog-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-category {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .latest-blog-section {
+    padding: 65px 5%;
+  }
+
+  .latest-blog-section .section-header {
+    margin-bottom: 35px;
+  }
+
+  .latest-blog-section .section-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .latest-blog-section .section-header p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .blog-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .blog-category {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .blog-category-header {
+    align-items: center;
+  }
+
+  .blog-category h3 {
+    font-size: 1.1rem;
+  }
+
+  .blog-view-all {
+    font-size: 0.72rem;
+  }
+
+}

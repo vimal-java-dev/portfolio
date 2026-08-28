@@ -1,0 +1,92 @@
+.body {
+    background: rgba(172, 3, 3, 0.075);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.body:hover {
+  transform: translateY(-5px);
+  border-color: rgba(128, 128, 128, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.main-content {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-radius: 14px;
+    background: rgba(172, 3, 3, 0.04);
+    box-sizing: border-box;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Styles for the cookie table */
+.cookie-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  -webkit-overflow-scrolling: touch;
+}   
+
+.cookie-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.cookie-table th,
+.cookie-table td {
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #e5e7eb;
+
+  /* Allow long words such as cookie names to wrap */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.cookie-table th {
+  font-weight: 600;
+}
+
+.cookie-table th:nth-child(1),
+.cookie-table td:nth-child(1) {
+  width: 18%;
+}
+
+.cookie-table th:nth-child(2),
+.cookie-table td:nth-child(2) {
+  width: 18%;
+}
+
+.cookie-table th:nth-child(3),
+.cookie-table td:nth-child(3) {
+  width: 46%;
+}
+
+.cookie-table th:nth-child(4),
+.cookie-table td:nth-child(4) {
+  width: 18%;
+}
+
+.cookie-table code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cookie-table th,
+  .cookie-table td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}

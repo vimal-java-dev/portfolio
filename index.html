@@ -42,6 +42,8 @@
   <link rel="stylesheet" href="/css/dropdown.css">
   <!-- Popup Window CSS -->
   <link rel="stylesheet" href="/css/whatsapp-floating.css">
+  <!-- Blog Section CSS -->
+  <link rel="stylesheet" href="/css/blogger.css">
 
   <!-- Open Graph (Social Sharing SEO) -->
   <meta property="og:title" content="Vimal Patel | Java Backend Developer Portfolio">
@@ -49,17 +51,18 @@
     content="Explore Java backend projects, Spring Boot applications, and enterprise backend systems built by Vimal Patel.">
   <meta property="og:url" content="https://vimaltech.dev/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://vimaltech.dev/images/logo-white.png">
+  <meta property="og:image" content="https://vimaltech.dev/images/logo-black.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vimal Patel | Java Backend Developer">
   <meta name="twitter:description"
     content="Java backend developer portfolio specializing in Spring Boot and scalable systems.">
-  <meta name="twitter:image" content="https://vimaltech.dev/images/logo-white.png">
+  <meta name="twitter:image" content="https://vimaltech.dev/images/logo-black.png">
   <!-- SEO section end -->
 
   <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -131,6 +134,7 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#services-preview">Offering</a></li>
           <li><a href="#projects">Live Works</a></li>
+          <li><a href="#latest-blog-posts">Latest Blog Posts</a></li>
         </ul>
       </li>
       <li><a href="/services">Services</a></li>
@@ -368,6 +372,76 @@
     </div>
   </section>
 
+  <!-- Latest Blog Posts Section -->
+  <section class="latest-blog-section" id="latest-blog-posts">
+
+    <div class="section-header">
+      <h2>LATEST <span>BLOG POSTS</span></h2>
+      <p>Explore the latest insights, ideas, and technical articles from Vimal Tech.</p>
+    </div>
+
+    <div class="blog-categories">
+
+      <!-- Technical Journeys -->
+      <article class="blog-category technical-journeys">
+        <div class="blog-category-header">
+          <div>
+            <span class="blog-category-label">TECHNICAL JOURNEYS</span>
+            <h3>Technical Journeys</h3>
+          </div>
+
+          <a href="https://blog.vimaltech.dev/" target="_blank" rel="noopener" class="blog-view-all">
+            View All <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="blog-posts" id="technical-journeys-posts">
+          <div class="blog-loading">Loading latest posts...</div>
+        </div>
+      </article>
+
+
+      <!-- System Design -->
+      <article class="blog-category system-design">
+        <div class="blog-category-header">
+          <div>
+            <span class="blog-category-label">SYSTEM DESIGN</span>
+            <h3>System Design</h3>
+          </div>
+
+          <a href="https://sd.vimaltech.dev/" target="_blank" rel="noopener" class="blog-view-all">
+            View All <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="blog-posts" id="system-design-posts">
+          <div class="blog-loading">Loading latest posts...</div>
+        </div>
+      </article>
+
+
+      <!-- Data Structures & Algorithms -->
+      <article class="blog-category dsa">
+        <div class="blog-category-header">
+          <div>
+            <span class="blog-category-label">DATA STRUCTURES &amp; ALGORITHMS</span>
+            <h3>Data Structures &amp; Algorithms</h3>
+          </div>
+
+          <a href="https://dsa.vimaltech.dev/" target="_blank" rel="noopener" class="blog-view-all">
+            View All <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="blog-posts" id="dsa-posts">
+          <div class="blog-loading">Loading latest posts...</div>
+        </div>
+      </article>
+
+    </div>
+
+  </section>
+
   <!-- CTA Section -->
   <section id="cta-section" class="section container fade-in">
     <div class="cta-card theme-neon">
@@ -444,14 +518,14 @@
         <div class="brand-divider"></div>
         <p>Follow me on social media:</p>
         <div class="footer-social">
-          <a href="https://github.com/vimal-tech-dev" target="_blank" rel="noopener" aria-label="Vimal Tech GitHub">
+          <a href="https://github.com/vimaltech-dev" target="_blank" rel="noopener" aria-label="Vimal Tech GitHub">
             <i class="fa-brands fa-github"></i>
           </a>
           <a href="https://www.linkedin.com/in/vimaltech/" target="_blank" rel="noopener"
             aria-label="Vimal Tech LinkedIn">
             <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a href="https://x.com/vimal_tech_dev/" target="_blank" rel="noopener" aria-label="Vimal Tech X">
+          <a href="https://x.com/vimaltech_dev/" target="_blank" rel="noopener" aria-label="Vimal Tech X">
             <i class="fa-brands fa-twitter"></i>
           </a>
           <a href="https://www.instagram.com/vimaltech/" target="_blank" rel="noopener"
@@ -495,48 +569,39 @@
           <ul class="quick-links-list">
             <li>
               <a href="https://blog.vimaltech.dev/" target="_blank" rel="noopener">
-                Blogger
+                Blogger Tech
                 <i class="fas fa-blog"></i>
               </a>
             </li>
             <li>
-              <a href="https://blog.vimaltech.dev/search/label/Java" target="_blank" rel="noopener">
-                Java Articles <i class="fas fa-angle-left"></i>
+              <a href="https://blog.vimaltech.dev/search/label/Web%20Development" target="_blank" rel="noopener">
+                Web Articles <i class="fas fa-angle-left"></i>
               </a>
             </li>
             <li>
-              <a href="https://blog.vimaltech.dev/search/label/Spring%20Boot" target="_blank" rel="noopener">
-                Spring Boot <i class="fas fa-angle-left"></i>
+              <a href="https://sd.vimaltech.dev/" target="_blank" rel="noopener">
+                Blogger SD
+                <i class="fas fa-blog"></i>
               </a>
             </li>
             <li>
-              <a href="https://blog.vimaltech.dev/search/label/Docker" target="_blank" rel="noopener">
-                Docker <i class="fas fa-angle-left"></i>
+              <a href="https://sd.vimaltech.dev/search/label/System%20Design" target="_blank" rel="noopener">
+                System Design <i class="fas fa-angle-left"></i>
               </a>
             </li>
             <li>
-              <a href="https://blog.vimaltech.dev/search/label/Kubernetes" target="_blank" rel="noopener">
-                Kubernetes <i class="fas fa-angle-left"></i>
+              <a href="https://dsa.vimaltech.dev/" target="_blank" rel="noopener">
+                Blogger DSA
+                <i class="fas fa-blog"></i>
               </a>
             </li>
             <li>
-              <a href="https://blog.vimaltech.dev/search/label/Microservices" target="_blank" rel="noopener">
-                Microservices <i class="fas fa-angle-left"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://blog.vimaltech.dev/search/label/CI-CD" target="_blank" rel="noopener">
-                CI/CD <i class="fas fa-angle-left"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://blog.vimaltech.dev/search/label/Linux" target="_blank" rel="noopener">
-                Linux <i class="fas fa-angle-left"></i>
+              <a href="https://dsa.vimaltech.dev/search/label/DSA" target="_blank" rel="noopener">
+                DSA <i class="fas fa-angle-left"></i>
               </a>
             </li>
           </ul>
         </div>
-
       </div>
       <!-- End of Wrapper -->
 
@@ -553,28 +618,23 @@
             </a>
           </li>
           <li>
-            <a href="/faq">
+            <a href="/faqs" rel="noopener">
               FAQs <i class="fas fa-angle-left"></i>
             </a>
           </li>
           <li>
-            <a href="/privacy-policy">
+            <a href="/privacy-policy" rel="noopener">
               Privacy Policy <i class="fas fa-angle-left"></i>
             </a>
           </li>
           <li>
-            <a href="/terms-and-conditions">
+            <a href="/terms-and-conditions" rel="noopener">
               Terms & Conditions <i class="fas fa-angle-left"></i>
             </a>
           </li>
           <li>
-            <a href="/cookies-policy">
+            <a href="/cookies-policy" rel="noopener">
               Cookie Policy <i class="fas fa-angle-left"></i>
-            </a>
-          </li>
-          <li>
-            <a href="/sitemap.xml" target="_blank" rel="noopener">
-              Sitemap <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
           </li>
         </ul>
@@ -606,6 +666,7 @@
   <!-- dropdown + latestworks -->
   <script src="/js/dropdown.js"></script>
   <script src="/js/latest-works.js"></script>
+  <script src="/js/blogger.js"></script>
 </body>
 
 </html>
