@@ -1,0 +1,33 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 320 320"
+>
+    <defs>
+        <linearGradient id="vpGold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FDE68A" />
+            <stop offset="45%" stop-color="#F59E0B" />
+            <stop offset="100%" stop-color="#B45309" />
+        </linearGradient>
+    </defs>
+
+    <circle
+        cx="160"
+        cy="160"
+        r="158"
+        fill="#090e17"
+        stroke="url(#vpGold)"
+        stroke-width="4"
+    />
+
+    <text
+        x="160"
+        y="230"
+        text-anchor="middle"
+        font-family="Georgia, serif"
+        font-size="215"
+        font-weight="bold"
+        font-style="italic"
+        letter-spacing="-25"
+        fill="url(#vpGold)"
+    >VP</text>
+</svg>

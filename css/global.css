@@ -1,0 +1,396 @@
+/* ===================================================
+   ===== Global Styles =====
+=================================================== */
+:root {
+    --color-bg: #cfcfcf;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-accent: #38bdf8;
+    --color-primary: #EF5A00;
+
+    --font-primary: 'Inter', sans-serif;
+    --nav-bg: #c3c7ca;
+    --text-dim: #64748b;
+    --amber: #f59e0b;
+
+    /* google maps */
+    --border: rgba(255, 255, 255, 0.07);
+    --radius: 14px;
+    --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* BASE */
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: var(--font-primary);
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    /* font-weight: 500; */
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: -1px;
+    font-optical-sizing: auto;
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 500; */
+    font-style: normal;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 500; */
+    font-style: normal;
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 500; */
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+/* TYPOGRAPHY */
+p {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: 500; */
+    font-style: normal;
+}
+
+/* =========================================
+   HERO SECTION (GLOBAL)
+========================================= */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    overflow: hidden;
+    background: radial-gradient(circle at center, #1e293b, #020617);
+    /* Deep, rich tech slate */
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.gradient-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(56, 189, 248, 0.1), rgba(0, 0, 0, 0.5));
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* slightly stronger */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 850px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroFadeUp 1s ease forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+@keyframes heroFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HERO FIX (IMPORTANT) ===== */
+.hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+}
+
+/* Hero text */
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.3s;
+    color: #e5ff7a;
+    /* your strong green */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.highlight-text {
+    color: #a3e635;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    /* margin-bottom: 2rem; */
+    /* gap: 30px; */
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg,
+            #38bdf8,
+            #22c55e,
+            #a3e635,
+            #38bdf8);
+    background-size: 200% auto;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    animation: gradientMove 4s linear infinite;
+    filter: drop-shadow(0 0 6px rgba(163, 230, 53, 0.4));
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+h2.section-title {
+    /* 1. Typography (This should now reflect correctly) */
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-family: "Lexend", sans-serif;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+
+    /* 2. The Gradient Magic */
+    background: linear-gradient(90deg, #38bdf8, #22c55e, #a3e635, #38bdf8);
+    background-size: 200% auto;
+    /* Increased for better animation move */
+
+    /* 3. Clipping (The most important part) */
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* 4. The Fix: Set this to transparent! */
+    -webkit-text-fill-color: var(--color-text);
+
+    /* 5. Effects */
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    /* Reduced opacity for better visibility */
+    animation: gradientMove 4s linear infinite;
+    filter: drop-shadow(0 0 6px rgba(163, 230, 53, 0.4));
+}
+
+/* ===== BUTTON FIX (IMPORTANT) ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    background: var(--color-primary);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.6);
+    transform: scale(1.05);
+}
+
+.btn:hover::after {
+    transform: scale(1.1);
+}
+
+.btn.primary {
+    background: #ff9800;
+    color: #fff;
+}
+
+.btn.secondary {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+/* Glow Button */
+.glow-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.glow-btn:hover::before {
+    left: 100%;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+    animation-delay: var(--delay, 0s);
+}
+
+.fade-in.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* ===================================================
+   ===== Containers & Animations =====
+=================================================== */
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+   769px – 1024px
+========================================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content {
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        max-width: 650px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+}

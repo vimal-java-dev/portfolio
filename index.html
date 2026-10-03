@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vimal Patel - Java Developer and Full Stack Developer Portfolio"
+    />
+    <title>Vimal Patel | Java Developer</title>
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Font Awesome (Optimized Non-blocking) -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      as="style"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+      referrerpolicy="no-referrer"
+    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer"
+      />
+    </noscript>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/components/header.css" />
+    <link rel="stylesheet" href="/css/utilities-sections.css" />
+    <link rel="stylesheet" href="/css/latest-works.css" />
+    <link rel="stylesheet" href="/css/infinite-carousel.css" />
+    <link rel="stylesheet" href="/css/blogger.css" />
+    <link rel="stylesheet" href="/components/footer.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+
+    <!-- Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Space+Grotesk -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lexend -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Montserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Particles -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="/" class="brand" aria-label="Vimal Patel Home">
+          <svg
+            class="brand-logo"
+            viewBox="0 0 320 320"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="VP Logo"
+          >
+            <defs>
+              <linearGradient id="vpGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FDE68A" />
+                <stop offset="45%" stop-color="#F59E0B" />
+                <stop offset="100%" stop-color="#B45309" />
+              </linearGradient>
+            </defs>
+
+            <circle
+              cx="160"
+              cy="160"
+              r="148"
+              fill="none"
+              stroke="url(#vpGold)"
+              stroke-width="2"
+            />
+
+            <circle
+              cx="160"
+              cy="160"
+              r="136"
+              fill="none"
+              stroke="#D4A24C"
+              stroke-width="1"
+              opacity="0.55"
+            />
+
+            <path
+              d="M160 14 V32 M160 288 V306 M14 160 H32 M288 160 H306"
+              stroke="#F59E0B"
+              stroke-width="2"
+            />
+
+            <text
+              x="148"
+              y="210"
+              text-anchor="middle"
+              font-family="Georgia, serif"
+              font-size="145"
+              font-weight="bold"
+              font-style="italic"
+              letter-spacing="-15"
+              fill="url(#vpGold)"
+            >
+              VP
+            </text>
+          </svg>
+
+          <span class="brand-text">
+            <span class="brand-name">VIMAL PATEL</span>
+            <span class="brand-role">JAVA DEVELOPER • CREATOR</span>
+          </span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-menu" id="navMenu">
+          <li>
+            <a href="#hero" class="nav-link active">Home</a>
+          </li>
+          <li>
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li>
+            <a href="#services-preview" class="nav-link">Offering</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link">Live-Work</a>
+          </li>
+          <li>
+            <a href="#infinite-carousel" class="nav-link">Infinite-Carousel</a>
+          </li>
+          <li>
+            <a href="#latest-blog-posts" class="nav-link">Latest-Blog</a>
+          </li>
+          <li>
+            <a href="/expertise" class="nav-link">Next</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero" class="hero">
+        <div id="particles-js"></div>
+        <div class="gradient-overlay"></div>
+        <div class="hero-content">
+          <h1>
+            Building Scalable
+            <span class="gradient-text">Backend Systems</span>
+          </h1>
+          <p class="hero-subtext">
+            I've been
+            <span class="highlight-text" style="font-weight: 600"
+              >providing</span
+            >
+            Software as a Service
+            <span class="highlight-text" style="color: #38bdf8">(SaaS)</span> as
+            a Java Backend Developer specializing in
+            <span class="highlight-text" style="color: #00d916"
+              >Spring Boot</span
+            >,
+            <span class="highlight-text" style="color: #38bdf8">Docker</span>
+            and
+            <span class="highlight-text" style="color: #38bdf8"
+              >Microservices</span
+            >.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn primary glow-btn">Live Works</a>
+            <a href="/contactUs" class="btn secondary glow-btn"
+              >Let's Connect</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="section container fade-in">
+        <div class="glass-panel text-center">
+          <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+          <h2 class="section-title fade-in">Competency & Proficiency</h2>
+          <p>
+            I have deep exposure to Java Technologies with hands-on experience
+            building robust backend systems, REST APIs, and enterprise
+            applications. Highly skilled in
+            <strong
+              >Java, Spring Boot, Hibernate, Java Persistence API, Spring
+              Framework, SQL, NoSQL</strong
+            >, and <strong>Cloud Technologies</strong>. Passionate about writing
+            clean, maintainable, and efficient code.
+          </p>
+        </div>
+      </section>
+
+      <!-- Services Preview Section -->
+      <section id="services-preview" class="section container fade-in alt-bg">
+        <div class="section-header">
+          <h2 class="section-title">Professional | Services | Preview</h2>
+          <p class="section-subtitle">
+            Explore solutions tailored to build and scale your projects
+            efficiently.
+          </p>
+        </div>
+        <div class="services-preview-grid">
+          <div class="preview-card">
+            <div class="card-icon"><i class="fas fa-server"></i></div>
+            <h3>Backend Development</h3>
+            <p>
+              Scalable backend apps using Java, Spring Boot, and Microservices.
+            </p>
+          </div>
+          <div class="preview-card">
+            <div class="card-icon"><i class="fas fa-database"></i></div>
+            <h3>Database Management</h3>
+            <p>
+              Relational and NoSQL management (Oracle, MySQL, PostgreSQL,
+              MongoDB, Cassandra).
+            </p>
+          </div>
+          <div class="preview-card">
+            <div class="card-icon"><i class="fas fa-cloud"></i></div>
+            <h3>Cloud Integration</h3>
+            <p>
+              Deploy and manage applications efficiently on AWS infrastructure.
+            </p>
+          </div>
+          <div class="preview-card">
+            <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+            <h3>Project Consulting</h3>
+            <p>
+              Architecture guidance and microservices design for enterprise
+              projects.
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px">
+          <a href="/services" class="btn primary glow-btn"
+            >View All Services →</a
+          >
+        </div>
+      </section>
+
+      <!-- Latest Works Section -->
+      <section id="projects" class="projects-wrap">
+        <div class="section-header">
+          <h2 class="section-title">Live Works</h2>
+          <p class="section-subtitle">
+            A selection of live frontend interfaces click to view
+          </p>
+        </div>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="react">React</button>
+          <button class="filter-btn" data-filter="vue">Vue</button>
+          <button class="filter-btn" data-filter="angular">Angular</button>
+        </div>
+        <div class="projects-grid">
+          <!-- Clinic Demo Card -->
+          <div class="project-card" data-category="react">
+            <div class="card-inner">
+              <!-- FRONT -->
+              <div class="card-front">
+                <div class="card-thumbnail">
+                  <img
+                    src="/images/mobile-view/clinic-demo.png"
+                    alt="Clinic Demo Website UI"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <!-- BACK -->
+              <div class="card-back">
+                <h3>🏥 Smarter Healthcare</h3>
+                <p>
+                  ClinoraCare was founded with a singular mission: to eliminate
+                  the friction between modern medical technology and
+                  compassionate, human-centered patient care.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://clinic-demo.vimaltech.dev/"
+                    class="btn-live"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    → Live Site
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Foodaholic Bistro Demo Card -->
+          <div class="project-card" data-category="vue">
+            <div class="card-inner">
+              <!-- FRONT -->
+              <div class="card-front">
+                <div class="card-thumbnail">
+                  <img
+                    src="/images/mobile-view/foodaholic-bistro-demo.png"
+                    alt="Foodaholic Bistro Demo UI"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <!-- BACK (Dribbble-style reveal) -->
+              <div class="card-back">
+                <h3>🍽 FOOD THAT HITS DIFFERENT.</h3>
+                <p>
+                  Foodaholic Bistro was born from an obsession with bold,
+                  unapologetic late-night eating. We believe fast dining
+                  shouldn’t taste generic, look sterile, or cut corners on
+                  premium ingredients.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://foodaholic-bistro-demo.vimaltech.dev/"
+                    class="btn-live"
+                    target="_blank"
+                    rel="noopener"
+                    >→ Live Site</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fitness Freak Demo Card -->
+          <div class="project-card" data-category="angular">
+            <div class="card-inner">
+              <div class="card-front">
+                <div class="card-thumbnail">
+                  <img
+                    src="/images/mobile-view/fitness-freak-demo.png"
+                    alt="Fitness Freak App"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <!-- BACK (Dribbble-style reveal) -->
+              <div class="card-back">
+                <h3>🏋️ THE PERFORMANCE PLATFORM</h3>
+                <p>
+                  YOUR TRANSFORMATION. The unified operating system for
+                  high-performance training, dynamic nutrition logging, client
+                  analytics, and local browser persistence.
+                </p>
+                <div class="card-links">
+                  <a
+                    href="https://fitness-freak-demo.vimaltech.dev/"
+                    class="btn-live"
+                    target="_blank"
+                    rel="noopener"
+                    >→ Live Site</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="projects-navigation">
+          <button
+            type="button"
+            class="project-nav-btn prev-project"
+            aria-label="Previous project"
+          >
+            ← Prev
+          </button>
+
+          <a href="/portfolio/#frontend-works" class="btn primary glow-btn">
+            Portfolio →
+          </a>
+
+          <button
+            type="button"
+            class="project-nav-btn next-project"
+            aria-label="Next project"
+          >
+            Next →
+          </button>
+        </div>
+      </section>
+
+      <!-- Infinite Carousel Section -->
+      <!-- ===================================================
+     LIVE WEBSITE CAROUSEL
+    =================================================== -->
+      <section id="infinite-carousel" class="vt-websites-section">
+        <div class="section-header">
+          <h2 class="section-title">Live Website Showcase</h2>
+
+          <p class="section-subtitle">
+            Explore live website projects and interactive demos.
+          </p>
+        </div>
+        <!-- =============================================
+       GROUP 1
+      ============================================== -->
+        <div class="vt-carousel">
+          <div class="vt-carousel-track vt-scroll-left">
+            <!-- =====================
+           GROUP 1 - ORIGINAL
+      ====================== -->
+            <div class="vt-carousel-group">
+              <!-- SPORTS CLUB -->
+              <a
+                href="https://sports-club-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Sports Club</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/sports-club-demo.png"
+                    alt="Sports Club Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="https://crimson-cobalt-tailors-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Crimson Cobalt Tailors</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/crimson-cobalt-tailors-demo.png"
+                    alt="Crimson Cobalt Tailors Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- NUTRITION -->
+              <a
+                href="https://nutrition-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Nutrition Specialist</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/nutrition-demo.png"
+                    alt="Nutrition Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <a
+                href="https://fitness-freak-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Fitness Freak</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/fitness-freak-demo.png"
+                    alt="Fitness Freak Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+            </div>
+            <!-- =====================
+           GROUP 1 - DUPLICATE
+           FOR INFINITE SCROLL
+          ======================= -->
+            <div class="vt-carousel-group" aria-hidden="true">
+              <!-- SPORTS CLUB -->
+              <a
+                href="https://sports-club-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Sports Club</h3>
+                </div>
+
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/sports-club-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- CRIMSON COBALT TAILORS -->
+              <a
+                href="https://crimson-cobalt-tailors-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Crimson Cobalt Tailors</h3>
+                </div>
+
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/crimson-cobalt-tailors-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- NUTRITION -->
+              <a
+                href="https://nutrition-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Nutrition Specialist</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/nutrition-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- FITNESS FREAK -->
+              <a
+                href="https://fitness-freak-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Fitness Freak</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/fitness-freak-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- =============================================
+       GROUP 2
+      ============================================== -->
+        <div class="vt-carousel">
+          <div class="vt-carousel-track vt-scroll-right">
+            <!-- =====================
+           GROUP 2 - ORIGINAL
+          ====================== -->
+            <div class="vt-carousel-group">
+              <!-- SWARNIM JEWELLERS -->
+              <a
+                href="https://swarnim-jewellers-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Swarnim Jewellers</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/swarnim-jewellers-demo.png"
+                    alt="Swarnim Jewellers Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- FOODAHOLIC BISTRO -->
+              <a
+                href="https://foodaholic-bistro-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Foodaholic Bistro</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/foodaholic-bistro-demo.png"
+                    alt="Foodaholic Bistro Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- HOTEL INN -->
+              <a
+                href="https://hotel-inn-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Hotel Inn</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/hotel-inn-demo.png"
+                    alt="Hotel Inn Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- CLINORACARE -->
+              <a
+                href="https://clinic-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>ClinoraCare</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/clinic-demo.png"
+                    alt="ClinoraCare Clinical Center Demo Website"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+            </div>
+
+            <!-- =====================
+           GROUP 2 - DUPLICATE
+           FOR INFINITE SCROLL
+          ====================== -->
+            <div class="vt-carousel-group" aria-hidden="true">
+              <!-- SWARNIM JEWELLERS -->
+              <a
+                href="https://swarnim-jewellers-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Swarnim Jewellers</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/swarnim-jewellers-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- FOODAHOLIC BISTRO -->
+              <a
+                href="https://foodaholic-bistro-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Foodaholic Bistro</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/foodaholic-bistro-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- HOTEL INN -->
+              <a
+                href="https://hotel-inn-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>Hotel Inn</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/hotel-inn-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+              <!-- CLINORACARE -->
+              <a
+                href="https://clinic-demo.vimaltech.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="vt-carousel-card"
+              >
+                <div class="vt-carousel-info">
+                  <h3>ClinoraCare</h3>
+                </div>
+                <div class="vt-carousel-image">
+                  <img
+                    src="/images/mobile-view/clinic-demo.png"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Blog Posts Section -->
+      <!-- Horizontal Category Navigation -->
+      <section class="latest-blog-section" id="latest-blog-posts">
+        <div class="section-header">
+          <h2 class="section-title">LATEST <span>BLOG POSTS</span></h2>
+
+          <p class="section-subtitle">
+            Explore the latest insights, ideas, and technical articles from
+            <a
+              href="https://blog.vimaltech.dev/"
+              target="_blank"
+              rel="noopener"
+              class="blog-view-all"
+            >
+              Vimal Tech Blog. <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </p>
+        </div>
+
+        <!-- Blog Category Navigation -->
+        <div class="blog-category-navigation" aria-label="Blog categories">
+          <button
+            type="button"
+            class="blog-category-button active"
+            data-blog-target="technical-journeys"
+          >
+            Technical Journeys
+          </button>
+
+          <button
+            type="button"
+            class="blog-category-button"
+            data-blog-target="system-design"
+          >
+            System Design
+          </button>
+
+          <button
+            type="button"
+            class="blog-category-button"
+            data-blog-target="dsa"
+          >
+            Data Structures &amp; Algorithms
+          </button>
+        </div>
+
+        <div class="blog-categories">
+          <!-- Technical Journeys -->
+          <article class="blog-category technical-journeys">
+            <div class="blog-category-header">
+              <div>
+                <span class="blog-category-label">TECHNICAL JOURNEYS</span>
+                <h3>Technical Journeys</h3>
+              </div>
+
+              <a
+                href="https://blog.vimaltech.dev/"
+                target="_blank"
+                rel="noopener"
+                class="blog-view-all"
+              >
+                View All <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="blog-posts" id="technical-journeys-posts">
+              <div class="blog-loading">Loading latest posts...</div>
+            </div>
+          </article>
+
+          <!-- System Design -->
+          <article class="blog-category system-design">
+            <div class="blog-category-header">
+              <div>
+                <span class="blog-category-label">SYSTEM DESIGN</span>
+                <h3>System Design</h3>
+              </div>
+
+              <a
+                href="https://sd.vimaltech.dev/"
+                target="_blank"
+                rel="noopener"
+                class="blog-view-all"
+              >
+                View All <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="blog-posts" id="system-design-posts">
+              <div class="blog-loading">Loading latest posts...</div>
+            </div>
+          </article>
+
+          <!-- Data Structures & Algorithms -->
+          <article class="blog-category dsa">
+            <div class="blog-category-header">
+              <div>
+                <span class="blog-category-label">
+                  DATA STRUCTURES &amp; ALGORITHMS
+                </span>
+
+                <h3>Data Structures &amp; Algorithms</h3>
+              </div>
+
+              <a
+                href="https://dsa.vimaltech.dev/"
+                target="_blank"
+                rel="noopener"
+                class="blog-view-all"
+              >
+                View All <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+
+            <div class="blog-posts" id="dsa-posts">
+              <div class="blog-loading">Loading latest posts...</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section id="cta-section" class="section container fade-in">
+        <div class="cta-card theme-neon">
+          <h2 class="cta-title">Thanks for visiting 👋</h2>
+          <p class="cta-subtitle" style="color: #fff; margin-bottom: 20px">
+            Ready to turn your idea into reality?
+          </p>
+          <p
+            class="cta-description"
+            style="
+              max-width: 600px;
+              margin: 0 auto 30px auto;
+              line-height: 1.6;
+              color: #cbd5e1;
+            "
+          >
+            Helping businesses thrive in the Digital Era. Whether it's a
+            <strong>local business website</strong>
+            or a complex <strong>enterprise backend system</strong>, I am ready
+            to code your vision.
+          </p>
+          <a
+            href="tel:+919638474047"
+            class="btn primary glow-btn"
+            target="_blank"
+          >
+            Let's Build Together
+            <i class="fas fa-phone-alt" style="margin-left: 8px"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <!-- The Placeholder -->
+      <div id="footer-placeholder"></div>
+    </main>
+
+    <!-- JS -->
+    <script src="/js/global-dark-mode-particles.js"></script>
+    <script src="/js/global.js"></script>
+    <script src="/components/header.js"></script>
+    <script src="/js/latest-works.js"></script>
+    <script src="/js/blogger.js"></script>
+    <script src="/components/load-footer.js"></script>
+  </body>
+</html>

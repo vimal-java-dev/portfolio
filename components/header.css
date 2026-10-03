@@ -1,0 +1,484 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background: rgba(11, 17, 32, 0.94);
+    border-bottom: 1px solid rgba(245, 158, 11, 0.15);
+    backdrop-filter: blur(14px);
+    transition:
+        padding 1s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.8s ease,
+        border-color 0.8s ease;
+}
+
+.navbar {
+    width: min(1400px, 94%);
+    min-height: 82px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0;
+    transition:
+        width 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+        min-height 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        padding 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        gap 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        border-radius 0.8s ease,
+        border 0.8s ease,
+        background 0.8s ease,
+        box-shadow 0.8s ease;
+}
+
+/* Brand */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 80px;
+    height: 80px;
+    display: block;
+    transition:
+        width 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        height 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.3s ease;
+}
+
+.brand:hover .brand-logo {
+    transform: rotate(3deg) scale(1.04);
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: 180px;
+    overflow: hidden;
+    opacity: 1;
+    transition:
+        opacity 0.45s ease,
+        max-width 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        gap 0.4s ease;
+}
+
+.brand-name {
+    color: #f8fafc;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.brand-role {
+    color: #f59e0b;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+/* Navigation */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    flex-shrink: 0;
+    transition:
+        gap 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link {
+    position: relative;
+    display: block;
+    padding: 10px 14px;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        color 0.3s ease,
+        padding 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+        font-size 0.5s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 3px;
+    height: 2px;
+    background: #f59e0b;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition:
+        transform 0.3s ease,
+        left 0.5s ease,
+        right 0.5s ease;
+}
+
+.nav-link:hover {
+    color: #f59e0b;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.nav-link.active {
+    color: #f59e0b;
+}
+
+/* Mobile Button */
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px auto;
+    background: #f59e0b;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ========================================
+   STAGE 1
+   Logo Shrinks
+   ======================================== */
+
+.site-header.logo-small .brand-logo {
+    width: 54px;
+    height: 54px;
+}
+
+.site-header .navbar {
+    min-height: 62px;
+}
+
+/* ========================================
+   STAGE 2
+   Navbar Collapses To Center
+   ======================================== */
+
+.site-header.nav-collapsed {
+    padding: 12px 0;
+    background: transparent;
+    border-bottom-color: transparent;
+}
+
+.site-header.nav-collapsed .navbar {
+    width: fit-content;
+    min-height: 58px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px 8px 4px 5px;
+    gap: 2px;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: 18px;
+    background: rgba(11, 17, 32, 0.94);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
+}
+
+.site-header.nav-collapsed .brand {
+    gap: 0;
+}
+
+.site-header.nav-collapsed .brand-logo {
+    width: 54px;
+    height: 54px;
+}
+
+.site-header.nav-collapsed .brand-text {
+    max-width: 0;
+    opacity: 0;
+    gap: 0;
+}
+
+.site-header.nav-collapsed .nav-menu {
+    gap: 0;
+}
+
+.site-header.nav-collapsed .nav-link {
+    padding: 8px 10px;
+    font-size: 13px;
+}
+
+.site-header.nav-collapsed .nav-link::after {
+    left: 10px;
+    right: 10px;
+    bottom: 1px;
+}
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        min-height: 76px;
+    }
+
+    .brand-logo {
+        width: 62px;
+        height: 62px;
+    }
+
+    .brand-name {
+        font-size: 14px;
+    }
+
+    .nav-menu {
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 10px 9px;
+        font-size: 13px;
+    }
+
+    .nav-link::after {
+        left: 9px;
+        right: 9px;
+    }
+
+    .site-header.logo-small .brand-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .site-header.nav-collapsed .navbar {
+        min-height: 56px;
+        padding: 3px 8px 3px 8px;
+        gap: 7px;
+    }
+
+    .site-header.nav-collapsed .brand-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .site-header.nav-collapsed .nav-link {
+        padding: 8px 8px;
+        font-size: 12px;
+    }
+
+    .site-header.nav-collapsed .nav-link::after {
+        left: 8px;
+        right: 8px;
+    }
+}
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        min-height: 70px;
+    }
+
+    .brand-logo {
+        width: 58px;
+        height: 58px;
+    }
+
+    .brand-text {
+        gap: 3px;
+        max-width: 160px;
+    }
+
+    .brand-name {
+        font-size: 13px;
+        letter-spacing: 1.5px;
+    }
+
+    .brand-role {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        width: 100%;
+        padding: 12px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        background: #0b1120;
+        border: 1px solid rgba(245, 158, 11, 0.15);
+        border-top: none;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0.3s ease;
+    }
+
+    .nav-menu.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .nav-link::after {
+        left: 24px;
+        right: auto;
+        bottom: 9px;
+        width: 35px;
+    }
+
+    .demo-section {
+        min-height: 90vh;
+    }
+
+    /* Mobile Stage 1 */
+
+    .site-header.logo-small .brand-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Mobile Stage 2 */
+
+    .site-header.nav-collapsed {
+        padding: 10px 0;
+    }
+
+    .site-header.nav-collapsed .navbar {
+        width: auto;
+        min-height: 52px;
+        margin-left: 2%;
+        margin-right: 2%;
+        padding: 3px 5px;
+        gap: 4px;
+        border-radius: 15px;
+    }
+
+    .site-header.nav-collapsed .brand-logo {
+        width: 48px;
+        height: 48px;
+    }
+
+    .site-header.nav-collapsed .brand-text {
+        display: none;
+    }
+
+    .site-header.nav-collapsed .menu-toggle {
+        display: block;
+        width: 42px;
+        height: 42px;
+    }
+
+    .site-header.nav-collapsed .nav-menu {
+        top: calc(100% + 10px);
+        left: auto;
+        right: 0;
+        width: 220px;
+        border: 1px solid rgba(245, 158, 11, 0.2);
+        border-radius: 12px;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE
+   ======================================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        width: 92%;
+    }
+
+    .brand-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .brand-text {
+        max-width: 140px;
+    }
+
+    .brand-name {
+        font-size: 12px;
+    }
+
+    .brand-role {
+        font-size: 7px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .site-header.logo-small .brand-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .site-header.nav-collapsed .navbar {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .site-header.nav-collapsed .brand-logo {
+        width: 44px;
+        height: 44px;
+    }
+}
