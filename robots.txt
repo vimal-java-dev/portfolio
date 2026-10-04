@@ -1,0 +1,6 @@
+# robots.txt for https://portfolio.vimaltech.dev
+
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.vimaltech.dev/sitemap.xml

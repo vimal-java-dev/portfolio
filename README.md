@@ -1,6 +1,6 @@
-# Vimal Tech — Java Developer Portfolio
+# Vimal Patel — Java Developer Portfolio
 
-![Vimal Tech](https://img.shields.io/badge/Vimal%20Tech-Java%20Developer-F59E0B?style=for-the-badge)
+![Vimal Patel](https://img.shields.io/badge/Vimal%20Tech-Java%20Developer-F59E0B?style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-Backend%20Development-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-Backend-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -9,13 +9,13 @@
 ## 🌐 Live Portfolio
 
 **Portfolio:**  
-https://vimaltech.dev/
+https://portfolio.vimaltech.dev/
 
 ---
 
 ## 📌 About
 
-**Vimal Tech** is a professional software development portfolio focused on Java backend engineering, full-stack web development, enterprise applications, REST APIs, microservices, databases, cloud technologies, and modern frontend development.
+This **REPO** is a professional software development portfolio focused on Java backend engineering, full-stack web development, enterprise applications, REST APIs, microservices, databases, cloud technologies, and modern frontend development.
 
 The portfolio presents technical expertise, professional services, live projects, Proofs of Concept, enterprise application experience, technical resources, and development work in a responsive and modern web interface.
 
@@ -115,7 +115,7 @@ The portfolio showcases:
 The portfolio is structured as a modular frontend application with separated pages, stylesheets, JavaScript modules, and reusable components.
 
 ```text
-vimaltech-frontend/
+portfolio/
 │
 ├── index.html
 ├── expertise.html

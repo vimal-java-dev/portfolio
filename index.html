@@ -7,7 +7,21 @@
       name="description"
       content="Vimal Patel - Java Developer and Full Stack Developer Portfolio"
     />
-    <title>Vimal Patel | Java Developer</title>
+    <!-- SEO section start -->
+    <title>
+      Vimal Patel | Java Backend Developer | Spring Boot & Microservices
+    </title>
+    <meta
+      name="description"
+      content="Portfolio of Vimal Patel, a Java backend developer specializing in Spring Boot, REST APIs, microservices, and scalable enterprise applications."
+    />
+    <meta
+      name="keywords"
+      content="Java Developer, Spring Boot Developer, Backend Developer, Microservices Developer, REST API Developer, Java Portfolio"
+    />
+    <meta name="author" content="Vimal Patel" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://portfolio.vimaltech.dev/" />
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
@@ -37,12 +51,65 @@
     <link rel="stylesheet" href="/components/header.css" />
     <link rel="stylesheet" href="/css/utilities-sections.css" />
     <link rel="stylesheet" href="/css/latest-works.css" />
+    <!-- Infinite Carousel CSS — LOAD LAST -->
     <link rel="stylesheet" href="/css/infinite-carousel.css" />
+    <!-- Blog Section CSS -->
     <link rel="stylesheet" href="/css/blogger.css" />
     <link rel="stylesheet" href="/components/footer.css" />
 
+    <!-- Open Graph (Social Sharing SEO) -->
+    <meta
+      property="og:title"
+      content="Vimal Patel | Java Backend Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore Java backend projects, Spring Boot applications, and enterprise backend systems built by Vimal Patel."
+    />
+    <meta property="og:url" content="https://portfolio.vimaltech.dev/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://portfolio.vimaltech.dev/favicon.svg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Vimal Patel | Java Backend Developer" />
+    <meta
+      name="twitter:description"
+      content="Java backend developer portfolio specializing in Spring Boot and scalable systems."
+    />
+    <meta
+      name="twitter:image"
+      content="https://portfolio.vimaltech.dev/favicon.svg"
+    />
+    <!-- SEO section end -->
+
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://portfolio.vimaltech.dev/#website",
+            "name": "Vimal Patel Portfolio",
+            "url": "https://portfolio.vimaltech.dev/"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://portfolio.vimaltech.dev/#person",
+            "name": "Vimal Patel",
+            "jobTitle": "Java Backend Developer",
+            "url": "https://portfolio.vimaltech.dev/",
+            "sameAs": ["https://github.com/vimaltech-dev"]
+          }
+        ]
+      }
+    </script>
 
     <!-- Inter -->
     <link
@@ -211,7 +278,11 @@
           </p>
           <div class="hero-buttons">
             <a href="#projects" class="btn primary glow-btn">Live Works</a>
-            <a href="/contactUs" class="btn secondary glow-btn"
+            <a
+              href="https://vimaltech.dev/contactUs/"
+              class="btn secondary glow-btn"
+              target="_blank"
+              rel="noopener"
               >Let's Connect</a
             >
           </div>
@@ -279,7 +350,11 @@
         </div>
 
         <div style="text-align: center; margin-top: 40px">
-          <a href="/services" class="btn primary glow-btn"
+          <a
+            href="https://vimaltech.dev/services/"
+            class="btn primary glow-btn"
+            target="_blank"
+            rel="noopener"
             >View All Services →</a
           >
         </div>
@@ -412,7 +487,12 @@
             ← Prev
           </button>
 
-          <a href="/portfolio/#frontend-works" class="btn primary glow-btn">
+          <a
+            href="https://vimaltech.dev/portfolio/"
+            class="btn primary glow-btn"
+            target="_blank"
+            rel="noopener"
+          >
             Portfolio →
           </a>
 
