@@ -107,6 +107,10 @@ body.dark .project-card a:hover {
     gap: 1rem;
 }
 
+.card-back h3 {
+    color: #f59e0b;
+}
+
 /* STATIC GLOSS + SHIMMER OVERLAY */
 .card-thumbnail {
     /* height: 180px; */
